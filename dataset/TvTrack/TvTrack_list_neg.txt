@@ -1,0 +1,12 @@
+https://trakt.tv
+https://trakt.tv/shows/trending
+https://trakt.tv/calendars/shows
+https://trakt.tv/calendars/premieres/2018-09-24
+https://trakt.tv/discover
+https://trakt.tv/apps
+https://trakt.tv/vip
+https://trakt.tv/search?watchnow=netflix
+https://trakt.tv/search/shows?watchnow=netflix
+https://trakt.tv/search?query=game+of+thrones
+https://trakt.tv/search?query=westworld
+https://trakt.tv/search?query=friends

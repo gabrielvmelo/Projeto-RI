@@ -1,0 +1,17 @@
+https://www.metacritic.com
+https://www.metacritic.com/movie
+https://www.metacritic.com/browse/movies/release-date/theaters/date
+https://www.metacritic.com/browse/movies/critic/reviewed
+https://www.metacritic.com/critic/wanda-hale
+https://www.metacritic.com/tv
+https://www.metacritic.com/browse/tv/release-date/new-series/date
+https://www.metacritic.com/browse/tv/release-date/returning-series/date
+https://www.metacritic.com/browse/tv/release-date/special-event/date
+https://www.metacritic.com/browse/tv/release-date/new-series/date
+https://www.metacritic.com/feature/tv-premiere-dates
+https://www.metacritic.com/browse/tv/score/metascore/90day/filtered
+https://www.metacritic.com/browse/tv/critic/reviewed
+https://www.metacritic.com/browse/tv-shows/trailers/date
+https://www.metacritic.com/browse/tv-shows/trailers/date
+https://www.metacritic.com/tv/anne-with-an-e/trailers/11205407
+https://www.metacritic.com/game

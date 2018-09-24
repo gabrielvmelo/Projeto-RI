@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+		<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQcAUFNADAYCUVhTDw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta content="//static-3.tvgcdn.net/www/img/favicon_128.png" itemprop="image" />
+		<meta name="apple-itunes-app" content="app-id=333647776, affiliate-data=at=11l9QE, app-argument=https://www.tvguide.com/new-tonight/">
+		<meta property="fb:app_id" content="63084645929"/>
+		<meta name="google-site-verification" content="Od29UEFliEmsUY2XH0kfXxkTNucL0cv_rc0J_RPWXU4" />
+		
+		<title>New Tonight | TV Guide</title> 
+		<link rel="icon" type="image/svg+xml" href="//static-5.tvgcdn.net/www/img/favicon.svg" />
+		<link rel="alternate icon" type="image/png" href="//static-5.tvgcdn.net/www/img/favicon_32.png" />
+		<link rel="apple-touch-icon" href="//static-1.tvgcdn.net/www/img/apple-touch-icon-precomposed.png" />
+		<link rel="canonical" href="https://www.tvguide.com/new-tonight/" />
+
+		<script type="text/javascript">
+			(function () {
+				if ( typeof window.CustomEvent === "function" ) return false;
+				function CustomEvent ( event, params ) {
+					params = params || { bubbles: false, cancelable: false, detail: undefined };
+					var evt = document.createEvent( 'CustomEvent' );
+					evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+					return evt;
+				}
+				CustomEvent.prototype = window.Event.prototype;
+				window.CustomEvent = CustomEvent;
+			})();
+
+			window.gdprConsent = false;
+			window.GDPR_CONSENT_EVENT = 'gdprConsent';
+			window.fireGDPRConsentEvent = function(timeout) {
+				timeout = timeout || 0;
+				 window.gdprTimout = window.setTimeout(function() {
+					window.gdprConsentEvent = new CustomEvent(window.GDPR_CONSENT_EVENT, { detail: true });
+					window.gdprConsent = true;
+					window.dispatchEvent(window.gdprConsentEvent);
+				    window.clearTimeout(window.gdprTimout);
+				 }, timeout);
+			};
+						(function(id){function append(scriptid,url,async){var d=document,sn='script',f=d.getElementsByTagName(sn)[0];if(!f)f=d.head;var s=d.createElement(sn);s.async=!0;s.id=scriptid;s.src=url;f.parentNode.insertBefore(s,f)}
+				function getRootDomain(){var parts=window.location.hostname.split('.');if(parts.length===2)rootDomain=parts[0];else if(parts.length>2){var part=parts[parts.length-2];if(part==='com'||part==='co'){rootDomain=parts[parts.length-3]}
+				else{rootDomain=part}} return rootDomain;}
+				window.evidon={};window.evidon.id=id;var cdn='//c.evidon.com/',rootDomain=getRootDomain(),noticecdn=cdn+'sitenotice/';append('evidon-notice',noticecdn+'evidon-sitenotice-tag.js',!1);append('evidon-location',cdn+'geo/country.js',!0);append('evidon-themes',noticecdn+id+'/snthemes.js',!0);if(rootDomain)append('evidon-settings',noticecdn+id+'/'+rootDomain+'/settings.js',!0);
+				
+				window.evidon.priorConsentCallback=function() {
+					window.fireGDPRConsentEvent();
+
+					if (typeof om == 'object' && typeof om.fireGdprTags != 'undefined') {
+						om.fireGdprTags();
+					}
+				}
+				window.evidon.closeCallback=function(){}
+				window.evidon.consentWithdrawnCallback=function(){}
+			})(425)
+		</script>
+				
+					<link media="all" type="text/css" rel="stylesheet" href="//static-4.tvgcdn.net/www/css/bs3grid/bs3grid-c2c1f516f66a1ef7c42b5af7dcbdc53a.css">
+
+			<link media="all" type="text/css" rel="stylesheet" href="//static-5.tvgcdn.net/www/css/site-4f82d330bfa4ca6023fb588a3c086f26.css">
+
+			<link media="all" type="text/css" rel="stylesheet" href="//static-5.tvgcdn.net/www/css/font-awesome/font-awesome-7ad0a3f9a32724b7bfbc263ed9e6cb20.css">
+
+			<link media="all" type="text/css" rel="stylesheet" href="//static-2.tvgcdn.net/www/css/listings/tonight-7a43d9b67a9e087b8b0bcf96f865e2ce.css">
+<link media="all" type="text/css" rel="stylesheet" href="//static-4.tvgcdn.net/www/css/provider/modal-e08cd8d9737506c5d52f52fc3e626191.css">
+
+		
+						<!--[if lt IE 9]>
+			<script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+		<![endif]-->
+
+		<!--[if lte IE 9]>
+			<script src="//static-1.tvgcdn.net/www/js/ieshim-2428c7f7a33718da67a799b1d026f668.js"></script>
+
+		<![endif]-->
+
+        		<script type="text/javascript">
+			window.$tvg = window.$tvg || { };
+			window.$tvg.environment = {
+				"mapiHost": "mapi.tvguide.com",
+				"listingsHost": "mobilelistings.tvguide.com",
+				"staticHost": "static.tvgcdn.net",
+			};
+
+                        window.utag_data = {"pageViewGuid":"e830a508-be1d-490b-8cfc-8244bda65288","siteType":"responsive web","siteId":432,"ci":"us-203529h","siteSection":"listings","bkPath":"aw-tvguide\/listings","pageType":"new-tonight","siteHierarchy":"new-tonight","userState":"not authenticated","userType":"anon"};
+            window.$tvg.tealium = 'tags.tiqcdn.com/utag/cbsi/tvguidesite/prod/utag.js';
+
+						window.$tvg.loggedIn = false;
+			window.$tvg.user = null;
+			window.$tvg.watchlistItems = { };
+			window.$tvg.checkinItems = {"191470-36383050":true,"288041-32552290":true,"917701-35911665":true,"1195357-35534868":true};
+			
+
+			window.$tvg.asyncScriptLoaded = { };
+			window.$tvg.asyncScriptLoadError = { };
+			window.$tvg.asyncScriptDidLoad = function(name) {
+				cbs = window.$tvg.asyncScriptLoaded[name] || null
+				window.$tvg.asyncScriptLoaded[name] = { "push": function(cb) { cb(); } };
+				if(cbs) cbs.forEach(function(cb) { try { cb(); } catch(e) { } });
+			};
+
+			window.$tvg.asyncScriptNotify = function(name, cb) {
+				(window.$tvg.asyncScriptLoaded[name] = window.$tvg.asyncScriptLoaded[name] || [ ]).push(cb);
+			};
+
+			window.$tvg.asyncScriptDidNotLoad = function(name) {
+				cbs = window.$tvg.asyncScriptLoadError[name] || null
+				window.$tvg.asyncScriptLoadError[name] = { "push": function(cb) { cb(); } };
+				if(cbs) cbs.forEach(function(cb) { try { cb(); } catch(e) { } });
+			};
+
+			window.$tvg.asyncScriptNotifyLoadError = function(name, cb) {
+				(window.$tvg.asyncScriptLoadError[name] = window.$tvg.asyncScriptLoadError[name] || [ ]).push(cb);
+			};
+
+			window.$tvg.asyncScript = function(src, forceSSL, name) {
+				var script = document.createElement("script");
+				script.async = true;
+				script.type = 'text/javascript';
+
+				var useSSL = forceSSL || 'https:' == document.location.protocol;
+				script.src = (useSSL ? 'https' : 'http') + '://' + src;
+
+				if(name) {
+					if(script.readyState) {
+						script.onreadystatechange = function () {
+							if(script.readyState == "loaded" || script.readyState == "complete") {
+								script.onreadystatechange = null;
+								$tvg.asyncScriptDidLoad(name);
+							}
+						};
+					} else {
+						script.onload = function () { $tvg.asyncScriptDidLoad(name); };
+						script.onerror = function () { $tvg.asyncScriptDidNotLoad(name); };
+					}
+				}
+
+				var node = document.getElementsByTagName('script')[0];
+				node.parentNode.insertBefore(script, node);
+			};
+
+			window.$tvg.addScript = function(src, attrs) {
+				var script = document.createElement("script");
+				script.type = 'text/javascript';
+				script.async = true;
+				if(!!attrs) {
+					for (var k in attrs) {
+						if (attrs.hasOwnProperty(k)) {
+							script.setAttribute(k, attrs[k]);
+						}
+					}
+				}
+				script.src = src;
+				document.body.appendChild(script);
+			}
+
+			var googletag = googletag || {};
+			googletag.cmd = googletag.cmd || [];
+
+			googletag.CBSigetCookieValue = function(ckNm) {
+				var value = null;
+				var allCookies = document.cookie;
+				var pos = allCookies.indexOf(ckNm);
+				if (pos != -1) {
+					var start = pos + ckNm.length + 1;
+					var end = allCookies.indexOf(";", start);
+					if (end == -1) end = allCookies.length;
+					value = allCookies.substring(start, end);
+				}
+				return value;
+			};
+
+			// determine if it's DST in the Eastern Timezone on the given date
+			googletag.CBSiisEDT = function(dt) {
+				// EDT starts second Sunday of March
+				var edtStart = new Date(dt.getFullYear(), 2, 1);
+				edtStart = Date.UTC(edtStart.getUTCFullYear(), 2, 14-(edtStart.getUTCDay()+13)%7, 5);
+				// EDT ends first Sunday of November
+				var edtEnd = new Date(dt.getFullYear(), 10, 1);
+				edtEnd = Date.UTC(edtEnd.getUTCFullYear(), 10, 7-(edtEnd.getUTCDay()+6)%7, 4);
+				// see if current date is within the EDT range
+				return dt.getTime() >= edtStart && dt.getTime() < edtEnd;
+			};
+
+			googletag.CBSiaddPageView = function () {
+				var pv=1;
+				var cookiename="pv";
+				//If there's a cookie, get the current value and add one to it.
+				if (document.cookie.indexOf(cookiename)!=-1) {
+					pv=parseInt(googletag.CBSigetCookieValue(cookiename));
+					if(isNaN(pv))
+					{  pv=1;
+					} else {
+						pv+=1;
+					}
+				}
+				// set expiration to midnight using EDT or EST offset (4|5)
+				var dt = new Date();
+				var exp = Date.UTC(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate(), googletag.CBSiisEDT(dt) ? 4 : 5);
+				// adjust 1 day if set to midnight of previous day
+				exp += exp > dt.getTime() ? 0 : 24*60*60*1000;
+				exp = new Date(exp).toUTCString();
+				// get L2 domain
+				var domainArr = document.domain.split('.').reverse();
+				var l2domain=document.domain;
+				if(domainArr[1]!=null)
+				{   l2domain = domainArr[1] + "." + domainArr[0];
+				}
+
+				// save the value in the cookie
+				document.cookie = cookiename + "=" + pv + ";path=/;domain=" + l2domain + ";expires=" + exp;
+				//update the value for the next ad call
+				googletag.pubads().setTargeting("pv",""+pv);
+			};
+
+			window.googletag = window.googletag || {};
+			window.googletag.cmd = window.googletag.cmd || [];
+
+			window.indexExchangeEnabled = true;
+			
+			window.addEventListener(window.GDPR_CONSENT_EVENT, function (e) {
+				if(e.detail === true) {
+					if(window.indexExchangeEnabled) {
+						window.indexLoaded = function() {
+							window.loadDFP();
+						};
+
+						window.dfpLoaded = false;
+						window.loadDFP = function() {
+							if(!window.dfpLoaded) {
+								window.dfpLoaded = true;
+								window.$tvg.asyncScript('www.googletagservices.com/tag/js/gpt.js');
+							}
+						};
+
+						window.$tvg.asyncScript('js-sec.indexww.com/ht/ls-tvguide.js', false, 'index-exchange-proximic');
+						window.$tvg.asyncScriptNotify('index-exchange-proximic', function() {
+							window.indexLoaded();
+						});
+						window.$tvg.asyncScriptNotifyLoadError('index-exchange-proximic', function() {
+							window.indexLoaded();
+						});
+					} else {
+						window.$tvg.asyncScript('js-sec.indexww.com/ht/ls-tvguide.js', false, 'index-exchange-proximic');
+						window.$tvg.asyncScriptNotify('index-exchange-proximic', function() {
+							window.$tvg.asyncScript('www.googletagservices.com/tag/js/gpt.js');
+						});
+					}
+					
+					protocol = ('https:' == document.location.protocol)?'https:':'http:';
+
+					// bug-snag
+											window.$tvg.addScript(protocol + '//d2wy8f7a9ursnm.cloudfront.net/bugsnag-2.min.js', { 'data-apikey' : 'f9cdc58fb369d58d321e25a62d94e5a9' });
+						window.Bugsnag = window.Bugsnag || {};
+													Bugsnag.releaseStage = "production";
+											
+					// sonobi-lib
+					window.$tvg.addScript(protocol + '//mtrx.go.sonobi.com/morpheus.cbsi.media.1655.js');
+					// google ima
+					window.$tvg.addScript(protocol + '//imasdk.googleapis.com/js/sdkloader/ima3.js');
+					// chartbeat
+					window.$tvg.addScript(protocol + '//static.chartbeat.com/js/chartbeat_mab.js');
+					// tvg-gpt
+					window.$tvg.addScript(protocol + '//static-1.tvgcdn.net/www/js/gpt.js');
+					// sharethrough
+					window.$tvg.addScript(protocol + '//native.sharethrough.com/assets/tag.js');
+
+					// Facebook pixel
+					!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function()
+					{n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}
+					;if(!f._fbq)f._fbq=n;
+					n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+					t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+					document,'script','https://connect.facebook.net/en_US/fbevents.js');
+					fbq('init', '302133323585329'); // Insert your pixel ID here.
+					fbq('track', 'PageView');
+				};
+			});
+
+			//Chartbeat code implementation
+			var _sf_async_config = _sf_async_config || {};
+			/** CONFIGURATION START **/
+			_sf_async_config.uid = (window.utag_data['pageType'] == 'article' || window.utag_data['pageType'] == 'feature_article') ? 65713 : 25571; // ACCOUNT NUMBER
+			_sf_async_config.domain = 'tvguide.com'; // DOMAIN
+			_sf_async_config.flickerControl = false;
+			_sf_async_config.useCanonical = true;
+			_sf_async_config.useCanonicalDomain = true;
+			/** CONFIGURATION END **/
+			var _sf_startpt = (new Date()).getTime();
+		</script>
+
+								<style>
+			html { display:none; }
+		</style>
+		<script>
+			if (self == top) {
+				document.documentElement.style.display = 'block';
+			} else {
+				top.location = self.location;
+			}
+		</script>
+	</head>
+	<body class="no-skin-takeover no-skin-takeover-narrow ">
+		<noscript>
+			<style>
+				html { display:block; }
+			</style>
+		</noscript>
+		<div id="wrap">
+            <div  class="nav_ad ad-dfp" data-placement="layout.nav_ad" id="nav_ad"></div>							<div id="header"  data-section-id="header">
+	<div class="header-wrap">
+		<div class="header-brand" data-section-id="logo"><a href="https://www.tvguide.com/" class="header-brand-link">TV Guide</a></div>
+		<div class="header-search" data-section-id="search">
+			<form action="https://www.tvguide.com/search/" method="GET" target="_blank" class="header-search-form-tab hidden">
+				<input type="submit" value="submit">
+			</form>
+			<form class="header-search-form" action="https://www.tvguide.com/search/" method="get">
+				<input class="header-search-input" placeholder="Search TV Guide here&#33;" autocomplete="off" name="keyword" type="text" value="">
+				<button type="submit" class="header-search-icon"><span class="fa fa-search"></span></button>
+			</form>
+			<div class="header-autocomplete" id="header-autocomplete"></div>
+		</div>
+		<ul class="header-items"  data-section-id="navigation">
+			<li class="header-item header-item-auth header-item-first hidden-xs">
+									<a  id="header-item-signin" class="header-item-link header-item-auth-link" href="https://www.tvguide.com/signin/"><span class="hidden-sm">Sign In / Up </span><span class="fa fa-user header-item-auth-icon"></span></a>
+							</li>
+									<li class="header-item header-item-first">
+		<a href="https://www.tvguide.com/listings/" class="header-item-link">What&#039;s On</a>
+		<span class="header-item-submenu-separator"></span>
+<span class="header-item-submenu header-item-submenu-rows-7">
+			<span class="header-item-submenu-accessory-background"></span>
+	
+						<ul class="header-item-submenu-col header-item-submenu-items">
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/listings/">TV Listings</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/watch-this-now/">Watch This Now!</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/coming-soon/">Coming Soon</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/new-tonight/">New Tonight</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/streaming/">What to Stream</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/galleries/summer-new-shows-2018/">New Summer TV</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/sports/live-today/">Today's Live Sports</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+								</ul>
+					<ul class="header-item-submenu-col header-item-submenu-items">
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/sports/listings/">Sports Listings</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/sports/nfl/">NFL Schedule</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/sports/nhl/">NHL Schedule</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/sports/baseball/">MLB Schedule</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/sports/nba/">NBA Schedule</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/movies/listings/">Movies Listings</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+								</ul>
+			
+			<span class="header-item-submenu-col header-item-submenu-accessory">
+							<h2 class="section-header" data-section-id="section-header"><span class="section-header-text"><span class="section-header-accented-text"  data-section-id="section-header">Watch</span> This</span></h2>
+	
+	<a href="https://www.tvguide.com/videos/todays-top-videos/play/watch-this-now-the-voice-the-resident-magnum-p-i-the-good-doctor/" class="header-item-submenu-accessory-thumbnail">
+					<img src="https://cimg.tvgcdn.net/i/r/2018/09/19/54d4711e-6e5a-45ff-a386-e17c1dbc0949/resize/200x133/fafa1994ad3d0671e89166b68e656a95/180919-magnum-pi.jpg" class="header-item-submenu-accessory-thumbnail-img" srcset="https://cimg.tvgcdn.net/i/r/2018/09/19/54d4711e-6e5a-45ff-a386-e17c1dbc0949/resize/400x266/4bf3a41e57f7514321964e89317ed775/180919-magnum-pi.jpg 2x, https://cimg.tvgcdn.net/i/r/2018/09/19/54d4711e-6e5a-45ff-a386-e17c1dbc0949/resize/600x399/01f6666cc4f671f9c86cb0378d18d093/180919-magnum-pi.jpg 3x" alt="Jay Hernandez, &lt;i style=&quot;&quot;&gt;Magnum P.I.&lt;/i&gt;" width="200" height="133" title="180919-magnum-pi.jpg" />
+		
+		<span class="thumbnail-media-icon thumbnail-media-icon-sm thumbnail-media-icon-video"><span class="fa fa-fw fa-play"></span></span>	</a>
+
+		
+			<h6 class="header-item-submenu-accessory-subtitle">Watch This Now &ndash; Sept. 24, 2018</h6>
+	
+			<p class="header-item-submenu-accessory-body">Why you should watch Magnum P.I., The Resident and more</p>
+						</span>
+	</span>
+
+<span class="header-item-submenu-more">
+	<a href="#" onclick="return window.$tvg.navigation.expand(this)" class="header-item-submenu-more-link">More&nbsp;&nbsp;<span class="header-item-submenu-more-icon fa fa-chevron-down"></span></a>
+</span>	</li>
+		<li class="header-item">
+		<a href="https://www.tvguide.com/watchlist/" class="header-item-link">Watchlist</a>
+		<span class="header-item-submenu-separator"></span>
+<span class="header-item-submenu header-item-submenu-rows-3">
+	
+						<ul class="header-item-submenu-col header-item-submenu-items">
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/watchlist/">My Watchlist</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/news/?filter=watchlist">News</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/watchlist/about/">What is a Watchlist?</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+								</ul>
+			
+	</span>
+
+<span class="header-item-submenu-more">
+	<a href="#" onclick="return window.$tvg.navigation.expand(this)" class="header-item-submenu-more-link">More&nbsp;&nbsp;<span class="header-item-submenu-more-icon fa fa-chevron-down"></span></a>
+</span>	</li>
+		<li class="header-item header-item-last">
+		<a href="https://www.tvguide.com/news/" class="header-item-link">News &amp; Features</a>
+		<span class="header-item-submenu-separator"></span>
+<span class="header-item-submenu header-item-submenu-rows-5">
+	
+						<ul class="header-item-submenu-col header-item-submenu-items">
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/news/">News</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/news/fall-tv-schedule-1005618/">Fall TV Scorecard</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/coming-soon/">Coming Soon </a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/galleries/summer-new-shows-2018/">Summer Preview</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/special/emmys/">Emmys 2018</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+								</ul>
+					<ul class="header-item-submenu-col header-item-submenu-items">
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/tech/best-streaming-services/">Best Streaming Services</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/videos/">TV Guide Original Videos</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/galleries/">Photo Galleries</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/special/oscars/">2018 Academy Awards</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+									<li class="header-item-submenu-item">
+						<a  class="header-link" href="https://www.tvguide.com/special/golden-globes/">2018 Golden Globe Awards</a>
+						<span class="header-item-accessory"><span class="fa fa-chevron-right"></span></span>
+					</li>
+								</ul>
+			
+	</span>
+
+<span class="header-item-submenu-more">
+	<a href="#" onclick="return window.$tvg.navigation.expand(this)" class="header-item-submenu-more-link">More&nbsp;&nbsp;<span class="header-item-submenu-more-icon fa fa-chevron-down"></span></a>
+</span>	</li>
+						</ul>
+
+		<ul class="header-items-xs" data-section-id="navigation">
+			<li class="header-item-xs header-item-xs-first header-item-auth">
+									<a  class="header-item-xs-link header-item-auth-link header-item-auth-xs-link" href="https://www.tvguide.com/signin/"><span class="fa fa-user header-item-auth-icon-xs"></span></a>
+							</li>
+			<li class="header-item-xs header-item-xs-last header-item-xs-menu">
+				<a href="#" onclick="return window.$tvg.navigation.toggle()" class="header-item-xs-link header-item-xs-menu">
+					<span class="header-item-xs-menu-bars">
+						<span class="header-item-xs-menu-bar header-item-xs-menu-bar-top">
+							<span class="header-item-xs-menu-bar-inner header-item-xs-menu-bar-inner-top"></span>
+						</span>
+						<span class="header-item-xs-menu-bar header-item-xs-menu-bar-bottom">
+							<span class="header-item-xs-menu-bar-inner header-item-xs-menu-bar-inner-bottom"></span>
+						</span>
+					</span>
+				</a>
+			</li>
+		</ul>
+
+		<div class="header-social hide">
+			<ul>
+				<li class="header-item header-social-item header-social-item-facebook header-social-item-submenu-disabled">
+					<a href="https://facebook.com/TVGuide" class="header-social-icon">
+						<span class="fa fa-facebook-official"></span>
+					</a>
+
+					<span class="header-item-submenu-separator header-social-item-submenu-separator"></span>
+					<span class="header-item-submenu header-social-item-submenu">
+						<span class="header-item-social-container">
+							<div class="fb-like" data-href="https://facebook.com/TVGuide" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+						</span>
+					</span>
+				</li>
+				<li class="header-item header-social-item header-social-item-twitter header-social-item-submenu-disabled">
+					<a href="https://twitter.com/TVGuide" class="header-social-icon">
+						<span class="fa fa-twitter-square"></span>
+					</a>
+
+					<span class="header-item-submenu-separator header-social-item-submenu-separator"></span>
+					<span class="header-item-submenu header-social-item-submenu">
+						<span class="header-item-social-container">
+						<a href="https://twitter.com/TVGuide" class="twitter-follow-button" data-show-count="true">Follow @TVGuide</a>
+						</span>
+					</span>
+				</li>
+			</ul>
+		</div>
+
+		<div  class="header-sponsored ad-dfp" data-placement="layout.navigation" id="navbar_top"></div>	</div>
+</div>						<div id="content-wrap">
+												<div id="mantle_skin">
+																		<div id="adSkinLeft"></div><div id="adSkinRight"></div>
+							<div  class="skin-takeover-container ad-dfp" data-placement="layout.skin" id="skin"></div>											
+					<div class="content-before">
+												
+																					<div id="layout-header-ad-wrapper">
+									<div  data-placement="layout.header" id="leader_plus_top_variant_1" class="ad-dfp"></div>								</div>
+													
+													<div class="content-before-blank"></div>
+						
+													<div class="whats-hot-container"x>
+		<ul class="whats-hot" id="whats-hot" data-section-id="whats-hot"><li class="whats-hot-item"><a href="https://www.tvguide.com/news/100-best-shows-right-now/" class="whats-hot-item-image-link"><img src="https://cimg.tvgcdn.net/i/r/2018/09/10/db45e5df-6338-4175-95a5-96eea49df4c2/crop/170x170+0+0/thumbnail/80x80/f9ca495aac342b77810aeb65980fdd3c/best-100-tina-square.jpg" class="whats-hot-item-image" srcset="https://cimg.tvgcdn.net/i/r/2018/09/10/db45e5df-6338-4175-95a5-96eea49df4c2/crop/170x170+0+0/thumbnail/160x160/6fae0fec98f2747af105f8d35e45950d/best-100-tina-square.jpg 2x" width="80" height="80" /></a><a  title="The 100 Best Shows Right Now" class="whats-hot-item-title" href="https://www.tvguide.com/news/100-best-shows-right-now/">The 100 Best Shows Right Now</a></li><li class="whats-hot-item"><a href="https://www.tvguide.com/news/american-horror-story-timeline-how-the-seasons-are-connected/" class="whats-hot-item-image-link"><img src="https://cimg.tvgcdn.net/i/r/2018/09/05/0f4a0f95-edb1-47e4-8a21-ccdd9c77b01e/crop/170x170+0+0/thumbnail/80x80/812aa1dde8d63264851a49407c89d8f0/180904-ahs-square.jpg" class="whats-hot-item-image" srcset="https://cimg.tvgcdn.net/i/r/2018/09/05/0f4a0f95-edb1-47e4-8a21-ccdd9c77b01e/crop/170x170+0+0/thumbnail/160x160/17e7a6d0582edfca1a1980243d33f038/180904-ahs-square.jpg 2x" alt="Connie Britton, &lt;em&gt;American Horror Story: Murder House&lt;/em&gt;" width="80" height="80" title="Connie Britton, American Horror Story: Murder House" /></a><a  title="American Horror Story: A Definitive Timeline" class="whats-hot-item-title" href="https://www.tvguide.com/news/american-horror-story-timeline-how-the-seasons-are-connected/"><em>American Horror Story</em>: A Definitive Timeline</a></li><li class="whats-hot-item"><a href="https://www.tvguide.com/galleries/whats-new-on-hulu/" class="whats-hot-item-image-link"><img src="https://cimg.tvgcdn.net/i/r/2018/08/31/23334a97-1096-41bc-90a2-b27b7ba32800/crop/170x170+0+0/thumbnail/80x80/75f0d77d8aab97a32805f70ac46d41a2/180831-scott-glenn.jpg" class="whats-hot-item-image" srcset="https://cimg.tvgcdn.net/i/r/2018/08/31/23334a97-1096-41bc-90a2-b27b7ba32800/crop/170x170+0+0/thumbnail/160x160/3f1b7d8d10dcedb716ee50a8ba3c14fc/180831-scott-glenn.jpg 2x" alt="Scott Glenn, &lt;em&gt;Castle Rock&lt;/em&gt;" width="80" height="80" title="Scott Glenn, Castle Rock" /><span class="thumbnail-media-icon thumbnail-media-icon-xs thumbnail-media-icon-gallery"><span class="fa fa-fw fa-camera"></span></span></a><a  title="What&#039;s New on Hulu" class="whats-hot-item-title" href="https://www.tvguide.com/galleries/whats-new-on-hulu/">What's New on Hulu</a></li><li class="whats-hot-item"><a href="https://www.tvguide.com/news/netflix-best-young-adult-movies/" class="whats-hot-item-image-link"><img src="https://cimg.tvgcdn.net/i/r/2018/08/31/2c5ba89b-e931-4bad-b98e-65a0276e0417/crop/170x170+0+0/thumbnail/80x80/b23ea493108d326715a0d7a8b6f8f8e6/180831-lana-condor.jpg" class="whats-hot-item-image" srcset="https://cimg.tvgcdn.net/i/r/2018/08/31/2c5ba89b-e931-4bad-b98e-65a0276e0417/crop/170x170+0+0/thumbnail/160x160/d19273747bcc649e09fb4cbdad871d32/180831-lana-condor.jpg 2x" alt="Lana Condor,&lt;em&gt; To All the Boys I&#039;ve Loved Before&lt;/em&gt;" width="80" height="80" title="Lana Condor, To All the Boys I&#039;ve Loved Before" /></a><a  title="The Best Young Adult Movies on Netflix" class="whats-hot-item-title" href="https://www.tvguide.com/news/netflix-best-young-adult-movies/">The Best Young Adult Movies on Netflix</a></li><li class="whats-hot-item"><a href="https://www.tvguide.com/news/mayans-mc-sons-of-anarchy-spinoff-character-guide/" class="whats-hot-item-image-link"><img src="https://cimg.tvgcdn.net/i/r/2018/08/31/aa79a7e3-0ae6-425c-a662-349ce5a2e660/crop/170x170+0+0/thumbnail/80x80/30853f3412d71714b1e71f0f506476ce/180831-mayans.jpg" class="whats-hot-item-image" srcset="https://cimg.tvgcdn.net/i/r/2018/08/31/aa79a7e3-0ae6-425c-a662-349ce5a2e660/crop/170x170+0+0/thumbnail/160x160/9788b6234c63806de3f1fa7946bf5a36/180831-mayans.jpg 2x" alt="MAYANS M.C. -- Pictured: JD Pardo as EZ Reyes. CR: James Minchin/FX" width="80" height="80" title="MAYANS M.C. -- Pictured: JD Pardo as EZ Reyes. CR: James Minchin/FX" /></a><a  title="Who&#039;s Who on Mayans M.C." class="whats-hot-item-title" href="https://www.tvguide.com/news/mayans-mc-sons-of-anarchy-spinoff-character-guide/">Who's Who on <em>Mayans M.C.</em></a></li></ul>
+
+		<a href="#" class="whats-hot-navigation whats-hot-navigation-prev" id="whats-hot-navigation-prev"><span class="fa fa-fw fa-chevron-left"></span></a>
+		<a href="#" class="whats-hot-navigation whats-hot-navigation-next" id="whats-hot-navigation-next"><span class="fa fa-fw fa-chevron-right"></span></a>
+	</div>
+
+						
+																	</div>
+
+					<div class="content-wrapper">
+						<div class="container" id="content">
+									<div class="content-main-right-rail-row">
+			<h2 class="section-header" data-section-id="section-header"><span class="section-header-indicator"></span><span class="section-header-text"><span class="section-header-accented-text"  data-section-id="section-header">TV</span> Listings</span></h2>
+	<div class="nav-tabs" role="tablist" data-section-id="navigation-tabs"><ul class="nav-tab-list"><li  class="nav-tab"><a href="https://www.tvguide.com/listings/" class="nav-tab-link">TV Listings</a><span class="nav-tab-active-bar"></span></li><li  class="nav-tab  active"><a href="https://www.tvguide.com/new-tonight/" class="nav-tab-link">New Tonight</a><span class="nav-tab-active-bar"></span></li><li  class="nav-tab"><a href="https://www.tvguide.com/sports/live-today/" class="nav-tab-link">Today's Live Sports</a><span class="nav-tab-active-bar"></span></li><li  class="nav-tab streaming-tab"><a href="https://www.tvguide.com/watch-this-now/" class="nav-tab-link"><i class="fa fa-location-arrow"></i> Watch This Now!</a><span class="nav-tab-active-bar"></span></li><li class="nav-tab-end-spacer"></li></ul></div>		<div class="content-main content-main-with-right-rail" data-section-id="main-content">
+					
+<h5 class="section-subheader" data-section-id="section-subheader"><span class="section-subheader-text"><span class="section-subheader-accented-text">Provider:</span> <span data-name="provider">Eastern (ET)</span></span><span class="section-subheader-show-all section-subheader-show-all-left-align"><span class="provider-change-text" data-button="provider"><span class="fa fa-map-marker text-accent"></span> Change</span></span></h5>
+	<div class="listings-tonight-header button-picker-group">
+					<div class="listings-tonight-header-time button-picker-group-align-left">
+				<div class="button-picker no-hover" data-section-id="button-picker"><ul class="button-picker-options button-picker-options-count-4 no-hover"><li class="button-picker-options-chevron"><span class="fa fa-chevron-down"></span></li><li class="button-picker-option button-picker-option-active">8:00PM</li>
+																													<li  class="button-picker-option"><a href="#8:30PM">8:30PM</a></li>
+																								<li  class="button-picker-option"><a href="#9:00PM">9:00PM</a></li>
+																								<li  class="button-picker-option"><a href="#10:00PM">10:00PM</a></li>
+																								<li  class="button-picker-option"><a href="#10:30PM">10:30PM</a></li>
+															</ul><div class="button-picker-divider"></div></div>
+			</div>
+		
+		<div class="listings-tonight-header-title button-picker-group-align-center">
+			<div class="button-picker no-hover" data-section-id="button-picker"><ul class="button-picker-options button-picker-options-count-2 no-hover"><li class="button-picker-options-chevron"><span class="fa fa-chevron-down"></span></li><li class="button-picker-option button-picker-option-active">All Shows</li>
+									<li  class="button-picker-option button-picker-option-selected">Watchlist</li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/trending-tonight/">Trending</a></li>
+							</ul><div class="button-picker-divider"></div></div>
+		</div>
+
+		<div class="listings-tonight-header-date button-picker-group-align-right">
+			<div class="button-picker no-hover" data-section-id="button-picker"><ul class="button-picker-options button-picker-options-count-6 no-hover"><li class="button-picker-options-chevron"><span class="fa fa-chevron-down"></span></li><li class="button-picker-option button-picker-option-active">Today</li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/new-tonight/all-shows/tomorrow/">Tomorrow</a></li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/new-tonight/all-shows/september-26/">Wed, Sep 26</a></li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/new-tonight/all-shows/september-27/">Thu, Sep 27</a></li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/new-tonight/all-shows/september-28/">Fri, Sep 28</a></li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/new-tonight/all-shows/september-29/">Sat, Sep 29</a></li>
+									<li  class="button-picker-option"><a href="https://www.tvguide.com/new-tonight/all-shows/september-30/">Sun, Sep 30</a></li>
+							</ul><div class="button-picker-divider"></div></div>
+		</div>
+	</div>
+
+								<div class="listings-tonight-programs-header listings-tonight-programs-header-first">
+				8:00PM
+			</div>
+
+			<span id="8:00PM" class="listings-scroll-to-time"></span>
+
+			<ul class="listings-program-list" data-section-id="program-list">
+			<li class="listings-program listings-program-first">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/dancing-with-the-stars/episode-1-season-27/2701-premiere/191470/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/565/thumbs/118301565_168x224.jpg" class="show-card-image" alt="Dancing with the Stars" title="Dancing with the Stars" srcset="https://static.tvgcdn.net/feed/1/565/thumbs/118301565_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/565/thumbs/118301565_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/dancing-with-the-stars/191470/" class="listings-program-link">Dancing With the Stars</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/dancing-with-the-stars/episode-1-season-27/2701-premiere/191470/" class="listings-program-link">2701 (Premiere)</a>
+
+													<span class="listings-program-episode-chronology">(Season 27 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | ABC</p>
+				<p class="listings-program-description">The 27th-season opener begins with 13 celebrities, including Mary Lou Retton; DeMarcus Ware; John Schneider; Nancy McKeon; Bobby Bones; and Tinashe.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="191470" data-type="tvshow" data-name="Dancing with the Stars"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="191470" data-type="tvshow" data-program="36383050" data-url="https://www.tvguide.com/tvshows/dancing-with-the-stars/episode-1-season-27/2701-premiere/191470/" data-title="Dancing with the Stars"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">182 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/episode-10-season-5/mind-the-gap/687058/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/151/thumbs/118556151_168x224.jpg" class="show-card-image" alt="Love &amp; Hip Hop Hollywood" title="Love &amp; Hip Hop Hollywood" srcset="https://static.tvgcdn.net/feed/1/151/thumbs/118556151_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/151/thumbs/118556151_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/687058/" class="listings-program-link">Love &amp; Hip Hop Hollywood</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/episode-10-season-5/mind-the-gap/687058/" class="listings-program-link">Mind the Gap</a>
+
+													<span class="listings-program-episode-chronology">(Season 5 | Episode 10)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | VH1</p>
+				<p class="listings-program-description">The ladies arrive in London. Scandal follows Teairra across the pond. La&#039;Britney shares a rumor about Moniece and Kimberly. Bridget&#039;s press junket goes left. Paris is put on the defensive.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="687058" data-type="tvshow" data-name="Love &amp; Hip Hop Hollywood"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="687058" data-type="tvshow" data-program="36437699" data-url="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/episode-10-season-5/mind-the-gap/687058/" data-title="Love &amp; Hip Hop Hollywood"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">14 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/penn-teller-fool-us/episode-12-season-5/never-trust-a-magician/661098/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/589/thumbs/118443589_168x224.jpg" class="show-card-image" alt="Penn &amp; Teller: Fool Us" title="Penn &amp; Teller: Fool Us" srcset="https://static.tvgcdn.net/feed/1/589/thumbs/118443589_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/589/thumbs/118443589_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/penn-teller-fool-us/661098/" class="listings-program-link">Penn &amp; Teller: Fool Us</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/penn-teller-fool-us/episode-12-season-5/never-trust-a-magician/661098/" class="listings-program-link">Never Trust a Magician</a>
+
+													<span class="listings-program-episode-chronology">(Season 5 | Episode 12)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | CW</p>
+				<p class="listings-program-description">Magicians from around the world perform their best trick to try and fool Penn &amp; Teller, who will get to see the trick only once and have to immediately try to work it out. Anyone who succeeds wins the right to perform with Penn &amp; Teller in their celebrated show at the Rio Hotel &amp; Casino in Las Vegas.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="661098" data-type="tvshow" data-name="Penn &amp; Teller: Fool Us"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="661098" data-type="tvshow" data-program="36349320" data-url="https://www.tvguide.com/tvshows/penn-teller-fool-us/episode-12-season-5/never-trust-a-magician/661098/" data-title="Penn &amp; Teller: Fool Us"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">30 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/the-big-bang-theory/episode-1-season-12/the-conjugal-configuration/288041/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/992/thumbs/118568992_168x224.jpg" class="show-card-image" alt="The Big Bang Theory" title="The Big Bang Theory" srcset="https://static.tvgcdn.net/feed/1/992/thumbs/118568992_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/992/thumbs/118568992_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/the-big-bang-theory/288041/" class="listings-program-link">The Big Bang Theory</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/the-big-bang-theory/episode-1-season-12/the-conjugal-configuration/288041/" class="listings-program-link">The Conjugal Configuration</a>
+
+													<span class="listings-program-episode-chronology">(Season 12 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | CBS</p>
+				<p class="listings-program-description">In the Season 12 premiere, Sheldon and Amy&#039;s honeymoon runs aground in New York, while Penny and Leonard discover they are uncomfortably similar to Amy&#039;s parents, Mr. and Mrs. Fowler. Also, Koothrappali insults physicist Neil deGrasse Tyson and starts a Twitter war.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="288041" data-type="tvshow" data-name="The Big Bang Theory"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="288041" data-type="tvshow" data-program="32552290" data-url="https://www.tvguide.com/tvshows/the-big-bang-theory/episode-1-season-12/the-conjugal-configuration/288041/" data-title="The Big Bang Theory"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">449 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/the-resident/episode-1-season-2/00-42-30/1041587/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/543/thumbs/118550543_168x224.jpg" class="show-card-image" alt="The Resident" title="The Resident" srcset="https://static.tvgcdn.net/feed/1/543/thumbs/118550543_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/543/thumbs/118550543_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/the-resident/1041587/" class="listings-program-link">The Resident</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/the-resident/episode-1-season-2/00-42-30/1041587/" class="listings-program-link">00: 42: 30</a>
+
+													<span class="listings-program-episode-chronology">(Season 2 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | FOX</p>
+				<p class="listings-program-description">In the Season 2 premiere, Chastain Memorial Hospital suffers a blackout that requires the staff to treat their patients without the help of any technology. Bell orders the staff to stop accepting new patients and transfer those on life support, but when a child in need is rushed to the ER, Conrad and Devon go against the mandate. Meanwhile, Mina and Austin are tasked with performing heart surgery on a premature baby, despite the lack of power, and Nic works to organize the staff and patients.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1041587" data-type="tvshow" data-name="The Resident"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1041587" data-type="tvshow" data-program="35554135" data-url="https://www.tvguide.com/tvshows/the-resident/episode-1-season-2/00-42-30/1041587/" data-title="The Resident"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">504 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/the-voice/episode-1-season-15/the-blind-auditions-season-premiere/309948/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/191/thumbs/118573191_168x224.jpg" class="show-card-image" alt="The Voice" title="The Voice" srcset="https://static.tvgcdn.net/feed/1/191/thumbs/118573191_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/191/thumbs/118573191_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/the-voice/309948/" class="listings-program-link">The Voice</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/the-voice/episode-1-season-15/the-blind-auditions-season-premiere/309948/" class="listings-program-link">The Blind Auditions Season Premiere</a>
+
+													<span class="listings-program-episode-chronology">(Season 15 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | NBC</p>
+				<p class="listings-program-description">Season 15 commences with blind auditions.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="309948" data-type="tvshow" data-name="The Voice"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="309948" data-type="tvshow" data-program="35562396" data-url="https://www.tvguide.com/tvshows/the-voice/episode-1-season-15/the-blind-auditions-season-premiere/309948/" data-title="The Voice"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">245 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/sports/wrestling/game/wwe-monday-night-raw-9-24-2018-205626/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/921/thumbs/117581921_168x224.jpg" class="show-card-image" alt="WWE Monday Night Raw" title="WWE Monday Night Raw" srcset="https://static.tvgcdn.net/feed/1/921/thumbs/117581921_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/921/thumbs/117581921_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/wwe-monday-night-raw/205626/" class="listings-program-link">WWE Monday Night Raw</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/sports/wrestling/game/wwe-monday-night-raw-9-24-2018-205626/" class="listings-program-link">09-24-2018</a>
+
+													<span class="listings-program-episode-chronology">(Season 26 | Episode 39)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:00PM | USA</p>
+				<p class="listings-program-description">More battle lines are drawn between The Shield and Braun Strowman, Drew McIntyre and Dolph Ziggler. From Denver.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="205626" data-type="tvshow" data-name="WWE Monday Night Raw"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="205626" data-type="tvshow" data-program="36016081" data-url="https://www.tvguide.com/sports/wrestling/game/wwe-monday-night-raw-9-24-2018-205626/" data-title="WWE Monday Night Raw"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">27 Watching</span></span>
+				</div>
+			</div>
+		</li>
+	</ul>					<div class="listings-tonight-programs-header">
+				8:30PM
+			</div>
+
+			<span id="8:30PM" class="listings-scroll-to-time"></span>
+
+			<ul class="listings-program-list" data-section-id="program-list">
+			<li class="listings-program listings-program-first">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/young-sheldon/episode-1-season-2/a-high-pitched-buzz-and-training-wheels/1047493/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/697/thumbs/118568697_168x224.jpg" class="show-card-image" alt="Young Sheldon" title="Young Sheldon" srcset="https://static.tvgcdn.net/feed/1/697/thumbs/118568697_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/697/thumbs/118568697_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/young-sheldon/1047493/" class="listings-program-link">Young Sheldon</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/young-sheldon/episode-1-season-2/a-high-pitched-buzz-and-training-wheels/1047493/" class="listings-program-link">A High-Pitched Buzz and Training Wheels</a>
+
+													<span class="listings-program-episode-chronology">(Season 2 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">8:31PM | CBS</p>
+				<p class="listings-program-description">The Season 2 premiere: Sheldon dismantles the refrigerator to stop an annoying hum, and then gets a paper route to pay for the repairs.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1047493" data-type="tvshow" data-name="Young Sheldon"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1047493" data-type="tvshow" data-program="36351107" data-url="https://www.tvguide.com/tvshows/young-sheldon/episode-1-season-2/a-high-pitched-buzz-and-training-wheels/1047493/" data-title="Young Sheldon"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">296 Watching</span></span>
+				</div>
+			</div>
+		</li>
+	</ul>					<div class="listings-tonight-programs-header">
+				9:00PM
+			</div>
+
+			<span id="9:00PM" class="listings-scroll-to-time"></span>
+
+			<ul class="listings-program-list" data-section-id="program-list">
+			<li class="listings-program listings-program-first">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/9-1-1/episode-2-season-2/71/1098828/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/148/thumbs/118552148_168x224.jpg" class="show-card-image" alt="9-1-1" title="9-1-1" srcset="https://static.tvgcdn.net/feed/1/148/thumbs/118552148_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/148/thumbs/118552148_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/9-1-1/1098828/" class="listings-program-link">9-1-1</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/9-1-1/episode-2-season-2/71/1098828/" class="listings-program-link">7.1</a>
+
+													<span class="listings-program-episode-chronology">(Season 2 | Episode 2)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | FOX</p>
+				<p class="listings-program-description">A massive earthquake rocks Los Angeles, and the first responders rush to rescue victims from a crumbling high-rise hotel both under the rubble and high above the ground. Athena must deal with wreckage from a collapsed freeway overpass and Maddie is thrown into the fire as she faces her first crisis as a 911 dispatcher.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1098828" data-type="tvshow" data-name="9-1-1"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1098828" data-type="tvshow" data-program="36356874" data-url="https://www.tvguide.com/tvshows/9-1-1/episode-2-season-2/71/1098828/" data-title="9-1-1"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">440 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/better-call-saul/episode-8-season-4/coushatta/590385/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/493/thumbs/118462493_168x224.jpg" class="show-card-image" alt="Better Call Saul" title="Better Call Saul" srcset="https://static.tvgcdn.net/feed/1/493/thumbs/118462493_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/493/thumbs/118462493_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/better-call-saul/590385/" class="listings-program-link">Better Call Saul</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/better-call-saul/episode-8-season-4/coushatta/590385/" class="listings-program-link">Coushatta</a>
+
+													<span class="listings-program-episode-chronology">(Season 4 | Episode 8)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | AMC</p>
+				<p class="listings-program-description">Jimmy goes to great lengths to right a wrong, as Kim pulls out all the stops for a case. Mike lets his team blow off steam. Nacho receives a visitor.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="590385" data-type="tvshow" data-name="Better Call Saul"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="590385" data-type="tvshow" data-program="36316077" data-url="https://www.tvguide.com/tvshows/better-call-saul/episode-8-season-4/coushatta/590385/" data-title="Better Call Saul"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">80 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/jill-and-jessa-counting-on/episode-9-season-8/jingers-double-surprise/880947/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/270/thumbs/118465270_168x224.jpg" class="show-card-image" alt="Jill and Jessa: Counting On" title="Jill and Jessa: Counting On" srcset="https://static.tvgcdn.net/feed/1/270/thumbs/118465270_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/270/thumbs/118465270_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/jill-and-jessa-counting-on/880947/" class="listings-program-link">Counting On</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/jill-and-jessa-counting-on/episode-9-season-8/jingers-double-surprise/880947/" class="listings-program-link">Jinger&#039;s Double Surprise</a>
+
+													<span class="listings-program-episode-chronology">(Season 8 | Episode 9)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | TLC</p>
+				<p class="listings-program-description">Jinger and Jeremy throw a gender reveal party for the family and the family has a surprise of their own for Jinger; Josiah and Lauren celebrate their upcoming wedding with a game of giant foosball; and Joe and Kendra welcome their baby boy.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="880947" data-type="tvshow" data-name="Jill and Jessa: Counting On"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="880947" data-type="tvshow" data-program="36230457" data-url="https://www.tvguide.com/tvshows/jill-and-jessa-counting-on/episode-9-season-8/jingers-double-surprise/880947/" data-title="Jill and Jessa: Counting On"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">23 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="/tvshows/ghost-adventures/295609/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/441/thumbs/115398441_168x224.jpg" class="show-card-image" alt="Ghost Adventures" title="Ghost Adventures" srcset="https://static.tvgcdn.net/feed/1/441/thumbs/115398441_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/441/thumbs/115398441_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/ghost-adventures/295609/" class="listings-program-link">Ghost Adventures</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/ghost-adventures/295609/" class="listings-program-link">Haunted Castles</a>
+
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | TRAVEL</p>
+				<p class="listings-program-description">Zak and the crew investigate a Missouri mansion infected with violent spirits. Then the guys head to Washington State to investigate aggressive paranormal activity at a historic hotel.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="295609" data-type="tvshow" data-name="Ghost Adventures"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="295609" data-type="tvshow" data-program="36312410" data-url="https://www.tvguide.com/tvshows/ghost-adventures/295609/" data-title="Ghost Adventures"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">12 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/halloween-baking-championship/episode-1-season-4/hidden-halloween-horrors/845373/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/102/thumbs/116264102_168x224.jpg" class="show-card-image" alt="Halloween Baking Championship" title="Halloween Baking Championship" srcset="https://static.tvgcdn.net/feed/1/102/thumbs/116264102_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/102/thumbs/116264102_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/halloween-baking-championship/845373/" class="listings-program-link">Halloween Baking Championship</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/halloween-baking-championship/episode-1-season-4/hidden-halloween-horrors/845373/" class="listings-program-link">Hidden Halloween Horrors</a>
+
+													<span class="listings-program-episode-chronology">(Season 4 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | FOOD</p>
+				<p class="listings-program-description">In the pre-heat, the eight Halloween bakers weave spider web desserts with creatures trapped inside. In the main heat, wily witch hunter John Henson challenges the bakers to create melting desserts.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="845373" data-type="tvshow" data-name="Halloween Baking Championship"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="845373" data-type="tvshow" data-program="36329190" data-url="https://www.tvguide.com/tvshows/halloween-baking-championship/episode-1-season-4/hidden-halloween-horrors/845373/" data-title="Halloween Baking Championship"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">45 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="/tvshows/live-pd-presents-women-on-patrol/1192094/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/374/thumbs/118358374_168x224.jpg" class="show-card-image" alt="Live PD Presents: Women on Patrol" title="Live PD Presents: Women on Patrol" srcset="https://static.tvgcdn.net/feed/1/374/thumbs/118358374_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/374/thumbs/118358374_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/live-pd-presents-women-on-patrol/1192094/" class="listings-program-link">Live PD Presents: Women on Patrol</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/live-pd-presents-women-on-patrol/1192094/" class="listings-program-link">Episode 123</a>
+
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | LIFE</p>
+				<p class="listings-program-description">An unflinching look at female law enforcement officers across the country is presented.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1192094" data-type="tvshow" data-name="Live PD Presents: Women on Patrol"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1192094" data-type="tvshow" data-program="36360850" data-url="https://www.tvguide.com/tvshows/live-pd-presents-women-on-patrol/1192094/" data-title="Live PD Presents: Women on Patrol"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">6 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/love-it-or-list-it/episode-10-season-14/love-it-or-list-it/332552/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/35/thumbs/115394035_168x224.jpg" class="show-card-image" alt="Love It or List It" title="Love It or List It" srcset="https://static.tvgcdn.net/feed/1/35/thumbs/115394035_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/35/thumbs/115394035_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/love-it-or-list-it/332552/" class="listings-program-link">Love It or List It</a></h3>
+												<p class="listings-program-airing-info">9:00PM | HGTV</p>
+				<p class="listings-program-description">A city-raised husband has had all he can take in their family home on a horse farm. It is a dream place for his wife who loves horses, but she admits the home is a bit dated.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="332552" data-type="tvshow" data-name="Love It or List It"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="332552" data-type="tvshow" data-program="36327123" data-url="https://www.tvguide.com/tvshows/love-it-or-list-it/episode-10-season-14/love-it-or-list-it/332552/" data-title="Love It or List It"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">30 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/magnum-pi/episode-1-season-1/i-saw-the-sun-rise/1195357/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/62/thumbs/118534062_168x224.jpg" class="show-card-image" alt="Magnum P.I." title="Magnum P.I." srcset="https://static.tvgcdn.net/feed/1/62/thumbs/118534062_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/62/thumbs/118534062_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/magnum-pi/1195357/" class="listings-program-link">Magnum P.I.</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/magnum-pi/episode-1-season-1/i-saw-the-sun-rise/1195357/" class="listings-program-link">I Saw the Sun Rise</a>
+
+													<span class="listings-program-episode-chronology">(Season 1 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | CBS</p>
+				<p class="listings-program-description">In the premiere, decorated former Navy SEAL Thomas Magnum returns home from Afghanistan and repurposes his military skills to become a private investigator.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1195357" data-type="tvshow" data-name="Magnum P.I."><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1195357" data-type="tvshow" data-program="35534868" data-url="https://www.tvguide.com/tvshows/magnum-pi/episode-1-season-1/i-saw-the-sun-rise/1195357/" data-title="Magnum P.I."><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">307 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/planet-earth-yellowstone/episode-3-season-1/autumn/1222245/" class="show-card" data-section-id="showcard" >
+
+			<span class="show-card-image show-card-image-placeholder">
+			<img src="//static-3.tvgcdn.net/www/img/tvg-showcard-placeholder.jpg">
+		</span>
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/planet-earth-yellowstone/1222245/" class="listings-program-link">Planet Earth: Yellowstone</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/planet-earth-yellowstone/episode-3-season-1/autumn/1222245/" class="listings-program-link">Autumn</a>
+
+													<span class="listings-program-episode-chronology">(Season 1 | Episode 3)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | BBC</p>
+				<p class="listings-program-description">Winter is around the corner, leaving just two months for the animals to get ready or get out. Elk move down from the mountains to find food, and beavers repair dams before ice freezes their ponds.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1222245" data-type="tvshow" data-name="Planet Earth: Yellowstone"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1222245" data-type="tvshow" data-program="36085169" data-url="https://www.tvguide.com/tvshows/planet-earth-yellowstone/episode-3-season-1/autumn/1222245/" data-title="Planet Earth: Yellowstone"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">8 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/shifting-gears-with-aaron-kaufman/episode-1-season-2/rally-time/1161865/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/868/thumbs/118605868_168x224.jpg" class="show-card-image" alt="Shifting Gears with Aaron Kaufman" title="Shifting Gears with Aaron Kaufman" srcset="https://static.tvgcdn.net/feed/1/868/thumbs/118605868_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/868/thumbs/118605868_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/shifting-gears-with-aaron-kaufman/1161865/" class="listings-program-link">Shifting Gears With Aaron Kaufman</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/shifting-gears-with-aaron-kaufman/episode-1-season-2/rally-time/1161865/" class="listings-program-link">Rally Time</a>
+
+													<span class="listings-program-episode-chronology">(Season 2 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | DSC</p>
+				<p class="listings-program-description">Aaron Kaufman decides to take a stab at building and racing a rally car. Aaron and his builders try to navigate this fast-paced world they know nothing about, where winning is rare for novices and losing can be fatal.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1161865" data-type="tvshow" data-name="Shifting Gears with Aaron Kaufman"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1161865" data-type="tvshow" data-program="36300568" data-url="https://www.tvguide.com/tvshows/shifting-gears-with-aaron-kaufman/episode-1-season-2/rally-time/1161865/" data-title="Shifting Gears with Aaron Kaufman"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">9 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="/tvshows/teen-mom/299523/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/485/thumbs/115893485_168x224.jpg" class="show-card-image" alt="Teen Mom" title="Teen Mom" srcset="https://static.tvgcdn.net/feed/1/485/thumbs/115893485_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/485/thumbs/115893485_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/teen-mom/299523/" class="listings-program-link">Teen Mom</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/teen-mom/299523/" class="listings-program-link">Meet the New Moms</a>
+
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | MTV</p>
+				<p class="listings-program-description">Featuring Bristol Palin; and Cheyenne Floyd.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="299523" data-type="tvshow" data-name="Teen Mom"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="299523" data-type="tvshow" data-program="36415087" data-url="https://www.tvguide.com/tvshows/teen-mom/299523/" data-title="Teen Mom"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">8 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="/tvshows/the-real-housewives-of-orange-county/278727/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/780/thumbs/118423780_168x224.jpg" class="show-card-image" alt="The Real Housewives of Orange County" title="The Real Housewives of Orange County" srcset="https://static.tvgcdn.net/feed/1/780/thumbs/118423780_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/780/thumbs/118423780_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/the-real-housewives-of-orange-county/278727/" class="listings-program-link">The Real Housewives of Orange County</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/the-real-housewives-of-orange-county/278727/" class="listings-program-link">Italian Night Fight</a>
+
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | BRAVO</p>
+				<p class="listings-program-description"></p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="278727" data-type="tvshow" data-name="The Real Housewives of Orange County"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="278727" data-type="tvshow" data-program="36447591" data-url="https://www.tvguide.com/tvshows/the-real-housewives-of-orange-county/278727/" data-title="The Real Housewives of Orange County"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">29 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/whose-line-is-it-anyway/episode-16-season-14/gary-anthony-williams-4/195603/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/999/thumbs/118605999_168x224.jpg" class="show-card-image" alt="Whose Line Is It Anyway?" title="Whose Line Is It Anyway?" srcset="https://static.tvgcdn.net/feed/1/999/thumbs/118605999_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/999/thumbs/118605999_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/whose-line-is-it-anyway/195603/" class="listings-program-link">Whose Line Is It Anyway?</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/whose-line-is-it-anyway/episode-16-season-14/gary-anthony-williams-4/195603/" class="listings-program-link">Gary Anthony Williams 4</a>
+
+													<span class="listings-program-episode-chronology">(Season 14 | Episode 16)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:00PM | CW</p>
+				<p class="listings-program-description">Gary Anthony Williams guests on the improvisational-comedy showcase in which the performers wing it unscripted and unrehearsed.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="195603" data-type="tvshow" data-name="Whose Line Is It Anyway?"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="195603" data-type="tvshow" data-program="36349325" data-url="https://www.tvguide.com/tvshows/whose-line-is-it-anyway/episode-16-season-14/gary-anthony-williams-4/195603/" data-title="Whose Line Is It Anyway?"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">21 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="/tvshows/love-hip-hop-hollywood/687058/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/151/thumbs/118556151_168x224.jpg" class="show-card-image" alt="Love &amp; Hip Hop Hollywood" title="Love &amp; Hip Hop Hollywood" srcset="https://static.tvgcdn.net/feed/1/151/thumbs/118556151_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/151/thumbs/118556151_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/687058/" class="listings-program-link">Love &amp; Hip Hop Hollywood</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/687058/" class="listings-program-link">Ray J &amp; Princess&#039; Labor of Love</a>
+
+											</h4>
+								<p class="listings-program-airing-info">9:01PM | VH1</p>
+				<p class="listings-program-description">Ray J and Princess share their amazing journey to parenthood, including all the milestones leading up to the birth of baby girl Norwood.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="687058" data-type="tvshow" data-name="Love &amp; Hip Hop Hollywood"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="687058" data-type="tvshow" data-program="36360872" data-url="https://www.tvguide.com/tvshows/love-hip-hop-hollywood/687058/" data-title="Love &amp; Hip Hop Hollywood"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">6 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/american-pickers-bonus-buys/episode-75-season-1/snow-job/991077/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/233/thumbs/118567233_168x224.jpg" class="show-card-image" alt="American Pickers: Bonus Buys" title="American Pickers: Bonus Buys" srcset="https://static.tvgcdn.net/feed/1/233/thumbs/118567233_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/233/thumbs/118567233_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/american-pickers-bonus-buys/991077/" class="listings-program-link">American Pickers: Bonus Buys</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/american-pickers-bonus-buys/episode-75-season-1/snow-job/991077/" class="listings-program-link">Snow Job</a>
+
+													<span class="listings-program-episode-chronology">(Season 1 | Episode 75)</span>
+											</h4>
+								<p class="listings-program-airing-info">9:02PM | HIST</p>
+				<p class="listings-program-description">Enhanced episode. In the middle of a Minnesota blizzard, Mike and Frank face the frost to uncover a rare pair of trucks on farmer Jim&#039;s spread.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="991077" data-type="tvshow" data-name="American Pickers: Bonus Buys"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="991077" data-type="tvshow" data-program="36316164" data-url="https://www.tvguide.com/tvshows/american-pickers-bonus-buys/episode-75-season-1/snow-job/991077/" data-title="American Pickers: Bonus Buys"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">7 Watching</span></span>
+				</div>
+			</div>
+		</li>
+	</ul>					<div class="listings-tonight-programs-header">
+				10:00PM
+			</div>
+
+			<span id="10:00PM" class="listings-scroll-to-time"></span>
+
+			<ul class="listings-program-list" data-section-id="program-list">
+			<li class="listings-program listings-program-first">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/bravos-play-by-play/episode-1-season-1/episode-101/1230770/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/643/thumbs/118591643_168x224.jpg" class="show-card-image" alt="Bravo&#039;s Play By Play" title="Bravo&#039;s Play By Play" srcset="https://static.tvgcdn.net/feed/1/643/thumbs/118591643_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/643/thumbs/118591643_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/bravos-play-by-play/1230770/" class="listings-program-link">Bravo&#039;s Play by Play</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/bravos-play-by-play/episode-1-season-1/episode-101/1230770/" class="listings-program-link">Episode 101</a>
+
+													<span class="listings-program-episode-chronology">(Season 1 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | BRAVO</p>
+				<p class="listings-program-description">Jerry O&#039;Connell hosts a panel of Bravo super-fans to break down the week&#039;s events in the Bravo-verse. Andy Cohen and Rebecca Romijn guest with strong opinions and deep analysis on everything from housewives drama to the things Andy just can&#039;t say.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1230770" data-type="tvshow" data-name="Bravo&#039;s Play By Play"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1230770" data-type="tvshow" data-program="36235742" data-url="https://www.tvguide.com/tvshows/bravos-play-by-play/episode-1-season-1/episode-101/1230770/" data-title="Bravo&#039;s Play By Play"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">8 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/bull/episode-1-season-3/the-ground-beneath-their-feet/917701/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/620/thumbs/118563620_168x224.jpg" class="show-card-image" alt="Bull" title="Bull" srcset="https://static.tvgcdn.net/feed/1/620/thumbs/118563620_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/620/thumbs/118563620_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/bull/917701/" class="listings-program-link">Bull</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/bull/episode-1-season-3/the-ground-beneath-their-feet/917701/" class="listings-program-link">The Ground Beneath Their Feet</a>
+
+													<span class="listings-program-episode-chronology">(Season 3 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | CBS</p>
+				<p class="listings-program-description">In the Season 3 premiere, Bull returns to work following his heart attack with a new rich client for the firm to represent: an insurance company being sued by a dying mother for denying coverage of her liver transplant.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="917701" data-type="tvshow" data-name="Bull"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="917701" data-type="tvshow" data-program="35911665" data-url="https://www.tvguide.com/tvshows/bull/episode-1-season-3/the-ground-beneath-their-feet/917701/" data-title="Bull"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">380 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/house-hunters/episode-8-season-151/on-the-level-in-mississippi/299333/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/299/thumbs/51485299_168x224.jpg" class="show-card-image" alt="House Hunters" title="House Hunters" srcset="https://static.tvgcdn.net/feed/1/299/thumbs/51485299_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/299/thumbs/51485299_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/house-hunters/299333/" class="listings-program-link">House Hunters</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/house-hunters/episode-8-season-151/on-the-level-in-mississippi/299333/" class="listings-program-link">On the Level in Mississippi</a>
+
+													<span class="listings-program-episode-chronology">(Season 151 | Episode 8)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | HGTV</p>
+				<p class="listings-program-description">A doctor and his wife are planting roots in Vicksburg, Mississippi. They need a large house with room to grow, but it won&#039;t be easy staying on budget with her odd aversion to front-facing garages and his insistence on a perfectly level backyard.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="299333" data-type="tvshow" data-name="House Hunters"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="299333" data-type="tvshow" data-program="36327115" data-url="https://www.tvguide.com/tvshows/house-hunters/episode-8-season-151/on-the-level-in-mississippi/299333/" data-title="House Hunters"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">18 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/manifest/episode-1-season-1/pilot/1195288/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1195288-manifest_168x224.png" class="show-card-image" alt="Manifest" title="Manifest" srcset="https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1195288-manifest_336x448.png 2x, https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1195288-manifest_504x672.png 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/manifest/1195288/" class="listings-program-link">Manifest</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/manifest/episode-1-season-1/pilot/1195288/" class="listings-program-link">Pilot</a>
+
+													<span class="listings-program-episode-chronology">(Season 1 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | NBC</p>
+				<p class="listings-program-description">The premiere: Returning to New York from a vacation in Jamaica, the Stone family is separated when adult siblings Michaela and Ben, along with Ben&#039;s gravely ill son Cal, are bumped to a later flight, while Ben&#039;s wife, daughter and parents fly ahead. When that later flight lands, the passengers are bewildered to discover that five and a half years have gone by. They attempt to reconnect with the loved ones who mourned their passing and moved on long ago.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1195288" data-type="tvshow" data-name="Manifest"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1195288" data-type="tvshow" data-program="35576000" data-url="https://www.tvguide.com/tvshows/manifest/episode-1-season-1/pilot/1195288/" data-title="Manifest"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">914 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/pov/episode-13-season-31/survivors/191706/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/310/thumbs/118385310_168x224.jpg" class="show-card-image" alt="POV" title="POV" srcset="https://static.tvgcdn.net/feed/1/310/thumbs/118385310_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/310/thumbs/118385310_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/pov/191706/" class="listings-program-link">POV</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/pov/episode-13-season-31/survivors/191706/" class="listings-program-link">Survivors</a>
+
+													<span class="listings-program-episode-chronology">(Season 31 | Episode 13)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | PBS</p>
+				<p class="listings-program-description">The story of two Sierra Leonean healthcare workers who heroically face the Ebola epidemic in their country.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="191706" data-type="tvshow" data-name="POV"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="191706" data-type="tvshow" data-program="35986039" data-url="https://www.tvguide.com/tvshows/pov/episode-13-season-31/survivors/191706/" data-title="POV"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">5 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/the-good-doctor/episode-1-season-2/hello/1041642/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/524/thumbs/118595524_168x224.jpg" class="show-card-image" alt="The Good Doctor" title="The Good Doctor" srcset="https://static.tvgcdn.net/feed/1/524/thumbs/118595524_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/524/thumbs/118595524_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/the-good-doctor/1041642/" class="listings-program-link">The Good Doctor</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/the-good-doctor/episode-1-season-2/hello/1041642/" class="listings-program-link">Hello</a>
+
+													<span class="listings-program-episode-chronology">(Season 2 | Episode 1)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | ABC</p>
+				<p class="listings-program-description">In the Season 2 premiere, Shaun&#039;s proposed treatment for a homeless patient puts him and Jared in Andrews&#039; crosshairs. Meanwhile, Claire tries to overcome Melendez&#039;s reluctance to do a risky heart operation while Glassman must overcome his personal feelings about his oncologist, Dr. Marina Blaize, and face a difficult decision about his health.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1041642" data-type="tvshow" data-name="The Good Doctor"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1041642" data-type="tvshow" data-program="35152636" data-url="https://www.tvguide.com/tvshows/the-good-doctor/episode-1-season-2/hello/1041642/" data-title="The Good Doctor"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">569 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="/tvshows/vegas-rat-rods/651121/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/872/thumbs/117253872_168x224.jpg" class="show-card-image" alt="Vegas Rat Rods" title="Vegas Rat Rods" srcset="https://static.tvgcdn.net/feed/1/872/thumbs/117253872_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/872/thumbs/117253872_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/vegas-rat-rods/651121/" class="listings-program-link">Vegas Rat Rods</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/vegas-rat-rods/651121/" class="listings-program-link">The Story of Steve Darnell</a>
+
+											</h4>
+								<p class="listings-program-airing-info">10:00PM | DSC</p>
+				<p class="listings-program-description"></p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="651121" data-type="tvshow" data-name="Vegas Rat Rods"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="651121" data-type="tvshow" data-program="36450467" data-url="https://www.tvguide.com/tvshows/vegas-rat-rods/651121/" data-title="Vegas Rat Rods"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">4 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/mtv-floribama-shore/episode-12-season-2/a-thin-line-between-hunch-and-hate/1140413/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/171/thumbs/117968171_168x224.jpg" class="show-card-image" alt="MTV Floribama Shore" title="MTV Floribama Shore" srcset="https://static.tvgcdn.net/feed/1/171/thumbs/117968171_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/171/thumbs/117968171_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/mtv-floribama-shore/1140413/" class="listings-program-link">MTV Floribama Shore</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/mtv-floribama-shore/episode-12-season-2/a-thin-line-between-hunch-and-hate/1140413/" class="listings-program-link">A Thin Line Between Hunch and Hate</a>
+
+													<span class="listings-program-episode-chronology">(Season 2 | Episode 12)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:01PM | MTV</p>
+				<p class="listings-program-description">A day at Mermaid Academy promises to bring the girls back together. A surprise gift from Logan makes Kortni second-guess their breakup. And while Gus continues to resist Nilsa&#039;s advances, he can only stay strong for so long.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="1140413" data-type="tvshow" data-name="MTV Floribama Shore"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="1140413" data-type="tvshow" data-program="36423263" data-url="https://www.tvguide.com/tvshows/mtv-floribama-shore/episode-12-season-2/a-thin-line-between-hunch-and-hate/1140413/" data-title="MTV Floribama Shore"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">10 Watching</span></span>
+				</div>
+			</div>
+		</li>
+			<li class="listings-program">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/lodge-49/episode-8-season-1/something-from-nothing/987048/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/79/thumbs/118429079_168x224.jpg" class="show-card-image" alt="Lodge 49" title="Lodge 49" srcset="https://static.tvgcdn.net/feed/1/79/thumbs/118429079_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/79/thumbs/118429079_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/lodge-49/987048/" class="listings-program-link">Lodge 49</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/lodge-49/episode-8-season-1/something-from-nothing/987048/" class="listings-program-link">Something From Nothing</a>
+
+													<span class="listings-program-episode-chronology">(Season 1 | Episode 8)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:15PM | AMC</p>
+				<p class="listings-program-description">Dud and Ernie accompany Captain on a journey into the night. Liz attempts to climb the corporate ladder.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="987048" data-type="tvshow" data-name="Lodge 49"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="987048" data-type="tvshow" data-program="36316083" data-url="https://www.tvguide.com/tvshows/lodge-49/episode-8-season-1/something-from-nothing/987048/" data-title="Lodge 49"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">27 Watching</span></span>
+				</div>
+			</div>
+		</li>
+	</ul>					<div class="listings-tonight-programs-header">
+				10:30PM
+			</div>
+
+			<span id="10:30PM" class="listings-scroll-to-time"></span>
+
+			<ul class="listings-program-list" data-section-id="program-list">
+			<li class="listings-program listings-program-first">
+			<div class="listings-program-show-card">
+									<a href="https://www.tvguide.com/tvshows/house-hunters-international/episode-8-season-131/sing-it-out-in-karlsruhe-germany/308182/" class="show-card" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/486/thumbs/100501486_168x224.jpg" class="show-card-image" alt="House Hunters International" title="House Hunters International" srcset="https://static.tvgcdn.net/feed/1/486/thumbs/100501486_336x448.jpg 2x, https://static.tvgcdn.net/feed/1/486/thumbs/100501486_504x672.jpg 3x" width="168" height="224" />
+	
+	
+	
+</a>							</div>
+						<div class="listings-program-content">
+													<h3 class="listings-program-title"><a href="https://www.tvguide.com/tvshows/house-hunters-international/308182/" class="listings-program-link">House Hunters International</a></h3>
+													<h4 class="listings-program-episode-title">
+						<a href="https://www.tvguide.com/tvshows/house-hunters-international/episode-8-season-131/sing-it-out-in-karlsruhe-germany/308182/" class="listings-program-link">Sing It out in Karlsruhe, Germany</a>
+
+													<span class="listings-program-episode-chronology">(Season 131 | Episode 8)</span>
+											</h4>
+								<p class="listings-program-airing-info">10:30PM | HGTV</p>
+				<p class="listings-program-description">Professional opera singers Nick and Jen seek a home in Karlsruhe, Germany, where they can be together as a family with their daughter.</p>
+				<div class="listings-program-buttons">
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-watchlist " data-button="watchlist" data-id="308182" data-type="tvshow" data-name="House Hunters International"><span class="btn-utility-icon-container"><i class="fa fa-star"></i></span><span class="btn-utility-text">Watchlist</span></a></span>
+					<span class="btn-utility-container"><a  href="#" class="btn-utility btn-checkin" data-button="checkin" data-id="308182" data-type="tvshow" data-program="36327111" data-url="https://www.tvguide.com/tvshows/house-hunters-international/episode-8-season-131/sing-it-out-in-karlsruhe-germany/308182/" data-title="House Hunters International"><span class="btn-utility-icon-container"><i class="fa fa-check"></i></span><span class="btn-utility-text">I&rsquo;ll Watch</span></a><span class="btn-utility-count-status">17 Watching</span></span>
+				</div>
+			</div>
+		</li>
+	</ul>						</div>
+		<div class="content-right-rail" data-section-id="right-rail">
+				<div class="right-rail-item">
+		<div  data-placement="listings.new-tonight.right-rail.top" id="mpu_top" class="ad-dfp"></div>	</div>
+
+	<div class="right-rail-item discovery-driver" data-section-id="discover-listings">
+     
+        <div class="discover-graphic"><a href="/listings"><img src=//static-3.tvgcdn.net/www/img/static/discovery/feature.jpg alt="Your Favorite Shows Are Back!" /></div></a>
+        <h1 class="discover-header">Your Favorite Shows Are Back!</h1>
+    <p class="discover-desc">Don’t miss your dramas, sitcoms and reality shows. Find out when and where they’re airing!</p>
+    <a href="/listings"><button class="discover-button">Start Now</button></a>
+</div>
+	<div class="right-rail-item">
+		<div  data-placement="listings.new-tonight.right-rail.bottom" id="mpu_bottom" class="ad-dfp"></div>	</div>
+		</div>
+					</div>
+	
+															<div class="content-section-full" data-section-id="popular-objects">
+	<div class="section section-force-separator popular-objects">
+		<div class="row">
+																			<div class="col-sm-6 col-md-3">
+					<a href="https://www.tvguide.com/tvshows/">
+						<h4 class="section-header" data-section-id="section-header"><span class="section-header-indicator"></span><span class="section-header-text"><span class="section-header-accented-text"  data-section-id="section-header">Popular</span> Shows</span></h4>
+					</a>
+
+					<div class="popular-objects-category">
+						<ul class="popular-objects-category-show-cards">
+																																																					<li class="popular-objects-category-show-card popular-objects-category-show-card-first" data-object-id="288041-0">
+										<a href="https://www.tvguide.com/tvshows/the-big-bang-theory/288041/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/992/thumbs/118568992_70x93.jpg" class="show-card-image" alt="The Big Bang Theory" title="The Big Bang Theory" srcset="https://static.tvgcdn.net/feed/1/992/thumbs/118568992_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/992/thumbs/118568992_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="191470-1">
+										<a href="https://www.tvguide.com/tvshows/dancing-with-the-stars/191470/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/565/thumbs/118301565_70x93.jpg" class="show-card-image" alt="Dancing with the Stars" title="Dancing with the Stars" srcset="https://static.tvgcdn.net/feed/1/565/thumbs/118301565_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/565/thumbs/118301565_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1110001-2">
+										<a href="https://www.tvguide.com/tvshows/maniac/1110001/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/665/thumbs/118599665_70x93.jpg" class="show-card-image" alt="Maniac" title="Maniac" srcset="https://static.tvgcdn.net/feed/1/665/thumbs/118599665_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/665/thumbs/118599665_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="100565-3">
+										<a href="https://www.tvguide.com/tvshows/veronica-mars/100565/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/934/thumbs/117260934_70x93.jpg" class="show-card-image" alt="Veronica Mars" title="Veronica Mars" srcset="https://static.tvgcdn.net/feed/1/934/thumbs/117260934_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/934/thumbs/117260934_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1199503-4">
+										<a href="https://www.tvguide.com/tvshows/big-brother-20/1199503/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1199503-big-brother_70x93.png" class="show-card-image" alt="Big Brother 20" title="Big Brother 20" srcset="https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1199503-big-brother_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1199503-big-brother_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1027035-5">
+										<a href="https://www.tvguide.com/tvshows/american-horror-story-apocalypse/1027035/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1027035-american-horror-story-8_70x93.png" class="show-card-image" alt="American Horror Story: Apocalypse" title="American Horror Story: Apocalypse" srcset="https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1027035-american-horror-story-8_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/tvshows/900000-1000000/thumbs/1027035-american-horror-story-8_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="280608-6">
+										<a href="https://www.tvguide.com/tvshows/americas-got-talent/280608/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/515/thumbs/118360515_70x93.jpg" class="show-card-image" alt="America&#039;s Got Talent" title="America&#039;s Got Talent" srcset="https://static.tvgcdn.net/feed/1/515/thumbs/118360515_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/515/thumbs/118360515_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																															</ul>
+						<ul class="popular-objects-category-items">
+																																														<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">1.</span>
+																				<a href="https://www.tvguide.com/tvshows/the-big-bang-theory/288041/" class="popular-objects-category-item-link" data-object-id="288041-0">The Big Bang Theory</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">2.</span>
+																				<a href="https://www.tvguide.com/tvshows/dancing-with-the-stars/191470/" class="popular-objects-category-item-link" data-object-id="191470-1">Dancing with the Stars</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">3.</span>
+																				<a href="https://www.tvguide.com/tvshows/maniac/1110001/" class="popular-objects-category-item-link" data-object-id="1110001-2">Maniac</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">4.</span>
+																				<a href="https://www.tvguide.com/tvshows/veronica-mars/100565/" class="popular-objects-category-item-link" data-object-id="100565-3">Veronica Mars</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">5.</span>
+																				<a href="https://www.tvguide.com/tvshows/big-brother-20/1199503/" class="popular-objects-category-item-link" data-object-id="1199503-4">Big Brother</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">6.</span>
+																				<a href="https://www.tvguide.com/tvshows/american-horror-story-apocalypse/1027035/" class="popular-objects-category-item-link" data-object-id="1027035-5">American Horror Story: Apocalypse</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">7.</span>
+																				<a href="https://www.tvguide.com/tvshows/americas-got-talent/280608/" class="popular-objects-category-item-link" data-object-id="280608-6">America&#039;s Got Talent</a>
+									</li>
+																																						</ul>
+					</div>
+				</div>
+																			<div class="col-sm-6 col-md-3">
+					<a href="https://www.tvguide.com/movies/">
+						<h4 class="section-header" data-section-id="section-header"><span class="section-header-indicator"></span><span class="section-header-text"><span class="section-header-accented-text"  data-section-id="section-header">Popular</span> Movies</span></h4>
+					</a>
+
+					<div class="popular-objects-category">
+						<ul class="popular-objects-category-show-cards">
+																																																					<li class="popular-objects-category-show-card popular-objects-category-show-card-first" data-object-id="714006-0">
+										<a href="https://www.tvguide.com/movies/avengers-infinity-war-part-1/714006/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<span class="show-card-image show-card-image-placeholder">
+			<img src="//static-3.tvgcdn.net/www/img/tvg-showcard-placeholder.jpg">
+		</span>
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1185878-1">
+										<a href="https://www.tvguide.com/movies/a-quiet-place/1185878/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/767/thumbs/118374767_70x93.jpg" class="show-card-image" alt="A Quiet Place" title="A Quiet Place" srcset="https://static.tvgcdn.net/feed/1/767/thumbs/118374767_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/767/thumbs/118374767_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1187848-2">
+										<a href="https://www.tvguide.com/movies/rampage/1187848/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/772/thumbs/118360772_c2000x2667+0+0_70x93.jpg" class="show-card-image" alt="Rampage" title="Rampage" srcset="https://static.tvgcdn.net/feed/1/772/thumbs/118360772_c2000x2667+0+0_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/772/thumbs/118360772_c2000x2667+0+0_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1189616-3">
+										<a href="https://www.tvguide.com/movies/super-troopers-2/1189616/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/844/thumbs/118204844_c2026x2701+0+0_70x93.jpg" class="show-card-image" alt="Super Troopers 2" title="Super Troopers 2" srcset="https://static.tvgcdn.net/feed/1/844/thumbs/118204844_c2026x2701+0+0_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/844/thumbs/118204844_c2026x2701+0+0_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="1183715-4">
+										<a href="https://www.tvguide.com/movies/ready-player-one/1183715/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/198/thumbs/118170198_c2000x2667+0+0_70x93.jpg" class="show-card-image" alt="Ready Player One" title="Ready Player One" srcset="https://static.tvgcdn.net/feed/1/198/thumbs/118170198_c2000x2667+0+0_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/198/thumbs/118170198_c2000x2667+0+0_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="810978-5">
+										<a href="https://www.tvguide.com/movies/trainwreck/810978/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/138/thumbs/13041138_70x93.jpg" class="show-card-image" alt="Trainwreck" title="Trainwreck" srcset="https://static.tvgcdn.net/feed/1/138/thumbs/13041138_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/138/thumbs/13041138_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="551901-6">
+										<a href="https://www.tvguide.com/movies/world-war-z/551901/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/904/thumbs/115510904_c1520x2027+0+0_70x93.jpg" class="show-card-image" alt="World War Z" title="World War Z" srcset="https://static.tvgcdn.net/feed/1/904/thumbs/115510904_c1520x2027+0+0_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/904/thumbs/115510904_c1520x2027+0+0_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																															</ul>
+						<ul class="popular-objects-category-items">
+																																														<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">1.</span>
+																				<a href="https://www.tvguide.com/movies/avengers-infinity-war-part-1/714006/" class="popular-objects-category-item-link" data-object-id="714006-0">Avengers: Infinity War Part 1</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">2.</span>
+																				<a href="https://www.tvguide.com/movies/a-quiet-place/1185878/" class="popular-objects-category-item-link" data-object-id="1185878-1">A Quiet Place</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">3.</span>
+																				<a href="https://www.tvguide.com/movies/rampage/1187848/" class="popular-objects-category-item-link" data-object-id="1187848-2">Rampage</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">4.</span>
+																				<a href="https://www.tvguide.com/movies/super-troopers-2/1189616/" class="popular-objects-category-item-link" data-object-id="1189616-3">Super Troopers 2</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">5.</span>
+																				<a href="https://www.tvguide.com/movies/ready-player-one/1183715/" class="popular-objects-category-item-link" data-object-id="1183715-4">Ready Player One</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">6.</span>
+																				<a href="https://www.tvguide.com/movies/trainwreck/810978/" class="popular-objects-category-item-link" data-object-id="810978-5">Trainwreck</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">7.</span>
+																				<a href="https://www.tvguide.com/movies/world-war-z/551901/" class="popular-objects-category-item-link" data-object-id="551901-6">World War Z</a>
+									</li>
+																																						</ul>
+					</div>
+				</div>
+																			<div class="col-sm-6 col-md-3">
+					<a href="https://www.tvguide.com/celebrities/">
+						<h4 class="section-header" data-section-id="section-header"><span class="section-header-indicator"></span><span class="section-header-text"><span class="section-header-accented-text"  data-section-id="section-header">Popular</span> Celebrities</span></h4>
+					</a>
+
+					<div class="popular-objects-category">
+						<ul class="popular-objects-category-show-cards">
+																																																					<li class="popular-objects-category-show-card popular-objects-category-show-card-first" data-object-id="166360-0">
+										<a href="https://www.tvguide.com/celebrities/michael-weatherly/166360/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/celebs/m-o/thumbs/michael-weatherly2_sc_70x93.png" class="show-card-image" alt="Michael Weatherly" title="Michael Weatherly" srcset="https://static.tvgcdn.net/mediabin/showcards/celebs/m-o/thumbs/michael-weatherly2_sc_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/celebs/m-o/thumbs/michael-weatherly2_sc_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="189721-1">
+										<a href="https://www.tvguide.com/celebrities/cote-de-pablo/189721/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/cote-de-pablo2_sc_70x93.png" class="show-card-image" alt="Cote De Pablo" title="Cote De Pablo" srcset="https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/cote-de-pablo2_sc_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/celebs/c/thumbs/cote-de-pablo2_sc_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="193924-2">
+										<a href="https://www.tvguide.com/celebrities/tj-thyne/193924/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/celebs/s-u/thumbs/tj-thyne_sc_70x93.png" class="show-card-image" alt="TJ Thyne" title="TJ Thyne" srcset="https://static.tvgcdn.net/mediabin/showcards/celebs/s-u/thumbs/tj-thyne_sc_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/celebs/s-u/thumbs/tj-thyne_sc_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="161390-3">
+										<a href="https://www.tvguide.com/celebrities/laura-san-giacomo/161390/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/rovi/showcards/feed/938/thumbs/31216938_c1032x1376+401+0_70x93.jpg" class="show-card-image" alt="Laura San Giacomo" title="Laura San Giacomo" srcset="https://static.tvgcdn.net/rovi/showcards/feed/938/thumbs/31216938_c1032x1376+401+0_140x187.jpg 2x, https://static.tvgcdn.net/rovi/showcards/feed/938/thumbs/31216938_c1032x1376+401+0_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="262070-4">
+										<a href="https://www.tvguide.com/celebrities/patrick-j-adams/262070/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/celebs/p-r/thumbs/patrick-j-adams_sc_70x93.png" class="show-card-image" alt="Patrick J. Adams" title="Patrick J. Adams" srcset="https://static.tvgcdn.net/mediabin/showcards/celebs/p-r/thumbs/patrick-j-adams_sc_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/celebs/p-r/thumbs/patrick-j-adams_sc_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="183309-5">
+										<a href="https://www.tvguide.com/celebrities/warren-leight/183309/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<span class="show-card-image show-card-image-placeholder">
+			<img src="//static-3.tvgcdn.net/www/img/tvg-showcard-placeholder.jpg">
+		</span>
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="271046-6">
+										<a href="https://www.tvguide.com/celebrities/stana-katic/271046/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/mediabin/showcards/celebs/s-u/thumbs/stana-katic2_sc_70x93.png" class="show-card-image" alt="Stana Katic" title="Stana Katic" srcset="https://static.tvgcdn.net/mediabin/showcards/celebs/s-u/thumbs/stana-katic2_sc_140x187.png 2x, https://static.tvgcdn.net/mediabin/showcards/celebs/s-u/thumbs/stana-katic2_sc_210x280.png 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																															</ul>
+						<ul class="popular-objects-category-items">
+																																														<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">1.</span>
+																				<a href="https://www.tvguide.com/celebrities/michael-weatherly/166360/" class="popular-objects-category-item-link" data-object-id="166360-0">Michael Weatherly</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">2.</span>
+																				<a href="https://www.tvguide.com/celebrities/cote-de-pablo/189721/" class="popular-objects-category-item-link" data-object-id="189721-1">Cote De Pablo</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">3.</span>
+																				<a href="https://www.tvguide.com/celebrities/tj-thyne/193924/" class="popular-objects-category-item-link" data-object-id="193924-2">TJ Thyne</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">4.</span>
+																				<a href="https://www.tvguide.com/celebrities/laura-san-giacomo/161390/" class="popular-objects-category-item-link" data-object-id="161390-3">Laura San Giacomo</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">5.</span>
+																				<a href="https://www.tvguide.com/celebrities/patrick-j-adams/262070/" class="popular-objects-category-item-link" data-object-id="262070-4">Patrick J. Adams</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">6.</span>
+																				<a href="https://www.tvguide.com/celebrities/warren-leight/183309/" class="popular-objects-category-item-link" data-object-id="183309-5">Warren Leight</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">7.</span>
+																				<a href="https://www.tvguide.com/celebrities/stana-katic/271046/" class="popular-objects-category-item-link" data-object-id="271046-6">Stana Katic</a>
+									</li>
+																																						</ul>
+					</div>
+				</div>
+																			<div class="col-sm-6 col-md-3">
+					<a href="https://www.tvguide.com/videos/">
+						<h4 class="section-header" data-section-id="section-header"><span class="section-header-indicator"></span><span class="section-header-text"><span class="section-header-accented-text"  data-section-id="section-header">Popular</span> Videos</span></h4>
+					</a>
+
+					<div class="popular-objects-category">
+						<ul class="popular-objects-category-show-cards">
+																																																					<li class="popular-objects-category-show-card popular-objects-category-show-card-first" data-object-id="24939920-0">
+										<a href="https://www.tvguide.com/tvshows/jane-the-virgin/660344/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/418/thumbs/118093418_70x93.jpg" class="show-card-image" alt="Jane the Virgin" title="Jane the Virgin" srcset="https://static.tvgcdn.net/feed/1/418/thumbs/118093418_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/418/thumbs/118093418_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="24919576-1">
+										<a href="https://www.tvguide.com/tvshows/the-flash/644014/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/219/thumbs/118045219_70x93.jpg" class="show-card-image" alt="The Flash" title="The Flash" srcset="https://static.tvgcdn.net/feed/1/219/thumbs/118045219_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/219/thumbs/118045219_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="24927275-2">
+										<a href="https://www.tvguide.com/tvshows/the-vampire-diaries/297527/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/605/thumbs/115937605_70x93.jpg" class="show-card-image" alt="The Vampire Diaries" title="The Vampire Diaries" srcset="https://static.tvgcdn.net/feed/1/605/thumbs/115937605_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/605/thumbs/115937605_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="23877803-3">
+										<a href="https://www.tvguide.com/tvshows/pretty-little-liars/304160/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/487/thumbs/115675487_70x93.jpg" class="show-card-image" alt="Pretty Little Liars" title="Pretty Little Liars" srcset="https://static.tvgcdn.net/feed/1/487/thumbs/115675487_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/487/thumbs/115675487_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																																																	<li class="popular-objects-category-show-card" data-object-id="24931881-4">
+										<a href="https://www.tvguide.com/tvshows/reign/555501/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/325/thumbs/117237325_70x93.jpg" class="show-card-image" alt="Reign" title="Reign" srcset="https://static.tvgcdn.net/feed/1/325/thumbs/117237325_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/325/thumbs/117237325_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="26283968-5">
+										<a href="https://www.tvguide.com/tvshows/24-to-life/916199/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/685/thumbs/116965685_70x93.jpg" class="show-card-image" alt="24 To Life" title="24 To Life" srcset="https://static.tvgcdn.net/feed/1/685/thumbs/116965685_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/685/thumbs/116965685_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																																																		<li class="popular-objects-category-show-card" data-object-id="24923284-6">
+										<a href="https://www.tvguide.com/tvshows/arrow/375406/" class="show-card show-card-small popular-objects-category-show-cards-image" data-section-id="showcard" >
+
+			<img src="https://static.tvgcdn.net/feed/1/498/thumbs/118589498_70x93.jpg" class="show-card-image" alt="Arrow" title="Arrow" srcset="https://static.tvgcdn.net/feed/1/498/thumbs/118589498_140x187.jpg 2x, https://static.tvgcdn.net/feed/1/498/thumbs/118589498_210x280.jpg 3x" width="70" height="93" />
+	
+	
+	
+</a>									</li>
+																																															</ul>
+						<ul class="popular-objects-category-items">
+																																														<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">1.</span>
+																				<a href="https://www.amazon.com/gp/product/B016HWZFH2/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="24939920-0">Chapter Twenty-Three</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">2.</span>
+																				<a href="https://www.amazon.com/gp/product/B0168JSWPQ/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="24919576-1">The Man Who Saved Central City</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">3.</span>
+																				<a href="https://www.amazon.com/gp/product/B016DAUW08/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="24927275-2">Day One of Twenty-Two Thousand, Give or Take</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">4.</span>
+																				<a href="https://www.amazon.com/gp/product/B00YIACYGQ/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="23877803-3">Game on, Charles</a>
+									</li>
+																																																																																								<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">5.</span>
+																				<a href="https://www.amazon.com/gp/product/B016DR1YCQ/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="24931881-4">Three Queens, Two Tigers</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">6.</span>
+																				<a href="https://www.amazon.com/gp/product/B01E6D85LC/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="26283968-5">Reckless Decisions</a>
+									</li>
+																																																									<li class="popular-objects-category-item">
+										<span class="popular-objects-category-item-number">7.</span>
+																				<a href="https://www.amazon.com/gp/product/B016BEVCSW/?tag=tvg_aiv_eptab-20&ref_=asc_tvg" class="popular-objects-category-item-link" data-object-id="24923284-6">Green Arrow</a>
+									</li>
+																																						</ul>
+					</div>
+				</div>
+					</div>
+	</div>
+</div>
+
+							
+													</div>
+
+						<div class="content-after">
+															<div class="content-after-blank"></div>
+							
+																								<div  data-placement="layout.footer" id="leader_bottom_variant_2" class="ad-dfp"></div>																					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div id="footer" data-section-id="footer">
+	<div class="footer-container container">
+		<div class="footer-row row">
+				
+			<div class="footer-primary col-md-7">
+				<a href="https://www.tvguide.com/" class="footer-brand">TV Guide</a>
+				<span class="footer-copyright footer-copyright-small">
+					<span class="footer-copyright-text">
+						&copy; 2018 CBS Interactive Inc. All rights reserved.
+					</span>
+				</span>
+				
+				<ul class="footer-social-links">
+			<li class="footer-social-links-item"><a class="footer-link" href="https://www.facebook.com/TVGuide" target="_blank"><i class="footer-social-links-icon fa fa-facebook"></i></a></li>
+			<li class="footer-social-links-item"><a class="footer-link" href="https://www.twitter.com/TVGuide" target="_blank"><i class="footer-social-links-icon fa fa-twitter"></i></a></li>
+			<li class="footer-social-links-item"><a class="footer-link" href="https://plus.google.com/+TVGuide" target="_blank"><i class="footer-social-links-icon fa fa-google-plus"></i></a></li>
+			<li class="footer-social-links-item"><a class="footer-link" href="https://instagram.com/tvguide" target="_blank"><i class="footer-social-links-icon fa fa-instagram"></i></a></li>
+			<li class="footer-social-links-item"><a class="footer-link" href="https://www.pinterest.com/tvguide/" target="_blank"><i class="footer-social-links-icon fa fa-pinterest-p"></i></a></li>
+			<li class="footer-social-links-item"><a class="footer-link" href="https://tvguide.tumblr.com" target="_blank"><i class="footer-social-links-icon fa fa-tumblr"></i></a></li>
+	</ul>
+				<ul class="footer-links">
+					<li class="footer-links-item footer-links-item-even"><a href="https://www.tvguide.com/help/" class="footer-link">Help</a></li>
+					<li class="footer-links-item"><a href="https://www.cbsinteractive.com/advertise/" class="footer-link" target="_blank" rel="nofollow">Media Kit</a></li>
+					<li class="footer-links-item"><a href="https://cbsi.secure.force.com/CBSi/articles/FAQ/CBS-Interactive-Copyright-Complaints?retURL=%2FCBSi%2Fapex%2Fknowledgehome%3Freferer%3Dmobiletou.com%26data%3D&popup=false&categories=CBS_Interactive%3AmTOU&template=template_mobiletou&referer=mobiletou.com&data=&cfs=SFS_TOU_PP" class="footer-link" target="_blank" rel="nofollow">Copyright Policy</a></li>
+					<li class="footer-links-item"><a href="https://www.tvguide.com/pages/staff/" class="footer-link">About Us</a></li>
+					<li class="footer-links-item"><a href="https://www.tvguide.com/pages/sitemap/" class="footer-link">Sitemap</a></li>
+					<li class="footer-links-item"><a href="https://www.tvguide.com/rss/" class="footer-link">RSS</a></li>
+					<li class="footer-links-item footer-links-item-even footer-links-item-mobile"><a href="https://www.tvguide.com/mobile/" class="footer-link">Mobile</a></li>
+					<li class="footer-copyright-item footer-links-item footer-copyright footer-copyright-large hidden-xs hidden-sm">
+						<span class="footer-copyright-text">
+							&copy; 2018 CBS Interactive Inc. All rights reserved.
+						</span>
+					</li>
+					<li class="footer-links-item"><a href="https://legalterms.cbsinteractive.com/privacy" class="footer-link" target="_blank" rel="nofollow">Privacy Policy</a></li>
+					<li class="footer-links-item footer-links-item-even"><a href="https://legalterms.cbsinteractive.com/adchoice" class="footer-link" target="_blank" rel="nofollow">Ad Choice</a></li>
+					<li class="footer-links-item"><a href="https://legalterms.cbsinteractive.com/terms-of-use" class="footer-link" target="_blank" rel="nofollow">Terms of Use</a></li>
+					<li class="footer-links-item footer-links-item-even"><a href="https://legalterms.cbsinteractive.com/eula" class="footer-link" target="_blank" rel="nofollow">Mobile User Agreement</a></li>
+					<li class="footer-links-item footer-links-item-even"><a href="https://www.cbsinteractive.com/careers" class="footer-link" target="_blank" rel="nofollow">Careers</a></li>
+				</ul>
+
+											</div>
+
+											<div class="footer-mobile col-md-4">
+					<a href="https://www.tvguide.com/mobile/"><h5 class="footer-mobile-header">Never Miss Your Show</h5></a>
+					<p id="footer-tma-status" class="footer-mobile-copy">Download the TV Guide app for iPhone, iPad and Android!</p>
+					<div class="text-me-app">
+    <script src="//static-5.tvgcdn.net/www/js/branchio-333cd1927d86d028a65501737ff84c71.js"></script>
+
+    <form onsubmit="sendSMSFooter(this); return false;">
+        <select>
+            <option value="1">+1</option>
+        </select><input id="phone" name="phone" type="tel" placeholder="Enter phone number" /><button id="text-me-app-btn" class="send"  type="submit">SEND</button>
+            </form>
+</div>					<p class="footer-mobile-copy-sm">Standard message and data rates may apply</p>
+					<a class="footer-mobile-app-store" target="_blank" href="https://itunes.apple.com/us/app/id333647776?mt=8&at=11l9QE"></a>
+					<a class="footer-mobile-google-play" target="_blank" href="https://play.google.com/store/apps/details?id=com.tvguidemobile&PAffiliateID=1101lS7t"></a>
+				</div>
+					</div>
+	</div>
+</div>
+<div id="footer-overscroll"></div>
+		<div  data-placement="layout.interstitial" id="intromercial" class="ad-dfp"></div>
+											<script type="text/javascript">
+				window.$tvg.guid = 'e830a508-be1d-490b-8cfc-8244bda65288';
+				window.$tvg.adConfig = {"dfp":{"base":{"desktop":"\/8264\/aw-tvguide\/listings\/new_tonight","mobile":"\/8264\/maw-tvguide\/listings\/new_tonight"},"units":{"mpu_top":{"desktop":{"sizes":[[300,250]],"position":"top","slot":"MPU","weight":800},"mobile":{"sizes":[[320,50],[300,250]],"position":"middle","slot":"MPU","weight":800}},"mpu_bottom":{"desktop":{"sizes":[[300,250]],"position":"bottom","slot":"MPU","weight":300},"mobile":{"sizes":[[320,50],[300,250]],"position":"middle2","slot":"MPU","weight":300}},"nav_ad":{"desktop":{"sizes":[[7,7]],"position":"nav","slot":"nav_ad","weight":801},"mobile":{"sizes":[[7,7]],"position":"nav","slot":"nav_ad","weight":801}},"navbar_top":{"desktop":{"sizes":[[300,60]],"position":"top","slot":"300x60","minimumWidth":728,"weight":50}},"skin":{"desktop":{"sizes":[[1600,1000]],"position":"top","slot":"Skin","weight":75}},"leader_plus_top_variant_1":{"desktop":{"sizes":[[728,90],[728,91],[970,66],[970,250]],"position":"top","slot":"Banner","weight":1000},"mobile":{"sizes":[[320,50],[300,250]],"position":"top","slot":"Banner","weight":1000}},"leader_bottom_variant_2":{"desktop":{"sizes":[[728,90],[728,92],[970,66]],"position":"bottom","slot":"Banner","weight":100},"mobile":{"sizes":[[320,50],[300,250]],"position":"bottom","slot":"Banner","weight":100}},"intromercial":{"desktop":{"sizes":null,"slot":"intromercial","weight":1},"mobile":{"sizes":null,"slot":"intromercial","weight":1}}},"targeting":{"ptype":"new-tonight","env":"production","pname":"listings\/new_tonight","vguid":"e830a508-be1d-490b-8cfc-8244bda65288","session":"d","subses":4}},"adsense":{"units":[],"term":null},"taboola":{"type":null,"units":[]},"netseer":[],"native":null};
+
+				//Chartbeat code implementation
+				var _sf_async_config = _sf_async_config || {},
+						siteSection,
+						author;
+
+				siteSection = window.utag_data['siteSection'] ? window.utag_data['siteSection'] : '';
+				author = (window.utag_data['pageType'] == 'article' || window.utag_data['pageType'] == 'feature_article') ? window.utag_data['articleAuthorName'] : '';
+
+				/** CONFIGURATION START **/
+				window.$tvg = window.$tvg || { };
+				_sf_async_config.sections = siteSection,
+				_sf_async_config.authors = author;
+
+				/** CONFIGURATION END **/
+
+				window.addEventListener(window.GDPR_CONSENT_EVENT, function (e) {
+
+					// chartbeat config
+					var n = document.getElementsByTagName('script')[0]; 
+
+					// load chartbeat video
+					window._sf_endpt = (new Date()).getTime();
+					var e = document.createElement('script');
+					e.setAttribute('language', 'javascript');
+					e.setAttribute('type', 'text/javascript');
+					e.setAttribute('src', '//static.chartbeat.com/js/chartbeat_video.js');
+					n.parentNode.insertBefore(e, n);
+
+					// load charbeat article
+					if(window.utag_data['pageType'] == 'article' || window.utag_data['pageType'] == 'feature_article') {
+						var e = document.createElement('script'); 
+						e.type = 'text/javascript'; 
+						e.async = true; 
+						e.src = '//static.chartbeat.com/js/chartbeat.js'; 
+						n.parentNode.insertBefore(e, n);
+					}
+				});
+			</script>
+			<script src="//static-5.tvgcdn.net/www/js/jquery-1.10.2-5ec6bb8c1c977bddb0c922659d3c192b.js"></script>
+
+
+						
+			
+			<!--[if lte IE 9]>
+				<script src="//static-2.tvgcdn.net/www/js/jquery.xdomainrequest-fe59549399abbf26db1c9018ec40ca91.js"></script>
+
+			<![endif]-->
+			<script src="//static-3.tvgcdn.net/www/js/srcset-cfa36228dba75b67e114cd54372ebe35.js"></script>
+
+			<script src="//static-5.tvgcdn.net/www/js/logger-4968e002c938f339adaec6b5143cffba.js"></script>
+
+			<script src="//static-2.tvgcdn.net/www/js/tvguid-2b67ab4be645980443e9ffa524f9bb00.js"></script>
+
+
+			<script src="//static-5.tvgcdn.net/www/js/button-picker-2acb58d48f8b1d5db80a70b9905d453a.js"></script>
+<script src="//static-5.tvgcdn.net/www/js/provider/modal-ffdf824eb4f7c8471288ed69e87046ef.js"></script>
+
+		
+		<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"3f9fb3df7c","applicationID":"4525918","transactionName":"ZVdSMkFQCkUCVEwLDVwdcQVHWAtYTEJWCQxdRV4=","queueTime":0,"applicationTime":153,"atts":"SRBRRAlKGUs=","errorBeacon":"bam.nr-data.net","agent":""}</script>		
+		<script type="application/ld+json">
+	{
+	    "@context" : "https://schema.org",
+	    "@type" : "Organization",
+	    "name" : "TVGuide.com",
+	    "url" : "https://www.tvguide.com",
+	    "sameAs" : [ ["https:\/\/www.facebook.com\/TVGuide","https:\/\/www.twitter.com\/TVGuide","https:\/\/plus.google.com\/+TVGuide","https:\/\/instagram.com\/tvguide","https:\/\/www.pinterest.com\/tvguide\/","https:\/\/tvguide.tumblr.com"] ]
+	}
+	</script>	</body>
+</html>
