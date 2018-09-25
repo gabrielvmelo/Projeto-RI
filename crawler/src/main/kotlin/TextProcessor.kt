@@ -20,6 +20,9 @@ class TextProcessor {
             if(!link.matches(regex)){
                 link = domain + link
             }
+            if(link[0] == '/' && link[1] == '/') {
+                link = "http:$link"
+            }
 
             listaLinks.add(link)
         }

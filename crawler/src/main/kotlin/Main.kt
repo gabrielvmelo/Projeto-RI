@@ -27,7 +27,6 @@ class Main {
             for(item in URLs){
                 val fronteira = Frontier()
                 fronteira.addURL(item)
-                print("URL:" + item + " ")
 
                 if(!robots.contains(item)) robots[item] = robotsTxt(item+"robots.txt")
 
@@ -35,6 +34,7 @@ class Main {
 
                 while (!fronteira.vazia() && contador < 1000){
                     var url = fronteira.remove()
+                    print("URL:" + url + "\n")
                     //Analisar robots.txt
                     if(checkRules(robots[item]!!, url)){
                         continue
