@@ -13,12 +13,12 @@ class TextProcessor {
         return Jsoup.parse(html)
     }
 
-    fun getLinks(html: String, url: String): LinkedList<String> {
+    fun getLinks(html: String, domain: String): LinkedList<String> {
         parse(html).select("a").forEachIndexed { _ , element ->
             var link = element.attr("href")
             val regex = ("^(?:[A-Za-z]+:)?//.*".toRegex())
             if(!link.matches(regex)){
-                link = url + link
+                link = domain + link
             }
 
             listaLinks.add(link)
