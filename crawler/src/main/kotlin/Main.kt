@@ -1,4 +1,3 @@
-import org.jsoup.Jsoup
 import java.lang.Exception
 import java.util.*
 
@@ -21,14 +20,15 @@ class Main {
                 "http://www.tv.com/"
             )
             //Salvar robots.txt
-            val robots = HashMap<String, LinkedList<String>>()
+            val mapRobots = HashMap<String, LinkedList<String>>()
 
             //Passar pelos 8 sites e coletar 1000 links de cada
             for(item in URLs){
                 val fronteira = Frontier()
                 fronteira.addURL(item)
 
-                if(!robots.contains(item)) robots[item] = robotsTxt(item+"robots.txt")
+                val robots = CheckRobots()
+                if(!mapRobots.contains(item)) mapRobots[item] = robots.readTxt(item+"robots.txt")
 
                 var contador = 0
 
@@ -36,12 +36,17 @@ class Main {
                     var url = fronteira.remove()
                     print("URL:" + url + "\n")
                     //Analisar robots.txt
-                    if(checkRules(robots[item]!!, url)){
+                    if(checkRules(mapRobots[item]!!, url)){
                         continue
                     }
                     //Fazer download da pagina para pegar seu html
                     val rbt = Robot()
-                    val html = rbt.downloadPage(url)
+                    var html: String
+                    try {
+                        html = rbt.downloadPage(url)
+                    } catch (e: Exception) {
+                        continue
+                    }
 
                     //Passar pagina pelo parser para pegar links existentes
                     val txtProcessor = TextProcessor()
@@ -56,15 +61,15 @@ class Main {
                     for (link in links){
                         fronteira.addURL(link)
                     }
-
                     contador += 1
+                    print("\n" + contador + "\n")
                 }
 
             }
 
         }
 
-        private fun checkRules(rules: LinkedList<String>, url: String): Boolean{
+        fun checkRules(rules: LinkedList<String>, url: String): Boolean{
             for(rule in rules){
                 if (url.contains(rule)){
                     return true
@@ -73,25 +78,6 @@ class Main {
             return false
         }
 
-        private fun robotsTxt(url: String): LinkedList<String>{
-            val rbt = Robot()
-            try {
-                val txt = Jsoup.parse(rbt.downloadPage(url)).select("body").toString().split(" ".toRegex())
-                var lista = LinkedList<String>()
-
-                for(i in txt.indices) {
-                    if(txt[i] == "Disallow:" && txt[i+1][0] == '/') {
-                        lista.add(txt[i+1])
-                    }
-                }
-
-                return lista
-            } catch (e: Exception) {
-                return LinkedList()
-            }
-
-        }
     }
-
 
 }
