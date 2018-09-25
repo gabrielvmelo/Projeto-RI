@@ -1,10 +1,6 @@
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import java.io.File
 import java.util.*
-import java.awt.SystemColor.text
-
-
 
 /**
  * Created by lariciamota.
@@ -13,16 +9,15 @@ import java.awt.SystemColor.text
 class TextProcessor {
     var listaLinks: LinkedList<String> = LinkedList()
 
-    fun parse(html: String){
-        val doc = Jsoup.parse(html)
-        val links = doc.select("a").forEachIndexed { index, element ->
-            val link = element.attr("href")
-            listaLinks.add(link)
-        }
+    private fun parse(html: String): Document {
+        return Jsoup.parse(html)
     }
 
     fun getLinks(html: String): LinkedList<String> {
-        parse(html)
+        parse(html).select("a").forEachIndexed { _ , element ->
+            val link = element.attr("href")
+            listaLinks.add(link)
+        }
         return listaLinks
     }
 }
