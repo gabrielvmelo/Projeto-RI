@@ -30,7 +30,7 @@ class Main {
 
                     //Passar pagina pelo parser
                     var rbt = Robot()
-                    rbt.parse(fronteira.remove())
+                    rbt.downloadPage(fronteira.remove())
                     //Enquanto lista da fronteira nao esta vazia
                     //Faz o download da prox pagina na fronteira com Robot
                     //Passa a pagina para o TextProcessor e encontra novos links
