@@ -1,5 +1,6 @@
 import java.lang.Exception
 import java.util.*
+import kotlin.collections.HashMap
 
 /**
  * Created by lariciamota.
@@ -19,6 +20,7 @@ class Main {
                 "https://www.thetvdb.com/",
                 "http://www.tv.com/"
             )
+
             //Salvar robots.txt
             val mapRobots = HashMap<String, LinkedList<String>>()
 
@@ -48,15 +50,15 @@ class Main {
                         continue
                     }
 
+                    //Armazena pagina visitada
+                    val repo = PageRepository()
+                    repo.storePage(html, item, contador)
+
                     //Passar pagina pelo parser para pegar links existentes
                     val txtProcessor = TextProcessor()
                     val links = txtProcessor.getLinks(html, item)
                     print("links: " + links + " ")
 
-//                    //Armazena pagina visitada
-//                    val repo = PageRepository()
-//                    repo.storePage(page)
-//
                     //Atualiza fronteira
                     for (link in links){
                         fronteira.addURL(link)
