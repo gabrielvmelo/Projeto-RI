@@ -24,8 +24,10 @@ vectorizer = CountVectorizer()
 print(vectorizer.fit_transform(list(txts)).todense())
 print(vectorizer.vocabulary_)
 print(len(vectorizer.vocabulary_))
+print(type(vectorizer.vocabulary_))
+arqout = open("dataset/words_freq_list", 'w')
 
-arqout = open("dataset/test", 'w')
-
-for word in vectorizer.vocabulary_:
-    arqout.write("{}: {}\n".format(word, vectorizer.vocabulary_[word]))
+order_vocabulary = sorted(vectorizer.vocabulary_.items(), key = lambda kv : kv[1])
+print(type(order_vocabulary))
+for elem in order_vocabulary:
+    arqout.write("{}: {}\n".format(elem[0], elem[1]))
