@@ -5,24 +5,24 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
   <meta http-equiv="x-ua-compatible" content="ie=edge"> 
   <meta name="viewport" content="width=device-width, initial-scale=1"> 
-  <title>Rotten Tomatoes: Movies | TV Shows | Movie Trailers | Reviews - Rotten Tomatoes</title> 
-  <meta name="description" content="Rotten Tomatoes, home of the Tomatometer, is the most trusted measurement of quality for Movies &amp; TV. The definitive site for Reviews, Trailers, Showtimes, and Tickets"> 
-  <link rel="canonical" href="https://www.rottentomatoes.com/"> 
+  <title>Rotten Tomatoes: About - Rotten Tomatoes</title> 
+  <meta name="description" content="Rotten Tomatoes is home to the Tomatometer rating, which represents the percentage of professional critic reviews that are positive for a given film or television show."> 
+  <link rel="canonical" href="https://www.rottentomatoes.com/about"> 
   <link rel="shortcut icon" sizes="76x76" type="image/x-icon" href="/assets/pizza-pie/images/favicon.ico"> 
   <meta property="fb:app_id" content="326803741017"> 
   <meta property="og:site_name" content="Rotten Tomatoes"> 
-  <meta property="og:title" content="Rotten Tomatoes: Movies | TV Shows | Movie Trailers | Reviews"> 
-  <meta property="og:description" content="Rotten Tomatoes, home of the Tomatometer, is the most trusted measurement of quality for Movies &amp; TV. The definitive site for Reviews, Trailers, Showtimes, and Tickets"> 
+  <meta property="og:title" content="Rotten Tomatoes: About"> 
+  <meta property="og:description" content="Rotten Tomatoes is home to the Tomatometer rating, which represents the percentage of professional critic reviews that are positive for a given film or television show."> 
   <meta property="og:type" content="website"> 
-  <meta property="og:url" content="https://www.rottentomatoes.com/"> 
+  <meta property="og:url" content="https://www.rottentomatoes.com/about"> 
   <meta property="og:image" content="/assets/pizza-pie/head-assets/images/RT_TwitterCard_2018.jpg"> 
   <meta property="og:locale" content="en_US"> 
   <meta name="twitter:card" content="summary_large_image"> 
   <meta name="twitter:url" content="//twitter.com/rottentomatoes"> 
   <meta name="twitter:image" content="/assets/pizza-pie/head-assets/images/RT_TwitterCard_2018.jpg"> 
-  <meta name="twitter:title" content="Rotten Tomatoes: Movies | TV Shows | Movie Trailers | Reviews"> 
-  <meta name="twitter:text:title" content="Rotten Tomatoes: Movies | TV Shows | Movie Trailers | Reviews"> 
-  <meta name="twitter:description" content="Rotten Tomatoes, home of the Tomatometer, is the most trusted measurement of quality for Movies &amp; TV. The definitive site for Reviews, Trailers, Showtimes, and Tickets"> 
+  <meta name="twitter:title" content="Rotten Tomatoes: About"> 
+  <meta name="twitter:text:title" content="Rotten Tomatoes: About"> 
+  <meta name="twitter:description" content="Rotten Tomatoes is home to the Tomatometer rating, which represents the percentage of professional critic reviews that are positive for a given film or television show."> 
   <meta name="twitter:site" content="@rottentomatoes"> 
   <link rel="manifest" href="/assets/pizza-pie/manifest/manifest.json"> 
   <link rel="apple-touch-icon" href="/assets/pizza-pie/head-assets/images/apple-touch-icon-60.jpg"> 
@@ -53,7 +53,6 @@ body {
   margin: 0;
 }
 
-aside,
 footer,
 nav,
 section {
@@ -79,6 +78,11 @@ img {
 
 svg:not(:root) {
   overflow: hidden;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
 }
 
 button,
@@ -113,15 +117,6 @@ input::-moz-focus-inner {
 
 input {
   line-height: normal;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td {
-  padding: 0;
 }
 
 .glyphicon {
@@ -190,16 +185,11 @@ td {
 .col-xs-4,
 .col-xs-5,
 .col-xs-6,
-.col-sm-6,
 .col-xs-7,
-.col-sm-7,
 .col-xs-11,
 .col-sm-11,
 .col-xs-12,
-.col-sm-12,
 .col-sm-13,
-.col-sm-17,
-.col-sm-18,
 .col-xs-24 {
   position: relative;
   min-height: 1px;
@@ -251,42 +241,17 @@ td {
 }
 
 @media (min-width: 768px) {
-  .col-sm-6,
-  .col-sm-7,
   .col-sm-11,
-  .col-sm-12,
-  .col-sm-13,
-  .col-sm-17,
-  .col-sm-18 {
+  .col-sm-13 {
     float: left;
-  }
-
-  .col-sm-6 {
-    width: 25%;
-  }
-
-  .col-sm-7 {
-    width: 29.16667%;
   }
 
   .col-sm-11 {
     width: 45.83333%;
   }
 
-  .col-sm-12 {
-    width: 50%;
-  }
-
   .col-sm-13 {
     width: 54.16667%;
-  }
-
-  .col-sm-17 {
-    width: 70.83333%;
-  }
-
-  .col-sm-18 {
-    width: 75%;
   }
 }
 
@@ -330,6 +295,13 @@ img {
   vertical-align: middle;
 }
 
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -343,7 +315,6 @@ img {
 
 h1,
 h2,
-h3,
 .h2 {
   font-family: inherit;
   font-weight: bold;
@@ -353,8 +324,7 @@ h3,
 
 h1,
 h2,
-.h2,
-h3 {
+.h2 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -366,10 +336,6 @@ h1 {
 h2,
 .h2 {
   font-size: 18px;
-}
-
-h3 {
-  font-size: 14px;
 }
 
 p {
@@ -384,8 +350,7 @@ small {
   text-align: center;
 }
 
-ul,
-ol {
+ul {
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -409,11 +374,6 @@ ul ul {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
-}
-
-table {
-  background-color: transparent;
-  border-collapse: collapse;
 }
 
 label {
@@ -641,6 +601,15 @@ label {
   }
 }
 
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
+
 .panel-body {
   padding: 15px;
 }
@@ -791,121 +760,6 @@ button.close {
   }
 }
 
-.carousel {
-  position: relative;
-}
-
-.carousel-inner {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-control {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 15%;
-  opacity: .5;
-  filter: alpha(opacity=50);
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-  background-color: transparent;
-}
-
-.carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
-  background-image: -o-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
-  background-image: linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-}
-
-.carousel-control.right {
-  left: auto;
-  right: 0;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.5) 100%);
-  background-image: -o-linear-gradient(left, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.5) 100%);
-  background-image: linear-gradient(to right, rgba(0,0,0,0.0001) 0%, rgba(0,0,0,0.5) 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-}
-
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
-  position: absolute;
-  top: 50%;
-  margin-top: -10px;
-  z-index: 5;
-  display: inline-block;
-}
-
-.carousel-control .glyphicon-chevron-left {
-  left: 50%;
-  margin-left: -10px;
-}
-
-.carousel-control .glyphicon-chevron-right {
-  right: 50%;
-  margin-right: -10px;
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  z-index: 15;
-  width: 60%;
-  margin-left: -30%;
-  padding-left: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.carousel-indicators li {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 1px;
-  text-indent: -999px;
-  border: 1px solid #fff;
-  border-radius: 10px;
-  background-color: #000 \9;
-  background-color: transparent;
-}
-
-.carousel-indicators .active {
-  margin: 0;
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-}
-
-@media screen and (min-width: 768px) {
-  .carousel-control .glyphicon-chevron-left,
-  .carousel-control .glyphicon-chevron-right {
-    width: 30px;
-    height: 30px;
-    margin-top: -10px;
-    font-size: 30px;
-  }
-
-  .carousel-control .glyphicon-chevron-left {
-    margin-left: -10px;
-  }
-
-  .carousel-control .glyphicon-chevron-right {
-    margin-right: -10px;
-  }
-
-  .carousel-indicators {
-    bottom: 20px;
-  }
-}
-
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -1044,15 +898,8 @@ ul {
   }
 }
 
-h3 {
-  line-height: 17px;
-  color: #545454;
-  margin: 0 0 12px 0;
-}
-
 h1,
-h2,
-h3 {
+h2 {
   text-transform: uppercase;
 }
 
@@ -1117,8 +964,62 @@ a.articleLink {
   }
 }
 
+.col-right,
+.col-left-center {
+  float: left;
+  min-height: 1px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .col-right.col-full-xs,
+  .col-left-center.col-full-xs {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.col-left-center {
+  padding-left: 20px;
+  padding-right: 10px;
+}
+
+.col-right {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .col-right {
+    width: 335px;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-right {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-left-center {
+    width: 765px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-left-center {
+    width: 70%;
+  }
+}
+
 .fullWidth {
   width: 100% !important;
+}
+
+.fl {
+  float: left;
 }
 
 .fr {
@@ -1127,10 +1028,6 @@ a.articleLink {
 
 .clearfix {
   clear: both;
-}
-
-.inlineBlock {
-  display: inline-block;
 }
 
 .btn-primary-rt:not(.disabled) {
@@ -1151,27 +1048,6 @@ a.articleLink {
   text-align: center;
 }
 
-.tableCenterDiv {
-  display: table;
-  margin: 0 auto;
-}
-
-.clickForMore {
-  text-align: right;
-}
-
-@media (min-width: 768px) {
-  .clickForMore {
-    margin: 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .clickForMore {
-    margin: 5px 0 30px 0;
-  }
-}
-
 .row-sameColumnHeight {
   margin-left: -10px;
   margin-right: -10px;
@@ -1186,33 +1062,6 @@ a.articleLink {
   float: none;
   display: table-cell;
   vertical-align: top;
-}
-
-.sponsored-tag {
-  display: none;
-}
-
-.sponsored-bg {
-  border-width: 0 80px 80px 0;
-  border-color: transparent #2971b2 transparent transparent;
-  border-style: solid;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.sponsored-text {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  color: #FFFFFF;
-  font-size: 0.9em;
-  position: absolute;
-  right: 0;
-  top: 28px;
-  z-index: 2;
 }
 
 #trending_bar_ad {
@@ -1788,6 +1637,18 @@ a.articleLink {
   padding: 0;
 }
 
+.panel {
+  box-shadow: 0 0 0 transparent;
+}
+
+@media (min-width: 991px) {
+  .col-left-center .panel-box:first-of-type,
+  .col-right .panel-box:first-of-type {
+    margin-top: 10px;
+  }
+}
+
+.panel-rt.panel,
 .panel-rt {
   border-color: #fff;
   -webkit-border-radius: 0;
@@ -1800,12 +1661,14 @@ a.articleLink {
   clear: both;
 }
 
+.panel-rt.panel>.panel-heading,
 .panel-rt>.panel-heading {
   color: #1C1C1C;
   border-color: transparent;
 }
 
 @media (max-width: 767px) {
+  .panel-rt.panel,
   .panel-rt {
     border: none;
     margin: 10px 0;
@@ -1813,17 +1676,27 @@ a.articleLink {
   }
 }
 
+@media (max-width: 767px) {
+  .panel-rt.panel.panel-box,
+  .panel-rt.panel-box {
+    border: none;
+  }
+}
+
+.panel-rt.panel .panel-body,
 .panel-rt .panel-body {
   clear: both;
   overflow: hidden;
 }
 
 @media (max-width: 767px) {
+  .panel-rt.panel .panel-body,
   .panel-rt .panel-body {
     padding: 5px;
   }
 }
 
+.panel-rt.panel .panel-heading,
 .panel-rt .panel-heading {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1837,30 +1710,11 @@ a.articleLink {
 }
 
 @media (min-width: 768px) {
+  .panel-rt.panel .panel-heading,
   .panel-rt .panel-heading {
     padding: 10px 25px;
     float: initial;
   }
-}
-
-.panel-rt.bannerCaption {
-  border: none;
-  margin: 0;
-}
-
-.panel-rt.bannerCaption .panel-heading {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  padding: 0 10px;
-  z-index: 20;
-}
-
-.panel-rt.bannerCaption .panel-body .title {
-  font-weight: bold;
-  margin: 0;
 }
 
 .social-tools {
@@ -1984,19 +1838,30 @@ a.articleLink {
   }
 }
 
-.noRating {
-  color: #545454;
-  font-size: 10px;
-}
-
-.tMeterIcon.tiny {
+.icon {
+  background: transparent url("/assets/pizza-pie/images/icons/global/icons-v3.54da261b421.png") no-repeat -312px -160px;
   display: inline-block;
-  min-width: 50px;
-  padding-bottom: 1px;
+  vertical-align: text-bottom;
 }
 
-.tMeterIcon.tiny.noRating {
-  width: 59px;
+.icon.big {
+  height: 48px;
+  width: 48px;
+}
+
+.icon.big.certified {
+  background: transparent url(/assets/pizza-pie/images/icons/global/cf-lg.3c29eff04f2.png) no-repeat;
+  background-size: cover;
+}
+
+.icon.big.fresh {
+  background: transparent url(/assets/pizza-pie/images/icons/global/new-fresh-lg.12e316e31d2.png) no-repeat;
+  background-size: cover;
+}
+
+.icon.big.rotten {
+  background: transparent url(/assets/pizza-pie/images/icons/global/new-rotten-lg.ecdfcf9596f.png) no-repeat;
+  background-size: cover;
 }
 
 .fontelloIcon:before {
@@ -2021,12 +1886,20 @@ a.articleLink {
   content: '\e801';
 }
 
+.icon-gplus:before {
+  content: '\e802';
+}
+
 .icon-youtube-play:before {
   content: '\e803';
 }
 
 .icon-facebook-squared:before {
   content: '\e804';
+}
+
+.icon-tumblr:before {
+  content: '\e806';
 }
 
 .icon-down-dir:before {
@@ -2059,260 +1932,6 @@ a.articleLink {
 
 .icon-instagram:before {
   content: '\e818';
-}
-
-.headline {
-  padding: .5px;
-}
-
-.headline:first-of-type {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.headline .headlineItem .bannerPic {
-  background-size: cover !important;
-  width: 100%;
-  height: 310px;
-}
-
-@media (max-width: 767px) {
-  .headline .headlineItem .bannerCaption {
-    bottom: 10px;
-  }
-
-  .headline .headlineItem .bannerPic {
-    margin-top: 25px;
-  }
-}
-
-.headline .headlineItem .bannerCaption {
-  background-color: #343434;
-  padding-bottom: 10px;
-  overflow: hidden;
-  border-bottom: 0;
-  margin: 0;
-}
-
-.headline .headlineItem .bannerCaption .panel-heading {
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  padding: 0 10px;
-  z-index: 20;
-}
-
-.headline .headlineItem .bannerCaption .panel-body .title {
-  font-weight: bold;
-  margin: 0;
-}
-
-@media (min-width: 768px) {
-  .headline .headlineItem .bannerCaption {
-    padding-top: 15px !important;
-    height: 90px;
-    opacity: .8;
-    left: 25px;
-    background-color: white;
-    position: absolute;
-    border-left: 5px solid #FA320A;
-    bottom: 10px;
-  }
-}
-
-.headline .headlineItem .bannerCaption .panel-body {
-  padding: 5px 15px;
-}
-
-#headliners .carousel-indicators {
-  background-color: transparent;
-  bottom: -37px;
-  height: 16px;
-  left: auto;
-  padding-right: 188px;
-  right: 30px;
-  text-align: right;
-  width: auto;
-  z-index: 1;
-}
-
-#headliners .carousel-indicators li {
-  background-color: #000000;
-  opacity: .35;
-  margin: 5px;
-}
-
-#headliners .carousel-indicators li.active {
-  background-color: #FA320A !important;
-  height: 10px;
-  width: 10px;
-  opacity: 1 !important;
-}
-
-#headliners .carousel-control {
-  bottom: 75px;
-  top: 0;
-  background-image: none;
-}
-
-#homepage-top-dvd-streaming h2 {
-  margin-bottom: 0;
-}
-
-#dvd-affliate-links {
-  margin-bottom: 10px;
-}
-
-@media (max-width: 767px) {
-  #dvd-affliate-links {
-    margin-left: 6px;
-  }
-}
-
-#dvd-affliate-links a:first-child {
-  margin-left: 0;
-}
-
-#dvd-affliate-links a {
-  font-size: 14px;
-  margin: 0 2px;
-  text-decoration: none;
-  color: black;
-}
-
-.movie_list {
-  line-height: 24px;
-  margin-top: 10px;
-  max-width: 100%;
-  table-layout: fixed;
-  width: 100%;
-}
-
-.movie_list a {
-  color: #343434;
-}
-
-.movie_list tr td {
-  padding: 0;
-}
-
-.movie_list .right_col {
-  padding: 0 7px;
-  text-align: right;
-  text-transform: uppercase;
-  width: 65px;
-}
-
-@media (max-width: 767px) {
-  .movie_list tr td {
-    padding: 8px;
-  }
-}
-
-.movie_list tr .left_col {
-  width: 75px;
-}
-
-.movie_list tr .middle_col {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  width: auto;
-  padding-left: 5px;
-  font-family: 'Franklin Gothic FS Book', sans-serif;
-}
-
-.movie_list tr .middle_col a {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.movie_list tr .right_col {
-  color: #545454;
-  padding: 0 5px;
-  text-align: right;
-  text-transform: uppercase;
-  width: 65px;
-}
-
-@media (max-width: 767px) {
-  .movie_list tr {
-    border-top: 1px solid #ddd;
-    margin: 5px 0;
-  }
-
-  .movie_list tr td {
-    vertical-align: middle;
-  }
-
-  .movie_list tr:last-of-type {
-    border-bottom: 1px solid #ddd;
-  }
-}
-
-.freshPicks .cfpItem {
-  float: left;
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .freshPicks .cfpItem {
-    padding: 0 10px;
-    width: 20%;
-  }
-}
-
-@media (max-width: 767px) {
-  .freshPicks .cfpItem {
-    padding: 5px;
-    width: 30vw;
-  }
-}
-
-.freshPicks .cfpItem a {
-  color: #555;
-}
-
-@media (min-width: 768px) {
-  .freshPicks .cfpItem a .imgContainer {
-    height: 200px;
-  }
-}
-
-@media (max-width: 767px) {
-  .freshPicks .cfpItem a .imgContainer {
-    height: 40vw;
-  }
-
-  .freshPicks .cfpItem a .imgContainer img {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-.freshPicks .cfpItem a .topText {
-  font-weight: 600;
-  font-size: 16px;
-  margin: 0;
-  text-transform: uppercase;
-  font-family: 'Neusa Next Pro Compact', Impact, Arial, sans-serif;
-}
-
-@media (max-width: 767px) {
-  .freshPicks .cfpItem a .topText {
-    height: 32px;
-  }
-}
-
-@media (min-width: 768px) {
-  .freshPicks .cfpItem a .imgContainer img {
-    height: 100%;
-    width: 118%;
-    position: relative;
-    left: -13px;
-  }
 }
 
 #newTrailerModal.modal,
@@ -2459,63 +2078,40 @@ a.articleLink {
   opacity: 1;
 }
 
-.home-slide {
-  background: url('/assets/pizza-pie/images/home/default_homepage_slide.87639326b72.jpg') center center;
-  background-size: cover;
-}
-
-.spotlight-item-wrap {
-  overflow: hidden;
-  max-height: 310px;
-}
-
 @media (min-width: 768px) {
-  .cfpModule h1.panel-heading {
-    margin-left: 5px;
+  #about-contact-panel h2.panel-heading {
+    margin-left: -7px;
   }
 
-  #headliners .panel-rt.bannerCaption.subPanel {
-    width: 500px;
-  }
-
-  h1.panel-heading::after {
+  h2.panel-heading::after {
     content: '  ';
   }
 }
 
 @media (max-width: 767px) {
-  .cfpModule h1.panel-heading {
-    margin-left: 20px;
-  }
-
-  #miniMOB .clickForMore a {
-    padding-left: 10px;
-  }
-
-  .cfpModule .panel-body.row {
-    margin-top: -75px;
-  }
-
-  .movie_list {
-    line-height: initial;
-  }
-
-  h1.panel-heading::after {
+  h2.panel-heading::after {
     content: none;
+  }
+
+  .col-right h2.panel-heading {
+    padding-left: 25px;
+  }
+
+  h2.panel-heading::before {
+    left: 0 !important;
   }
 }
 
-h3,
+span.bold,
 .articleLink,
 .btn {
   font-family: 'Franklin Gothic FS Med', sans-serif;
 }
 
 #header-main .dropdown-menu li a,
-.cfpModule .col-sm-6,
 .input-group,
-.modal-content,
-.clickForMore a {
+.aboutPage p,
+.modal-content {
   font-family: 'Franklin Gothic FS Book', sans-serif;
 }
 
@@ -2523,26 +2119,25 @@ h3,
 #tvMenu,
 #newsMenu,
 #ticketingMenu,
-h1.panel-heading {
+h2.panel-heading {
   font-family: 'Neusa Next Pro Compact', Impact, Arial, sans-serif;
 }
 
-#home-cfp-cf-logo {
-  margin-right: 15px;
+.about-trending {
+  color: #2466d4;
 }
 
-.home-body {
-  position: relative;
-  overflow: hidden;
-  margin-top: -26.4px;
-  width: 100%;
+.col-right h2.panel-heading::after,
+.col.col-right.col-full-xs h2.panel-heading::after {
+  content: none;
 }
 
-h1.panel-heading::before {
-  padding-left: 6px;
+h2.panel-heading {
+  font-weight: 600;
+  line-height: 25px;
 }
 
-h1.panel-heading::after {
+h2.panel-heading::after {
   position: absolute;
   margin-left: 11px;
   width: 100%;
@@ -2551,7 +2146,7 @@ h1.panel-heading::after {
   height: 20px;
 }
 
-h1.panel-heading::before {
+h2.panel-heading::before {
   background-color: #FA320A;
   content: ' ';
   min-width: 20px;
@@ -2563,14 +2158,6 @@ h1.panel-heading::before {
 .panel-rt .panel-heading {
   border: 0;
   font-size: 28px;
-}
-
-.cfpItem p {
-  color: #343434;
-}
-
-.clickForMore a {
-  color: #2466d4;
 }
 
 #menu .list-inline {
@@ -2616,9 +2203,9 @@ h1.panel-heading::before {
   position: relative;
 }
 
-h1.panel-heading {
-  font-weight: 600;
-  line-height: 25px;
+.trademark {
+  position: relative;
+  top: -2px;
 }
 
 @media (max-width: 767px) {
@@ -2779,7 +2366,11 @@ h1.panel-heading {
 }
 
 @media all and (-ms-high-contrast: none) and (min-width: 767px), (-ms-high-contrast: active) and (min-width: 767px) {
-  h1.panel-heading::before {
+  #about-contact-panel h2.panel-heading::before {
+    top: 21px;
+  }
+
+  h2.panel-heading::before {
     background-color: #FA320A;
     content: ' ';
     min-width: 20px;
@@ -2790,7 +2381,7 @@ h1.panel-heading {
 }
 
 @media all and (-ms-high-contrast: none) and (max-width: 768px), (-ms-high-contrast: active) and (max-width: 768px) {
-  h1.panel-heading::before {
+  h2.panel-heading::before {
     background-color: #FA320A;
     content: ' ';
     min-width: 20px;
@@ -2833,12 +2424,6 @@ h1.panel-heading {
   .mobileNav {
     display: none;
   }
-
-  .cfp-img-container {
-    width: 85%;
-    position: relative;
-    right: -14px;
-  }
 }
 
 @media all and (-ms-high-contrast: none) and (min-width: 767px), (-ms-high-contrast: active) and (min-width: 767px) {
@@ -2874,20 +2459,8 @@ h1.panel-heading {
     content: '';
   }
 
-  .tMeterIcon.tiny.noRating {
-    width: 61px;
-  }
-
   .editorial-header-link {
     width: 211px;
-  }
-
-  .freshPicks .cfpItem {
-    padding: 0;
-  }
-
-  .freshPicks .cfpItem a .imgContainer img {
-    width: 85%;
   }
 
   .navbar.navbar-rt #menu .menuHeader .dropdown-menu .subnav h2.title:not(.cfp-tv-season-title) {
@@ -2896,10 +2469,6 @@ h1.panel-heading {
 
   .navbar.navbar-rt #menu .menuHeader .dropdown-menu .subnav li {
     width: 130%;
-  }
-
-  .freshPicks .cfpItem a .imgContainer img {
-    height: 110%;
   }
 }
 
@@ -2911,17 +2480,6 @@ h1.panel-heading {
   .navbar.navbar-rt #menu .menuHeader .dropdown-menu .subnav li {
     width: 130%;
   }
-
-  .tMeterIcon.tiny.noRating {
-    width: 60px;
-  }
-}
-
-@-moz-document url-prefix()  {
-  .tv-list-1-view-all,
-  .tv-list-2-view-all {
-    padding-top: 10px;
-  }
 }
 
 h2.title {
@@ -2932,207 +2490,88 @@ h2.title {
   height: 350px;
 }
 
-@media (max-width: 500px) {
-  .headline .headlineItem .bannerPic {
-    height: 225px;
+body {
+  line-height: 1.3;
+}
+
+#about-contact-panel .bold {
+  font-weight: bold;
+}
+
+#about-contact-panel p {
+  font-family: 'Franklin Gothic FS Book';
+}
+
+#trademark1 {
+  font-size: 20px;
+  top: -3px;
+}
+
+#trademark4 {
+  font-size: 20px;
+  top: 2px;
+}
+
+.aboutPage h1 {
+  font-family: 'Neusa Next Pro Compact Medium';
+}
+
+.aboutPage h2 {
+  font-family: 'Neusa Next Pro Compact Medium';
+  font-weight: 500;
+}
+
+.about-icon-positioning {
+  padding: 8px 0;
+}
+
+.about-icon-text {
+  padding: 7px 75px;
+}
+
+.about-cf-text {
+  padding: 0 75px;
+}
+
+.about-social-icons {
+  font-size: 28px;
+  padding-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .aboutPage h1 {
+    font-weight: 500;
   }
 }
 
 @media (max-width: 767px) {
-  .headline .headlineItem .bannerCaption {
-    height: 110px;
-    border-left: 5px solid #FA320A;
-    border-bottom: 1px solid #EFEFEF;
-    position: absolute;
-    right: 13%;
-    left: 11%;
-    background: rgba(255, 255, 255, 0.8);
-  }
-
-  #headliners h3 {
-    padding-top: 15px;
-    padding-bottom: 7px;
-  }
-
-  .carousel-control {
-    font-size: 35px;
-  }
-
-  .glyphicon-chevron-right,
-  .glyphicon-chevron-left {
-    opacity: .8;
-  }
-
-  .cfpModule .panel-body {
-    margin: 0;
-  }
-
-  #miniMOB .leftColumn {
+  h1 {
     padding: 0;
   }
 
-  #miniMOB .rightColumn {
-    padding: 0;
+  h2 {
+    position: relative;
+    left: -5px;
   }
 
-  #headliners .carousel-control.left,
-  #headliners .carousel-control.right {
-    background-image: none !important;
+  h1,
+  h2:not(.panel-heading) {
+    font-size: 24px;
+    font-weight: normal;
   }
 
-  #headliners .carousel-control .glyphicon-chevron-left,
-  #headliners .carousel-control .glyphicon-chevron-right {
-    margin-top: -19px !important;
-  }
-
-  .headline .headlineItem .bannerCaption .panel-body {
-    padding: 5px 12px;
-  }
-
-  .articleLink {
-    padding-right: 4px;
-  }
-
-  .showtimesLink {
-    padding-right: 10px;
-  }
-
-  .clickForMore {
-    margin: 20px 3px 30px 0 !important;
-    width: 100%;
-  }
-}
-
-@media (min-width: 768px) {
-  #miniMOB .leftColumn {
-    padding: 10px 10px 20px 20px;
-  }
-
-  #miniMOB .rightColumn {
-    padding: 10px 20px 20px 20px;
-  }
-
-  #banner .title {
-    margin-left: -3px;
+  #trademark4 {
+    font-size: 24px;
+    top: 0;
   }
 }
 
 @media all and (-ms-high-contrast: none) and (min-width: 767px), (-ms-high-contrast: active) and (min-width: 767px) {
-  h1.panel-heading::before,
-  h1.panel-heading::after {
-    margin-bottom: -10px;
+  #about-contact-panel p {
+    font-family: 'Franklin Gothic FS Book';
   }
-
-  h1.panel-heading {
-    line-height: 30px;
-  }
-
-  .freshPicks .cfpItem a .imgContainer img {
-    position: initial;
-    left: 0;
-  }
-
-  .cfpModule .freshPicks .cfpItem a .imgContainer img {
-    width: 100%;
-  }
-
-  .trendingBar {
-    margin-bottom: -20px;
-  }
-
-  #main_container {
-    top: -32px;
-  }
-
-  .container.body_main {
-    background: #ffffff;
-  }
-
-  .navbar {
-    height: 81px;
-  }
-}
-
-@-moz-document url-prefix()  {
-  .home-body {
-    margin-top: -50px;
-  }
-
-  .fr {
-    margin-bottom: -19px;
-  }
-
-  .trendingBar {
-    top: -1px;
-  }
-
-  .carousel-inner {
-    top: -1px;
-  }
-}
-
-#miniMOB {
-  margin-left: 0;
-  margin-right: 0;
-  position: relative;
-  top: 25px;
-  font-family: 'Franklin Gothic FS Book', sans-serif;
-}
-
-#miniMOB h2 {
-  margin-top: 10px;
-  font-family: 'Neusa Next Pro Compact', Impact, Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-#miniMOB .adColumn {
-  padding: auto 20px auto 0;
-}
-
-#miniMOB .leftColumn,
-#miniMOB .rightColumn {
-  position: relative;
-}
-
-#miniMOB .rightColumn {
-  border-left: 1px solid #eee;
-}
-
-#miniMOB .movie_list .left_col a,
-#miniMOB .movie_list .middle_col a,
-#miniMOB .movie_list .right_col a {
-  display: block;
-  width: 100%;
-}
-
-#headliners h3 {
-  font-family: 'Neusa Next Pro Compact', Impact, Arial, sans-serif;
-  font-weight: 600;
-  font-size: 21px;
-  position: relative;
-  left: 1px;
-  line-height: 20px;
-  margin-bottom: -5px;
-}
-
-#banner .title {
-  font-family: 'Franklin Gothic FS Med', sans-serif;
-  font-size: 15px;
-  line-height: 15px;
-  font-weight: normal;
-}
-
-#miniMOB .clickForMore {
-  text-align: left;
-  padding-top: 12px;
-  padding-bottom: 7px;
-}
-
-.in {
-  opacity: 1;
 }</style> 
-  <link rel="preload" href="/assets/pizza-pie/stylesheets/bundles/home.a5bd2bc4b6d.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
+  <link rel="preload" href="/assets/pizza-pie/stylesheets/bundles/about.fa5cbdd8665.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
   <script>
         !function(t){"use strict";t.loadCSS||(t.loadCSS=function(){});var e=loadCSS.relpreload={};if(e.support=function(){var e;try{e=t.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),e.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},e.poly=function(){if(!e.support())for(var a=t.document.getElementsByTagName("link"),n=0;n<a.length;n++){var o=a[n];"preload"!==o.rel||"style"!==o.getAttribute("as")||o.getAttribute("data-loadcss")||(o.setAttribute("data-loadcss",!0),e.bindMediaToggle(o))}},!e.support()){e.poly();var a=t.setInterval(e.poly,500);t.addEventListener?t.addEventListener("load",function(){e.poly(),t.clearInterval(a)}):t.attachEvent&&t.attachEvent("onload",function(){e.poly(),t.clearInterval(a)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:t.loadCSS=loadCSS}("undefined"!=typeof global?global:this);
         </script> 
@@ -3142,7 +2581,7 @@ h2.title {
   <!-- TODO: User Information discussion --> 
   <!-- <c:set var="friendCount" value="${empty current.user? 0 : fn:length(current.friends)}" /> --> 
   <script id="mps-page-integration">
-      window.mpscall = {"adunits":"Multi Logo|Box Ad|Marquee Banner|Top Banner","cag[score]":null,"cag[certified_fresh]":null,"cag[fresh_rotten]":null,"cag[rating]":null,"cag[release]":null,"cag[movieshow]":null,"cag[genre]":null,"cag[urlid]":null,"cat":"home","field[env]":"production","field[rtid]":null,"path":"/","site":"rottentomatoes-web","title":"Rotten Tomatoes: Movies | TV Shows | Movie Trailers | Reviews","type":"index"};
+      window.mpscall = {"adunits":"Marquee Banner|Top Banner","cag[score]":null,"cag[certified_fresh]":null,"cag[fresh_rotten]":null,"cag[rating]":null,"cag[release]":null,"cag[movieshow]":null,"cag[genre]":null,"cag[urlid]":null,"cat":"about","field[env]":"production","field[rtid]":null,"path":"/about","site":"rottentomatoes-web","title":"Rotten Tomatoes: About","type":"webAboutPage"};
       var mpsopts={'host':'mps.nbcuni.com', 'updatecorrelator':1};
       var mps=mps||{};mps._ext=mps._ext||{};mps._adsheld=[];mps._queue=mps._queue||{};mps._queue.mpsloaded=mps._queue.mpsloaded||[];mps._queue.mpsinit=mps._queue.mpsinit||[];mps._queue.gptloaded=mps._queue.gptloaded||[];mps._queue.adload=mps._queue.adload||[];mps._queue.adclone=mps._queue.adclone||[];mps._queue.adview=mps._queue.adview||[];mps._queue.refreshads=mps._queue.refreshads||[];mps.__timer=Date.now||function(){return+new Date};mps.__intcode="v2";if(typeof mps.getAd!="function")mps.getAd=function(adunit){if(typeof adunit!="string")return false;var slotid="mps-getad-"+adunit.replace(/\W/g,"");if(!mps._ext||!mps._ext.loaded){mps._queue.gptloaded.push(function(){typeof mps._gptfirst=="function"&&mps._gptfirst(adunit,slotid);mps.insertAd("#"+slotid,adunit)});mps._adsheld.push(adunit)}return'<div id="'+slotid+'" class="mps-wrapper" data-mps-fill-slot="'+adunit+'"></div>'};(function(){head=document.head||document.getElementsByTagName("head")[0],mpsload=document.createElement("script");mpsload.src="//"+mpsopts.host+"/fetch/ext/load-"+mpscall.site+".js?nowrite=2";mpsload.id="mps-load";head.insertBefore(mpsload,head.firstChild)})();
     </script> 
@@ -3179,6 +2618,11 @@ h2.title {
                 var leaderboardHeight = eo.size[1];
                 if (leaderboardHeight > 50){
                     
+                        $('#header-main').removeClass('header_main_scroll');
+                        $('#header-main').css('margin-top', leaderboardHeight + 10);
+                        var bannerEl = $('#header_and_leaderboard');
+                        bannerEl.addClass('header_and_leaderboard_scroll');
+                    
                     if (leaderboardHeight < 90){
                         $('.leaderboard_wrapper').css('min-height', leaderboardHeight);
                     }
@@ -3210,7 +2654,7 @@ h2.title {
   <script>
             dataLayer.push({ viewportType: window.innerWidth >= 768 ? 'desktop_view' : 'mobile_view' });
             dataLayer.push({ rtVersion: 3.0 });
-            dataLayer.push({"webVersion":"node","pageName":"rt | homepage"});
+            dataLayer.push({"webVersion":"node","pageName":"rt | about"});
         </script> 
   <script>
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -3238,27 +2682,6 @@ h2.title {
   </noscript> 
   <script async src="//assets.adobedtm.com/a5fa26c3da5356c4d77ae8244dc4eb5096e2f4b0/satelliteLib-cbce2cb5d7b476a55d4d651acf340e0592b4f00c.js"></script> 
   <!-- TODO: Put in long term targeting fix --> 
-  <div id="overlay" style="height:0px;"></div> 
-  <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                // require(["js-cookie"], function(Cookies){
-                //     var pageViewCount = Cookies.get("pvc");
-                //     if (pageViewCount == null || (parseInt(pageViewCount) == 0) || (parseInt(pageViewCount) % 3 == 0)) {
-                        mps.insertAd('#overlay','interstitial');
-                //     }
-                // });
-            } else if (mps.getResponsiveSet() == '0') {
-                // require(["js-cookie"], function(Cookies){
-                //     var pageViewCount = Cookies.get("pvc");
-                //     if (pageViewCount == null || (parseInt(pageViewCount) == 0) || (parseInt(pageViewCount) % 3 == 0)) {
-                        mps.insertAd('#overlay','minterstitial');
-                //     }
-                // });
-            }
-        });
-    </script> 
   <!-- mobile menu --> 
   <div id="navMenu" class="modal fade" role="dialog" aria-labelledby="navMenu"> 
    <div class="modal-dialog"> 
@@ -3307,22 +2730,6 @@ h2.title {
   </div> 
   <div class="body_main container"> 
    <div id="header_and_leaderboard"> 
-    <div id="top_leaderboard_wrapper" class="leaderboard_wrapper homepage_leaderboard"> 
-     <div id="top_leaderboard_helper" class="leaderboard_helper"> 
-      <div id="leaderboard_top_ad"></div> 
-      <script>
-                //--RESPONSIVE AD SWITCHING (DIFFERENT CONTAINERS)
-                var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-                mps._queue.gptloaded.push(function () {
-                    if (mps.getResponsiveSet() == '0') { //MOBILE
-                        mps.insertAd('#leaderboard_top_ad','mbanner');
-                    } else { //DESKTOP or TABLET
-                        mps.insertAd('#leaderboard_top_ad','topbanner');
-                    }
-                });
-            </script> 
-     </div> 
-    </div> 
    </div> 
    <!-- global header --> 
    <nav id="header-main" class="header_main container"> 
@@ -3342,15 +2749,6 @@ h2.title {
        <!-- Logo --> 
        <div id="navbar_brand" class="navbar-brand"> 
         <a class="header-rt-logo" aria-label="header logo" href="/"><img id="original_rt_logo" src="/assets/pizza-pie/images/rtlogo.9b892cff3fd.png" alt="Rotten Tomatoes Logo"></a> 
-        <div id="new_logo_ad" style="display:none;"></div> 
-        <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                mps.rt.insertlogo('#new_logo_ad', 'ploc=rtlogo;');
-            }
-        });
-    </script> 
        </div> 
        <!-- Search box --> 
        <div id="desktop-search-root"> 
@@ -3385,7 +2783,7 @@ h2.title {
        <div id="mobile-nav" class="js-mobile-nav__body"> 
         <div class="mob-nav-bottom clearfix"> 
          <ul id="nav-list" class="nav-list"> 
-          <li class="nav-item"> <a href="/" class="active"><i class=" fontelloIcon icon-home"></i>Home</a> </li> 
+          <li class="nav-item"> <a href="/"><i class=" fontelloIcon icon-home"></i>Home</a> </li> 
           <li class="nav-item"> <a href="/lists/theater/"><i class=" fontelloIcon icon-boxoffice"></i>Box Office</a> </li> 
           <li class="nav-item"> <a href="/lists/tv/"><i class=" fontelloIcon icon-tv2"></i>TV</a> </li> 
           <li class="nav-item"> <a href="/lists/dvd/"><i class=" fontelloIcon icon-redeem"></i>DVD</a> </li> 
@@ -3945,7 +3343,7 @@ h2.title {
    </div> 
    <div id="social-tools" class="social-tools"> 
     <div class="social-tools-facebook-like"> 
-     <div class="fb-like" data-href="https://www.rottentomatoes.com/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div> 
+     <div class="fb-like" data-href="https://www.rottentomatoes.com/about" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="false"></div> 
     </div> 
     <a class="social-tools__btn social-tools-facebook-share" title="Facebook Share" data-name="facebookShare"></a> 
     <a class="social-tools__btn social-tools-twitter" title="Twitter" data-name="twitter"></a> 
@@ -3955,797 +3353,91 @@ h2.title {
    </div> 
    <!-- page body --> 
    <div id="main_container" class="container" role="main"> 
-    <!-- salt=home-sticky-wicket-88 --> 
-    <section class="home-body"> 
-     <div id="banner"> 
-      <section class="headline col-sm-12"> 
-       <div id="headliners" class="headline carousel slide" data-ride="carousel"> 
-        <ol class="carousel-indicators hidden-xs"> 
-         <li data-target="#headliners" data-slide-to="0" class="active"></li> 
-         <li data-target="#headliners" data-slide-to="1"></li> 
-         <li data-target="#headliners" data-slide-to="2"></li> 
-         <li data-target="#headliners" data-slide-to="3"></li> 
-         <li data-target="#headliners" data-slide-to="4"></li> 
-         <li data-target="#headliners" data-slide-to="5"></li> 
-         <li data-target="#headliners" data-slide-to="6"></li> 
-         <li data-target="#headliners" data-slide-to="7"></li> 
-        </ol> 
-        <div class="carousel-inner spotlight-item-wrap"> 
-         <section id="" class="headlineItem item active"> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/article/details-on-jon-favreau-star-wars-series-the-mandalorian/" data-slide-index="0"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//klrx-ZqNERXFLXxWAPj62Mxn6kM=/1100x610/v1.czsxMDI3OTY2ODtqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading"><em>The Mandalorian</em> Details Revealed</h3> 
-            <div class="panel-body"> 
-             <span class="title"><em>Star Wars</em> live-action series set in galaxy's outer reaches</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/article/hardy-rises-but-venom-sinks-like-a-brock/" data-slide-index="1"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//g9ghhplcl5OEmX3nlI-mSgNiC0M=/1100x610/v1.czsxMDI3OTY2NztqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading">Hardy Rises, But <em>Venom</em> Sinks Like a Brock</h3> 
-            <div class="panel-body"> 
-             <span class="title">And <em>A Star Is Born</em> goes Certified Fresh</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/article/the-less-singing-a-musical-has-the-better-the-musical-is-according-to-the-tomatometer/" data-slide-index="2"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//5cF6eJSoT7DyuJ8QPMpmxnthU2I=/1100x610/v1.czsxMDI3OTY2NjtqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading">Musicals: The Less Singing, The Better?</h3> 
-            <div class="panel-body"> 
-             <span class="title">We do a deep-throated Tomatometer dive on how musicals work</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorialadmin.rottentomatoes.com/article/the-walking-dead-season-9-preview-details/" data-slide-index="3"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//L1-N9j9Iy5tWvp6n0nyt9LirgNk=/1100x610/v1.czsxMDI3OTY2MztqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading"><em>Walking Dead</em> Season 9 Arrives</h3> 
-            <div class="panel-body"> 
-             <span class="title">10 things you need to know before Sunday</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/guide/all-tom-hardy-movies-ranked/" data-slide-index="4"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//lUvqzeDGh7s71pC-75vEySq5ggg=/1100x610/v1.czsxMDI3OTY2MDtqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading">All Tom Hardy Movies Ranked</h3> 
-            <div class="panel-body"> 
-             <span class="title">The <em>Venom</em> star gets sorted by Tomatometer</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/article/venom-star-tom-hardy-says-the-dark-side-drew-him-to-marvels-mischievous-symbiote/" data-slide-index="5"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//noxbQzQulWtLhmVH_ipoFi4mhCA=/1100x610/v1.czsxMDI3OTY1NztqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading">Tom Hardy Has A Dark Side</h3> 
-            <div class="panel-body"> 
-             <span class="title">And it drew him to <em>Venom</em>, he says in our exclusive interview</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/article/fifteen-years-later-school-of-rock-still-earns-a-big-rocking-a/" data-slide-index="6"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//L9WOR7mEBdC2Bcy_DsH-yHZOSsw=/1100x610/v1.czsxMDI3OTY1OTtqOzE3ODkzOzEyMDA7NTUwOzMxMA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading"><em>School of Rock</em>: 15 Years Later</h3> 
-            <div class="panel-body"> 
-             <span class="title">This Jack Black comedy still makes the grade</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-         <section id="" class="headlineItem item "> 
-          <aside class="sponsored-tag"> 
-           <p class="sponsored-text">FEATURED</p> 
-          </aside> 
-          <a class="unstyled homepage-carousel-image-link" href="https://editorial.rottentomatoes.com/article/10-other-spider-man-characters-we-want-to-see-in-solo-movies/" data-slide-index="7"> 
-           <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//q_4moesqOtB-cM8ytEEdnBNocfQ=/1100x610/v1.czsxMDI3OTY1MTtqOzE3ODkzOzEyMDA7NjAwOzMxNA" data-bg-image="true"></div> 
-           <div class="panel-rt bannerCaption subPanel"> 
-            <h3 class="panel-heading">Spider-Man Characters We Want To See Solo</h3> 
-            <div class="panel-body"> 
-             <span class="title">Silver Sable, Morbius and 8 more who should get their own movies</span> 
-            </div> 
-           </div> </a> 
-         </section> 
-        </div> 
-        <a class="left carousel-control" href="#headliners" role="button" data-slide="prev" aria-label="carousel control left"> <span class="glyphicon glyphicon-chevron-left"></span> </a> 
-        <a class="right carousel-control" href="#headliners" role="button" data-slide="next" aria-label="carousel control right"> <span class="glyphicon glyphicon-chevron-right"></span> </a> 
-       </div> 
-      </section> 
-      <section id="homepage-spotlight1" class="headlineItem headline col-sm-6 hidden-xs homepage-spotlight active"> 
-       <aside class="sponsored-tag"> 
-        <p class="sponsored-text">FEATURED</p> 
-       </aside> 
-       <a class="unstyled" href="https://editorial.rottentomatoes.com/article/horror-daily-double-a-tale-of-two-sisters-goodnight-mommy/"> 
-        <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//XWz78mianIfHZa7tETeNts6A98A=/540x610/v1.czsxMDI3OTY2OTtqOzE3ODkzOzEyMDA7Mjc0OzMxMA" data-bg-image="true"></div> 
-        <div class="panel-rt bannerCaption subPanel"> 
-         <h3 class="panel-heading">Horror Daily Double!</h3> 
-         <div class="panel-body"> 
-          <p class="title">Today's double feature: <em>A Tale of Two Sisters</em>, <em>Goodnight Mommy</em></p> 
-         </div> 
-        </div> </a> 
-      </section> 
-      <section id="homepage-spotlight2" class="headlineItem headline col-sm-6 hidden-xs homepage-spotlight active"> 
-       <aside class="sponsored-tag"> 
-        <p class="sponsored-text">FEATURED</p> 
-       </aside> 
-       <a class="unstyled" href="http://editorial.rottentomatoes.com/article/most-anticipated-movies-of-2020/"> 
-        <div class="bannerPic js-lazyLoad home-slide" data-src="https://resizing.flixster.com//0-7k8ZTb27WByO6fS2sGktexGHk=/540x610/v1.czsxMDI3OTY2MjtqOzE3ODkzOzEyMDA7Mjc0OzMxMA" data-bg-image="true"></div> 
-        <div class="panel-rt bannerCaption subPanel"> 
-         <h3 class="panel-heading">Ready For 2020?</h3> 
-         <div class="panel-body"> 
-          <p class="title">The 35 most anticipated movies in two years time</p> 
-         </div> 
-        </div> </a> 
-      </section> 
-      <div id="spotlight_ad" style="height:0px"></div> 
-      <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                mps.insertAd('#spotlight_ad','spotlight');
-            }
-        });
-    </script> 
-     </div> 
-     <section id="miniMOB" class="panel-rt row"> 
-      <div class="col-sm-17"> 
-       <div class="row"> 
-        <div class="col-sm-12 leftColumn col-full-xs"> 
-         <div id="homepage-opening-this-week" class="listings"> 
-          <a class="pull-right showtimesLink" href="/showtimes/">Get Tickets</a> 
-          <h2>Movies Opening This Week</h2> 
-          <table id="Opening" class="movie_list"> 
-           <tbody>
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/venom_2018"> <span class="icon tiny rotten"></span> <span class="tMeterScore">31%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/venom_2018">Venom</a> </td> 
-             <td class="right_col right"> <a href="/m/venom_2018"> Oct 5 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/a_star_is_born_2018"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">92%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/a_star_is_born_2018">A Star Is Born</a> </td> 
-             <td class="right_col right"> <a href="/m/a_star_is_born_2018"> Oct 5 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/shine_2018"> <span class="tMeterIcon tiny noRating">No Score Yet</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/shine_2018">Shine</a> </td> 
-             <td class="right_col right"> <a href="/m/shine_2018"> Oct 5 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/the_hate_u_give"> <span class="icon tiny fresh"></span> <span class="tMeterScore">96%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/the_hate_u_give">The Hate U Give</a> </td> 
-             <td class="right_col right"> <a href="/m/the_hate_u_give"> Oct 5 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/loving_pablo"> <span class="icon tiny rotten"></span> <span class="tMeterScore">25%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/loving_pablo">Loving Pablo</a> </td> 
-             <td class="right_col right"> <a href="/m/loving_pablo"> Oct 5 </a> </td> 
-            </tr> 
-           </tbody>
-          </table> 
-          <div class="clickForMore"> 
-           <a id="Opening-view-all" class="unstyled articleLink" href="/browse/opening/">View All</a> 
-          </div> 
-         </div> 
-         <div id="homepage-top-box-office" class="listings"> 
-          <a class="pull-right showtimesLink" href="/showtimes/">Get Tickets</a> 
-          <h2>Top Box Office</h2> 
-          <table class="movie_list" id="Top-Box-Office"> 
-           <tbody>
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/night_school_2018"> <span class="icon tiny rotten"></span> <span class="tMeterScore">28%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/night_school_2018">Night School</a> </td> 
-             <td class="right_col right"> <a href="/m/night_school_2018">$27.4M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/smallfoot"> <span class="icon tiny fresh"></span> <span class="tMeterScore">73%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/smallfoot">Smallfoot</a> </td> 
-             <td class="right_col right"> <a href="/m/smallfoot">$23.2M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/the_house_with_a_clock_in_its_walls"> <span class="icon tiny fresh"></span> <span class="tMeterScore">67%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/the_house_with_a_clock_in_its_walls">The House with a Clock in Its Walls</a> </td> 
-             <td class="right_col right"> <a href="/m/the_house_with_a_clock_in_its_walls">$12.7M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/a_simple_favor"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">85%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/a_simple_favor">A Simple Favor</a> </td> 
-             <td class="right_col right"> <a href="/m/a_simple_favor">$6.6M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/the_nun_2018"> <span class="icon tiny rotten"></span> <span class="tMeterScore">26%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/the_nun_2018">The Nun</a> </td> 
-             <td class="right_col right"> <a href="/m/the_nun_2018">$5.5M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/hell_fest"> <span class="icon tiny rotten"></span> <span class="tMeterScore">44%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/hell_fest">Hell Fest</a> </td> 
-             <td class="right_col right"> <a href="/m/hell_fest">$5.2M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/crazy_rich_asians"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">92%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/crazy_rich_asians">Crazy Rich Asians</a> </td> 
-             <td class="right_col right"> <a href="/m/crazy_rich_asians">$4.2M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/the_predator"> <span class="icon tiny rotten"></span> <span class="tMeterScore">34%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/the_predator">The Predator</a> </td> 
-             <td class="right_col right"> <a href="/m/the_predator">$4M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/white_boy_rick"> <span class="icon tiny rotten"></span> <span class="tMeterScore">58%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/white_boy_rick">White Boy Rick</a> </td> 
-             <td class="right_col right"> <a href="/m/white_boy_rick">$2.5M</a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/peppermint_2018"> <span class="icon tiny rotten"></span> <span class="tMeterScore">10%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/peppermint_2018">Peppermint</a> </td> 
-             <td class="right_col right"> <a href="/m/peppermint_2018">$1.9M</a> </td> 
-            </tr> 
-           </tbody>
-          </table> 
-          <div class="clickForMore"> 
-           <a id="Top-Box-Office-view-all" href="/browse/in-theaters/" class="unstyled articleLink">View All</a>
-          </div> 
-         </div> 
-         <div id="sharethrough_bottom_ad"></div> 
-         <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() == '0') { //MOBILE
-                mps.insertAd('#sharethrough_bottom_ad','sharethrough','strnativekey=kNF58ebeAUneyUk61UVo2yLu;pos=bottom;');
-            }
-        });
-    </script> 
-         <div id="homepage-top-coming-soon" class="listings"> 
-          <h2>Coming Soon to Theaters</h2> 
-          <table class="movie_list" id="Top-Coming-Soon"> 
-           <tbody>
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/first_man"> <span class="icon tiny fresh"></span> <span class="tMeterScore">88%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/first_man">First Man</a> </td> 
-             <td class="right_col right"> <a href="/m/first_man"> Oct 12 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/bad_times_at_the_el_royale"> <span class="icon tiny fresh"></span> <span class="tMeterScore">78%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/bad_times_at_the_el_royale">Bad Times at the El Royale</a> </td> 
-             <td class="right_col right"> <a href="/m/bad_times_at_the_el_royale"> Oct 12 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/goosebumps_2_haunted_halloween"> <span class="tMeterIcon tiny noRating">No Score Yet</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/goosebumps_2_haunted_halloween">Goosebumps 2: Haunted Halloween</a> </td> 
-             <td class="right_col right"> <a href="/m/goosebumps_2_haunted_halloween"> Oct 12 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/beautiful_boy_2018"> <span class="icon tiny fresh"></span> <span class="tMeterScore">68%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/beautiful_boy_2018">Beautiful Boy</a> </td> 
-             <td class="right_col right"> <a href="/m/beautiful_boy_2018"> Oct 12 </a> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/the_happy_prince_2018"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">73%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/the_happy_prince_2018">The Happy Prince</a> </td> 
-             <td class="right_col right"> <a href="/m/the_happy_prince_2018"> Oct 10 </a> </td> 
-            </tr> 
-           </tbody>
-          </table> 
-          <div class="clickForMore"> 
-           <a id="Top-Coming-Soon-view-all" class="unstyled articleLink" href="/browse/upcoming/">View All</a> 
-          </div> 
-         </div> 
-        </div> 
-        <div class="col-sm-12 rightColumn col-full-xs"> 
-         <h2>New TV Tonight</h2> 
-         <table class="movie_list"> 
-          <tbody>
-           <tr class="tv_show_tr tvList1"> 
-            <td class="left_col"> <a href="/tv/speechless/s03"> <span class="tMeterIcon tiny noRating">No Score Yet</span> </a> </td> 
-            <td class="middle_col"> <a href="/tv/speechless/s03"> Speechless </a> </td> 
-           </tr> 
-           <tr class="tv_show_tr tvList1"> 
-            <td class="left_col"> <a href="/tv/child_support/s02"> <span class="tMeterIcon tiny noRating">No Score Yet</span> </a> </td> 
-            <td class="middle_col"> <a href="/tv/child_support/s02"> Child Support </a> </td> 
-           </tr> 
-           <tr class="tv_show_tr tvList1"> 
-            <td class="left_col"> <a href="/tv/van_helsing/s03"> <span class="tMeterIcon tiny noRating">No Score Yet</span> </a> </td> 
-            <td class="middle_col"> <a href="/tv/van_helsing/s03"> Van Helsing </a> </td> 
-           </tr> 
-           <tr class="tv_show_tr tvList1"> 
-            <td class="left_col"> <a href="/tv/z-nation/s05"> <span class="tMeterIcon tiny noRating">No Score Yet</span> </a> </td> 
-            <td class="middle_col"> <a href="/tv/z-nation/s05"> Z Nation </a> </td> 
-           </tr> 
-          </tbody>
-         </table> 
-         <div class="clickForMore">
-          <a class="unstyled articleLink tv-list-1-view-all" href="/browse/tv-list-1">View All</a>
-         </div> 
-         <aside id="medrec_mobileTBO_ad" class="medrec_ad visible-xs center mobile-medrec" style="width:300px"></aside> 
-         <script>
-                var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-                mps._queue.gptloaded.push(function () {
-                    if (mps.getResponsiveSet() == '0') { //MOBILE
-                        mps.insertAd('#medrec_mobileTBO_ad','mboxadone');
-                    }
-                });
-            </script> 
-         <div id="homepage-tv-bottom"> 
-          <h2>Most Popular TV on RT</h2> 
-          <table class="movie_list"> 
-           <tbody>
-            <tr class="tv_show_tr tvLists.mostPopularTvOnRt"> 
-             <td class="left_col"> <a href="/tv/maniac/s01"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">80%</span> </a> </td> 
-             <td class="middle_col"> <a href="/tv/maniac/s01"> Maniac </a> </td> 
-            </tr> 
-            <tr class="tv_show_tr tvLists.mostPopularTvOnRt"> 
-             <td class="left_col"> <a href="/tv/the_sinner/s02"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">96%</span> </a> </td> 
-             <td class="middle_col"> <a href="/tv/the_sinner/s02"> The Sinner </a> </td> 
-            </tr> 
-            <tr class="tv_show_tr tvLists.mostPopularTvOnRt"> 
-             <td class="left_col"> <a href="/tv/American_Vandal/s02"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">97%</span> </a> </td> 
-             <td class="middle_col"> <a href="/tv/American_Vandal/s02"> American Vandal </a> </td> 
-            </tr> 
-            <tr class="tv_show_tr tvLists.mostPopularTvOnRt"> 
-             <td class="left_col"> <a href="/tv/bojack_horseman/s05"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">100%</span> </a> </td> 
-             <td class="middle_col"> <a href="/tv/bojack_horseman/s05"> BoJack Horseman </a> </td> 
-            </tr> 
-            <tr class="tv_show_tr tvLists.mostPopularTvOnRt"> 
-             <td class="left_col"> <a href="/tv/marvel_s_iron_fist/s02"> <span class="icon tiny rotten"></span> <span class="tMeterScore">53%</span> </a> </td> 
-             <td class="middle_col"> <a href="/tv/marvel_s_iron_fist/s02"> Marvel's Iron Fist </a> </td> 
-            </tr> 
-            <tr class="tv_show_tr tvLists.mostPopularTvOnRt"> 
-             <td class="left_col"> <a href="/tv/jack_ryan/s01"> <span class="icon tiny fresh"></span> <span class="tMeterScore">74%</span> </a> </td> 
-             <td class="middle_col"> <a href="/tv/jack_ryan/s01"> Tom Clancy's Jack Ryan </a> </td> 
-            </tr> 
-           </tbody>
-          </table> 
-          <div class="clickForMore">
-           <a class="unstyled articleLink tv-list-2-view-all" href="/browse/tv-list-2">View All</a>
-          </div> 
-         </div> 
-         <div id="homepage-top-dvd-streaming"> 
-          <h2>Top DVD &amp; Streaming Movies</h2> 
-          <div id="dvd-affliate-links"> 
-           <a id="fandango-affililate-link" href="/browse/dvd-streaming-all/?services=fandango_now">FandangoNOW</a> | 
-           <a id="netflix-affiliate-link" href="/browse/dvd-streaming-all/?services=netflix_iw">Netflix</a> | 
-           <a id="itunes-affiliate-link" href="/browse/dvd-streaming-all/?services=itunes">iTunes</a> | 
-           <a id="amazon-affiliate-link" href="/browse/dvd-streaming-all/?services=amazon;amazon_prime">Amazon</a> | 
-           <a id="all-affiliates-link" href="/browse/dvd-streaming-all/">More...</a> 
-          </div> 
-          <table class="movie_list" id="Top-DVD"> 
-           <tbody>
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/ant_man_and_the_wasp"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">88%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/ant_man_and_the_wasp">Ant-Man and the Wasp</a> </td> 
-             <td class="right_col right"> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/three_identical_strangers"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">97%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/three_identical_strangers">Three Identical Strangers</a> </td> 
-             <td class="right_col right"> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/dont_worry_he_wont_get_far_on_foot"> <span class="icon tiny certified_fresh"></span> <span class="tMeterScore">76%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/dont_worry_he_wont_get_far_on_foot">Don't Worry, He Won't Get Far on Foot</a> </td> 
-             <td class="right_col right"> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/loving_pablo"> <span class="icon tiny rotten"></span> <span class="tMeterScore">25%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/loving_pablo">Loving Pablo</a> </td> 
-             <td class="right_col right"> </td> 
-            </tr> 
-            <tr class=""> 
-             <td class="left_col"> <a href="/m/the_12th_man"> <span class="icon tiny fresh"></span> <span class="tMeterScore">85%</span> </a> </td> 
-             <td class="middle_col"> <a href="/m/the_12th_man">The 12th Man</a> </td> 
-             <td class="right_col right"> </td> 
-            </tr> 
-           </tbody>
-          </table> 
-          <div class="clickForMore"> 
-           <a id="Top-DVD-view-all" class="unstyled articleLink" href="/browse/top-dvd-streaming/">View All</a> 
-          </div> 
-         </div> 
-        </div> 
-        <div id="sponsored_media_hp_one_ad" style="display:none;"></div> 
-        <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            mps.insertAd('#sponsored_media_hp_one_ad','featuredmediaone');
-        });
-    </script> 
-        <div id="sponsored_media_hp_two_ad" style="display:none;"></div> 
-        <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            mps.insertAd('#sponsored_media_hp_two_ad','featuredmediatwo');
-        });
-    </script> 
-       </div> 
-      </div> 
-      <aside class="adColumn col-sm-7 hidden-xs"> 
-       <aside id="medrec_top_ad" class="medrec_ad " style="width:300px"></aside> 
-       <script>
-                var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-                mps._queue.gptloaded.push(function () {
-                    if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                        mps.insertAd('#medrec_top_ad','topmulti');
-                    }
-                });
-            </script> 
-       <div id="native_ad_slot"></div> 
-      </aside> 
-     </section> 
-     <div class="panel-rt cfpModule"> 
-      <h1 class="panel-heading inlineBlock" style="vertical-align: bottom">Certified Fresh Picks</h1> 
-      <div id="cfp_logo_ad" class="inlineBlock" style="vertical-align:bottom;margin:20px"></div> 
-      <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                mps.rt.insertlogo('#cfp_logo_ad', 'ploc=cfplogo;');
-            }
-        });
-    </script> 
-      <div class="panel-body row"> 
-       <div class="col-sm-6 hidden-xs"> 
-        <div class="tableCenterDiv"> 
-         <img id="home-cfp-cf-logo" src="/assets/pizza-pie/images/icons/global/cf-lg.3c29eff04f2.png" style="width:132px;height:132px"> 
-        </div> 
-        <p> Movies and TV shows are Certified Fresh with a steady Tomatometer of 75% or higher after a set amount of reviews (80 for wide-release movies, 40 for limited-release movies, 20 for TV shows), including 5 reviews from Top Critics. </p> 
-       </div> 
-       <div class="col-sm-18 freshPicks"> 
-        <!-- <div></div> --> 
-        <div class="cfpItem "> 
-         <!-- Hardcorded rt url so pageheader on editorial routes to rt too --> 
-         <a href="/m/a_simple_favor" class="unstyled articleLink cfpLinks"> <p class="topText bold">In Theaters</p> 
-          <div id="dropdown-cfp-image" class="imgContainer cfp-img-container"> 
-           <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com//fIeA6RPJY2ywg5TeSBTLzn5pvrs=/fit-in/278x400/v1.bTsxMjgyNTUyMTtqOzE3ODc4OzEyMDA7Mzc1MDs1NzAw" class="js-lazyLoad cfp-header-img" alt="A Simple Favor"> 
-          </div> 
-          <div class="movie_content_area"> 
-           <span class="icon tiny certified"></span> 
-           <span class="tMeterScore">85%</span> 
-          </div> <p class="title noSpacing">A Simple Favor</p> </a> 
-        </div> 
-        <div class="cfpItem "> 
-         <!-- Hardcorded rt url so pageheader on editorial routes to rt too --> 
-         <a href="/m/mandy_2018" class="unstyled articleLink cfpLinks"> <p class="topText bold">In Theaters</p> 
-          <div id="dropdown-cfp-image" class="imgContainer cfp-img-container"> 
-           <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com//cVxcMFd_8PDo_2G67fhexc8gMcQ=/fit-in/278x400/v1.bTsxMjY0OTE5MztqOzE3ODc2OzEyMDA7ODI2ODsxMTgxMQ" class="js-lazyLoad cfp-header-img" alt="Mandy"> 
-          </div> 
-          <div class="movie_content_area"> 
-           <span class="icon tiny certified"></span> 
-           <span class="tMeterScore">94%</span> 
-          </div> <p class="title noSpacing">Mandy</p> </a> 
-        </div> 
-        <div class="cfpItem "> 
-         <!-- Hardcorded rt url so pageheader on editorial routes to rt too --> 
-         <a href="/m/summer_1993" class="unstyled articleLink cfpLinks"> <p class="topText bold">ON DVD/STREAMING</p> 
-          <div id="dropdown-cfp-image" class="imgContainer cfp-img-container"> 
-           <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com//eX2Ri9k42rTW2S6WgzUBfXaat4E=/fit-in/278x400/v1.bTsxMjYwNzEzNztqOzE3ODc1OzEyMDA7Mjc2NDs0MDk2" class="js-lazyLoad cfp-header-img" alt="Summer 1993 (Estiu 1993)"> 
-          </div> 
-          <div class="movie_content_area"> 
-           <span class="icon tiny certified"></span> 
-           <span class="tMeterScore">100%</span> 
-          </div> <p class="title noSpacing">Summer 1993 (Estiu 1993)</p> </a> 
-        </div> 
-        <div class="cfpItem "> 
-         <!-- Hardcorded rt url so pageheader on editorial routes to rt too --> 
-         <a href="/tv/American_Vandal/s02" class="unstyled articleLink cfpLinks"> <p class="topText bold">On TV</p> 
-          <div id="dropdown-cfp-image" class="imgContainer cfp-img-container"> 
-           <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com//vm94zwWOf5rdQq-T3-hcQ0R305I=/fit-in/278x400/v1.dDszNDE4NDM7ajsxNzg0MDsxMjAwOzE1MDA7MjIyMg" class="js-lazyLoad cfp-header-img" alt="American Vandal"> 
-          </div> 
-          <div class="movie_content_area"> 
-           <span class="icon tiny certified"></span> 
-           <span class="tMeterScore">97%</span> 
-          </div> <p class="title noSpacing">American Vandal</p> </a> 
-        </div> 
-        <div class="cfpItem hidden-xs"> 
-         <!-- Hardcorded rt url so pageheader on editorial routes to rt too --> 
-         <a href="/tv/maniac/s01" class="unstyled articleLink cfpLinks"> <p class="topText bold">On Tv</p> 
-          <div id="dropdown-cfp-image" class="imgContainer cfp-img-container"> 
-           <img src="/assets/pizza-pie/images/poster_default.c8c896e70c3.gif" data-src="https://resizing.flixster.com//uPoLAkdI4d8Y-1GHj_9TX0IfoNw=/fit-in/278x400/v1.dDszNDQxNDY7ajsxNzg0MDsxMjAwOzIwMDA7MzAwMA" class="js-lazyLoad cfp-header-img" alt="Maniac: Miniseries"> 
-          </div> 
-          <div class="movie_content_area"> 
-           <span class="icon tiny certified"></span> 
-           <span class="tMeterScore">80%</span> 
-          </div> <p class="title noSpacing">Maniac: Miniseries</p> </a> 
-        </div> 
-       </div> 
-      </div> 
-      <div class="cert-fresh"> 
-       <div class="clickForMore">
-        <a class="unstyled articleLink" style="cursor: pointer" href="/browse/cf-in-theaters/">View All</a>
-       </div> 
-      </div> 
-     </div> 
-     <section id="videoPanel" class="panel-rt dark"> 
-      <h1 class="panel-heading">Trailers &amp; Videos</h1> 
-      <div class="panel-body"> 
-       <a id="homepage-main-video" href="https://editorial.rottentomatoes.com/article/five-big-things-we-learned-from-the-captain-marvel-trailer/" class="unstyled col-sm-11 video0 darkPanelItem"> 
-        <div class="videoItem translucent-container subPanel"> 
-         <div class="bannerPic videoSection  headliner"> 
-          <div class="containingDiv"> 
-           <div class="sponsored-tag"> 
-            <p class="sponsored-text">FEATURED</p> 
-            <div class="sponsored-bg"></div> 
-           </div> 
-           <img src="/assets/pizza-pie/images/video.default.cf010a946e9.jpg" class="videoPic js-lazyLoad homepage-video-thumbnail" data-src="https://resizing.flixster.com//38ivUwqeXthGj-JOgdSQLTzTb_M=/470x250/v1.czsxMDI3OTYwMztqOzE3ODkzOzEyMDA7NDcwOzI1MA" alt="5 Big Things We Learned About <em>Captain Marvel</em>"> 
-           <h3 class="panel-heading ">Trailer</h3> 
-           <div class="playButton"> 
-            <span class="glyphicon glyphicon-play-circle light-translucent white"></span> 
-           </div> 
-          </div> 
-          <div class="panel-rt bannerCaption"> 
-           <div class="panel-body"> 
-            <p class="title">5 Big Things We Learned About <em>Captain Marvel</em></p> 
-            <p class="detail">With a crash into a Blockbuster Video, Carol Danvers (Brie Larson) has made her Marvel Cinematic Universe trailer debut, as Marvel Studios finally released the first look at Captain Marvel. And it offered at least a few hints to the film's storyline and the ways it diverges from the character's history in the comics.</p> 
-           </div> 
-          </div> 
-         </div> 
-        </div> </a> 
-       <div class="col-sm-13"> 
-        <div id="homepage-secondary-video-row1" class="row"> 
-         <a href="https://www.rottentomatoes.com/m/mary_poppins_returns/trailers/11308977?" class="unstyled col-sm-12 darkPanelItem video1"> 
-          <div class="videoItem translucent-container subPanel"> 
-           <div class="bannerPic videoSection "> 
-            <div class="containingDiv"> 
-             <div class="sponsored-tag"> 
-              <p class="sponsored-text">FEATURED</p> 
-              <div class="sponsored-bg"></div> 
-             </div> 
-             <img src="/assets/pizza-pie/images/video.default.cf010a946e9.jpg" class="videoPic js-lazyLoad homepage-video-thumbnail" data-src="https://resizing.flixster.com//_2P6ERfrdApOeXNP4VpCZFjA7cU=/270x160/v1.czsxMDI3OTYwNDtqOzE3ODkzOzEyMDA7MjcwOzE2MA" alt="<em>Mary Poppins Returns</em>"> 
-             <h3 class="panel-heading ">Trailer</h3> 
-             <div class="playButton"> 
-              <span class="glyphicon glyphicon-play-circle light-translucent white"></span> 
-             </div> 
-            </div> 
-            <div class="panel-rt bannerCaption"> 
-             <div class="panel-body"> 
-              <p class="title"><em>Mary Poppins Returns</em></p> 
-              <p class="detail">Emily Blunt sings!</p> 
-             </div> 
-            </div> 
-           </div> 
-          </div> </a> 
-         <a href="https://www.rottentomatoes.com/m/apostle_2018/trailers/11308975?" class="unstyled col-sm-12 darkPanelItem video2"> 
-          <div class="videoItem translucent-container subPanel"> 
-           <div class="bannerPic videoSection "> 
-            <div class="containingDiv"> 
-             <div class="sponsored-tag"> 
-              <p class="sponsored-text">FEATURED</p> 
-              <div class="sponsored-bg"></div> 
-             </div> 
-             <img src="/assets/pizza-pie/images/video.default.cf010a946e9.jpg" class="videoPic js-lazyLoad homepage-video-thumbnail" data-src="https://resizing.flixster.com//wxqaCXPmswSn4Y70kBSR2iw8hTc=/270x160/v1.czsxMDI3OTYwNTtqOzE3ODkzOzEyMDA7MjcwOzE2MA" alt="<em>Apostle</em>"> 
-             <h3 class="panel-heading ">Trailer</h3> 
-             <div class="playButton"> 
-              <span class="glyphicon glyphicon-play-circle light-translucent white"></span> 
-             </div> 
-            </div> 
-            <div class="panel-rt bannerCaption"> 
-             <div class="panel-body"> 
-              <p class="title"><em>Apostle</em></p> 
-              <p class="detail">Dan Stevens in a horror/mystery from <em>The Raid</em> director</p> 
-             </div> 
-            </div> 
-           </div> 
-          </div> </a> 
-        </div> 
-        <div id="homepage-secondary-video-row2" class="row"> 
-         <a href="https://www.rottentomatoes.com/m/stan_and_ollie/trailers/11308981?" class="unstyled col-sm-12 hidden-xs darkPanelItem video3"> 
-          <div class="videoItem translucent-container subPanel"> 
-           <div class="bannerPic videoSection "> 
-            <div class="containingDiv"> 
-             <div class="sponsored-tag"> 
-              <p class="sponsored-text">FEATURED</p> 
-              <div class="sponsored-bg"></div> 
-             </div> 
-             <img src="/assets/pizza-pie/images/video.default.cf010a946e9.jpg" class="videoPic js-lazyLoad homepage-video-thumbnail" data-src="https://resizing.flixster.com//fH2PnHiFqCkNLbDP7vxqInqefDw=/270x160/v1.czsxMDI3OTYwNjtqOzE3ODkzOzEyMDA7MjcwOzE2MA" alt="<em>Stan &amp; Ollie</em>"> 
-             <h3 class="panel-heading ">Trailer</h3> 
-             <div class="playButton"> 
-              <span class="glyphicon glyphicon-play-circle light-translucent white"></span> 
-             </div> 
-            </div> 
-            <div class="panel-rt bannerCaption"> 
-             <div class="panel-body"> 
-              <p class="title"><em>Stan &amp; Ollie</em></p> 
-              <p class="detail">John C. Reilly, Steve Coogan are the iconic comedy duo</p> 
-             </div> 
-            </div> 
-           </div> 
-          </div> </a> 
-         <a href="https://www.rottentomatoes.com/m/ralph_breaks_the_internet_wreck_it_ralph_2/trailers/11309062?" class="unstyled col-sm-12 hidden-xs darkPanelItem video4"> 
-          <div class="videoItem translucent-container subPanel"> 
-           <div class="bannerPic videoSection "> 
-            <div class="containingDiv"> 
-             <div class="sponsored-tag"> 
-              <p class="sponsored-text">FEATURED</p> 
-              <div class="sponsored-bg"></div> 
-             </div> 
-             <img src="/assets/pizza-pie/images/video.default.cf010a946e9.jpg" class="videoPic js-lazyLoad homepage-video-thumbnail" data-src="https://resizing.flixster.com//CQxwvb7PSdBmNm4laAubOhY6Jvc=/270x160/v1.czsxMDI3OTYxOTtqOzE3ODkzOzEyMDA7MjcwOzE2MA" alt="<em>Ralph Breaks The Internet</em>"> 
-             <h3 class="panel-heading ">Trailer</h3> 
-             <div class="playButton"> 
-              <span class="glyphicon glyphicon-play-circle light-translucent white"></span> 
-             </div> 
-            </div> 
-            <div class="panel-rt bannerCaption"> 
-             <div class="panel-body"> 
-              <p class="title"><em>Ralph Breaks The Internet</em></p> 
-              <p class="detail">The Disney princesses (and Gal Gadot) are here</p> 
-             </div> 
-            </div> 
-           </div> 
-          </div> </a> 
-        </div> 
-        <div class="clickForMore"> 
-         <a id="homepage-view-all-videos" class="unstyled articleLink" href="https://editorial.rottentomatoes.com/video-interviews/"> <span> View All </span> </a> 
-        </div> 
-       </div> 
-      </div> 
-      <div id="sponsored_video_ad" style="display:none;"></div> 
-      <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            mps.insertAd('#sponsored_video_ad','featuredtrailer');
-        });
-    </script> 
-      <div id="featured_ad_video_ad" style="display:none;"></div> 
-      <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                mps.insertAd('#featured_ad_video_ad','featuredvideo');
-            }
-        });
-    </script> 
-     </section> 
-     <section id="newsAndFeatures" class="panel panel-rt panel-box"> 
-      <h1 class="panel-heading">News &amp; Features</h1> 
+    <div class="col col-left-center col-full-xs"> 
+     <section id="about-page" class="panel panel-rt panel-box aboutPage"> 
       <div class="panel-body content_body"> 
-       <div class="media-body"> 
-        <div class="panel-body"> 
-         <div> 
-          <div id="FeaturedSection"> 
-           <div class="FEATURE"></div> 
-           <div class="newsItem col-sm-6 col-xs-12  newsItemFix"> 
-            <a href="https://editorial.rottentomatoes.com/article/most-anticipated-2019-movies/" class="unstyled articleLink"> 
-             <div class="bannerPicContainer"> 
-              <div class="bannerPic js-lazyLoad" style="background: url('/assets/pizza-pie/images/video.default.cf010a946e9.jpg'); background-size: cover;" data-src="https://resizing.flixster.com//9RZ8VoMAf68fmyZ9SUVFAYdxqkk=/314x156/v1.czsxMDI3OTMxOTtqOzE3ODkzOzEyMDA7MjQ3OzEzOA" data-bg-image="true"></div> 
-             </div> 
-             <div class="bannerCaption"> 
-              <p class="noSpacing title">61 Most Anticipated Movies of 2019</p> 
-              <p class="byline noSpacing"></p> 
-             </div> </a> 
-           </div> 
-           <div class="FEATURE"></div> 
-           <div class="newsItem col-sm-6 col-xs-12  "> 
-            <a href="https://editorial.rottentomatoes.com/guide/best-sci-fi-movies-of-all-time/" class="unstyled articleLink"> 
-             <div class="bannerPicContainer"> 
-              <div class="bannerPic js-lazyLoad" style="background: url('/assets/pizza-pie/images/video.default.cf010a946e9.jpg'); background-size: cover;" data-src="https://resizing.flixster.com//o9LuhwMzJ3oY3tWR1KEJKGIfotA=/314x156/v1.czsxMDI3OTMyMTtqOzE3ODkzOzEyMDA7MjQ3OzEzOA" data-bg-image="true"></div> 
-             </div> 
-             <div class="bannerCaption"> 
-              <p class="noSpacing title">110 Best Sci-Fi Movies of All Time</p> 
-              <p class="byline noSpacing"></p> 
-             </div> </a> 
-           </div> 
-           <div class="FEATURE"></div> 
-           <div class="newsItem col-sm-6 col-xs-12 pull-right "> 
-            <a href="https://editorial.rottentomatoes.com/guide/140-essential-80s-movies/" class="unstyled articleLink"> 
-             <div class="bannerPicContainer"> 
-              <div class="bannerPic js-lazyLoad" style="background: url('/assets/pizza-pie/images/video.default.cf010a946e9.jpg'); background-size: cover;" data-src="https://resizing.flixster.com//qDm5iYEHYuJVOlJ12XKk5ZtdjcI=/314x156/v1.czsxMDI3OTMyMDtqOzE3ODkzOzEyMDA7MjQ3OzEzOA" data-bg-image="true"></div> 
-             </div> 
-             <div class="bannerCaption"> 
-              <p class="noSpacing title">140 Essential '80s Movies</p> 
-              <p class="byline noSpacing"></p> 
-             </div> </a> 
-           </div> 
-           <div class="FEATURE"></div> 
-           <div class="newsItem col-sm-6 col-xs-12  "> 
-            <a href="https://editorial.rottentomatoes.com/guide/best-netflix-shows-and-movies-to-binge-watch-now/" class="unstyled articleLink"> 
-             <div class="bannerPicContainer"> 
-              <div class="bannerPic js-lazyLoad" style="background: url('/assets/pizza-pie/images/video.default.cf010a946e9.jpg'); background-size: cover;" data-src="https://resizing.flixster.com//kB2lMqLHiAXkeGpg3YSfhtErqDY=/314x156/v1.czsxMDI3OTMyMjtqOzE3ODkzOzEyMDA7MjQ3OzEzOA" data-bg-image="true"></div> 
-             </div> 
-             <div class="bannerCaption"> 
-              <p class="noSpacing title">148 Best Netflix Series and Movies</p> 
-              <p class="byline noSpacing"></p> 
-             </div> </a> 
-           </div> 
-          </div> 
-          <br clear="all"> 
-          <div class="clickForMore newsAndFeaturesLink"> 
-           <a class="articleLink unstyled" href="https://editorial.rottentomatoes.com/news/">View All</a> 
-          </div> 
-         </div> 
-        </div> 
-        <div id="newsAndFeaturesWrap"> 
-         <h1 class="panel-heading top-headlines-panel">TOP HEADLINES</h1> 
-         <div class="col-sm-8 headlines-col-1"> 
-          <ul class="latest-entertainment-headlines redDot"> 
-           <li> <a target="_blank" href="https://www.hollywoodreporter.com/heat-vision/it-star-sophia-lillis-star-gretel-hansel-film-1149437" class="home-news-article-link" rel="noopener"> Sophia Lillis to Lead <i>Gretel and Hansel</i> </a> <br> <span class="subtle">– Hollywood Reporter</span> </li> 
-           <li> <a target="_blank" href="https://variety.com/2018/film/news/lilo-and-stitch-live-action-remake-disney-1202967403/" class="home-news-article-link" rel="noopener"> Disney Planning Live-Action <i>Lilo &amp; Stitch</i> </a> <br> <span class="subtle">– Variety</span> </li> 
-           <li> <a target="_blank" href="https://variety.com/2018/tv/news/chronicles-of-narnia-series-films-netflix-1202966920/" class="home-news-article-link" rel="noopener"> Amazon Developing <i>Chronicles of Narnia</i> Series and Films </a> <br> <span class="subtle">– Variety</span> </li> 
-           <li> <a target="_blank" href="https://www.hollywoodreporter.com/news/michelle-williams-will-play-christa-mcauliffe-challenger-movie-1148753" class="home-news-article-link" rel="noopener"> Michelle Williams Is <i>The Challenger</i> </a> <br> <span class="subtle">– Hollywood Reporter</span> </li> 
-          </ul> 
-         </div> 
-         <div class="col-sm-8 headlines-col-2"> 
-          <ul class="latest-entertainment-headlines redDot"> 
-           <li> <a target="_blank" href="http://www.vulture.com/2018/10/amazon-announces-wheel-of-time-show-neil-gaiman-deal.html" class="home-news-article-link" rel="noopener"> Amazon Plans <i>Wheel of Time</i> Series, Signs Deal with Neil Gaiman </a> <br> <span class="home-news-source">– New York Magazine/Vulture</span> </li> 
-           <li> <a target="_blank" href="https://variety.com/2018/film/news/ansel-elgort-west-side-story-steven-spielberg-1202964116/" class="home-news-article-link" rel="noopener"> Steven Spielberg’s <i>West Side Story</i> Adds Ansel Elgort </a> <br> <span class="home-news-source">– Variety</span> </li> 
-           <li> <a target="_blank" href="https://www.hollywoodreporter.com/heat-vision/jumanji-breakout-madison-iseman-star-new-annabelle-movie-1148419" class="home-news-article-link" rel="noopener"> Madison Iseman to Star in Next <i>Annabelle</i> Movie </a> <br> <span class="home-news-source">– Hollywood Reporter</span> </li> 
-           <li> <a target="_blank" href="https://www.hollywoodreporter.com/heat-vision/alita-battle-angel-release-date-pushed-spring-2019-1147922" class="home-news-article-link" rel="noopener"> <i>X-Men: Dark Phoenix</i> Bumped to June 2019 </a> <br> <span class="home-news-source">– Hollywood Reporter</span> </li> 
-          </ul> 
-         </div> 
-         <br clear="all"> 
-         <div class="clickForMore" id="home-top-headlines-view-all"> 
-          <a class="articleLink unstyled" href="https://editorial.rottentomatoes.com/publications/">View All</a> 
-         </div> 
-        </div> 
+       <h1><a name="about"></a>ABOUT ROTTEN TOMATOES<span id="trademark1" class="trademark">®</span></h1> 
+       <p>Rotten Tomatoes and the Tomatometer score are the world’s most trusted recommendation resources for quality entertainment. As the leading online aggregator of movie and TV show reviews from critics, we provide fans with a comprehensive guide to what’s Fresh – and what’s Rotten – in theaters and at home. And the Tomatometer is just the beginning. We also serve movie and TV fans with original editorial content on our site and through social channels, produce fun and informative video series, and hold live events for fans across the country, with our ‘Your Opinion Sucks’ live shows. If you’re an entertainment fan looking for a recommendation, or to share an opinion, you’ve come to the right place.</p> 
+       <hr> 
+       <a name="whatisthetomatometer"></a> 
+       <h2>What is the Tomatometer<span id="trademark4" class="trademark">®</span>?</h2> 
+       <p>The Tomatometer score – based on the opinions of hundreds of film and television critics – is a trusted measurement of critical recommendation for millions of fans.</p> 
+       <p>Back in the days of the open theaters, when a play was particularly atrocious, the audience expressed their dissatisfaction by not only booing and hissing at the stage, but also throwing whatever was at hand – vegetables and fruits included.</p> 
+       <p>The Tomatometer score represents the percentage of professional critic reviews that are positive for a given film or television show. A Tomatometer score is calculated for a movie or TV show after it receives at least five reviews.</p> 
+       <div class="about-icon-positioning"> 
+        <div class="icon big fresh fl"></div> 
+        <p class="about-icon-text">When at least 60% of reviews for a movie or TV show are positive, a red tomato is displayed to indicate its Fresh status.</p> 
        </div> 
-       <div class="col-sm-17 newsList hidden-xs"> 
-        <div class="col-sm-7 center">
-         <!-- Glam medrec for overseas users. glamTarget is set globally in body.tag --> 
-         <aside id="medrec_bottom_ad" class="medrec_ad " style="width:300px"></aside> 
-         <script>
-                var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-                mps._queue.gptloaded.push(function () {
-                    if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                        mps.insertAd('#medrec_bottom_ad','boxadone');
-                    } else if (mps.getResponsiveSet() == '0' && 'home' == 'home') {
-                        mps.insertAd('#medrec_bottom_ad','mboxadtwo');
-                    }
-                });
-            </script>  
-        </div> 
+       <div class="about-icon-positioning"> 
+        <div class="icon big rotten fl"></div> 
+        <p class="about-icon-text">When less than 60% of reviews for a movie or TV show are positive, a green splat is displayed to indicate its Rotten status.</p> 
+       </div> 
+       <hr> 
+       <h2>What is Certified Fresh?</h2> 
+       <div class="about-icon-positioning"> 
+        <div class="icon big certified fl"></div> 
+        <p class="about-cf-text">Certified Fresh status is a special distinction awarded to the best-reviewed movies and TV shows. In order to qualify, movies or TV shows must meet the following requirements:</p> 
+       </div> 
+       <div class="about-cf-list"> 
+        <ul> 
+         <li>A steady Tomatometer score of 75% or higher.</li> 
+         <li>At least five reviews from Top Critics. </li> 
+         <li>Films in wide release must have a minimum of 80 reviews.</li> 
+         <li>Films in limited release must have a minimum of 40 reviews.</li> 
+         <li>Only individual seasons of a TV show are eligible, and each must have a minimum of 20 reviews.</li> 
+        </ul> 
+       </div> 
+       <p>A movie or TV show that reaches the requirements for Certified Fresh doesn't immediately receive the designation. Instead, it is automatically flagged for our staff's consideration. Once the team can determine that it's unlikely the score will drop below the minimum requirements, they will mark it Certified Fresh.</p> 
+       <p>If the Tomatometer score drops below 70%, then the movie or TV show will lose its Certified Fresh status.</p> 
+       <hr> 
+       <h2>CURATION</h2> 
+       <p>Rotten Tomatoes has assembled a team of curators whose job it is to read thousands of movie and TV reviews weekly. The team collects movie and TV reviews from Tomatometer-approved critics and publications every day, generating Tomatometer scores. Our curators carefully read these reviews, noting if the reviews are Fresh or Rotten, and choose a representative pull-quote. Tomatometer-approved critics can also self-submit their reviews.</p> 
+       <hr> 
+       <h2>What is the Audience Score?</h2> 
+       <p>The Audience Score, denoted by a popcorn bucket, is the percentage of all users who have rated the movie or TV Show positively.</p> 
+       <div> 
+        <div class="icon big popcorn fl"></div> 
+        <p id="popcorn-full-text" class="popcorn-text">When at least 60% of users give a movie or TV show a star rating of 3.5 or higher, a full popcorn bucket is displayed to indicate its Fresh status.</p> 
+       </div> 
+       <div class="about-icon-positioning"> 
+        <div class="icon big spilled fl"></div> 
+        <p id="popcorn-tipped-text" class="popcorn-text">When less than 60% of users give a movie or TV show a star rating of 3.5 or higher, a tipped over popcorn bucket is displayed to indicate its Rotten status.</p> 
+       </div> 
+       <div class="about-icon-positioning"> 
+        <div class="icon big wts fl"></div> 
+        <p class="about-wts-text">The plus sign will appear for movies that do not have Audience Score or reviews. The percentage you see associated with this icon is the percentage of users who added the movie to their Want-to-See list. </p> 
+        <span>​​​</span> 
+       </div> 
+      </div>
+     </section> 
+    </div> 
+    <div class="col col-right col-full-xs"> 
+     <section id="about-contact-panel" class="panel panel-rt panel-box "> 
+      <h2 class="panel-heading">Contact Us</h2> 
+      <div class="panel-body content_body"> 
+       <span class="bold">Customer Support</span> 
+       <p>Visit our <a href="http://fandango.custhelp.com/app/answers/list/st/3/kw/Rotten%20tomatoes/">FAQs</a> or fill out our <a href="http://fandango.custhelp.com/app/new_ask">Email Form</a>.</p> 
+       <span class="bold">Licensing or Partnership Inquiries</span> 
+       <p>Fill out our <a href="/help_desk/proposalform">Business Proposal Form</a>.</p> 
+       <span class="bold">Submit Movie Information</span> 
+       <p><a href="http://fandango.custhelp.com/app/new_ask">Tell us</a> about missing or incorrect movie or TV information.</p> 
+       <span class="bold">Advertise</span> 
+       <p>Review <a href="https://www.fandango.com/Advertising.aspx">Fandango Advertising Opportunities</a>.</p> 
+       <span class="bold">Follow Us</span> 
+       <div> 
+        <a class="about-social-icons trendingLink about-trending fontelloIcon icon-twitter" href="https://twitter.com/rottentomatoes" aria-label="twitter link"></a> 
+        <a class="about-social-icons trendingLink about-trending fontelloIcon icon-facebook-squared" href="https://www.facebook.com/rottentomatoes" aria-label="facebook link"></a> 
+        <a class="about-social-icons trendingLink about-trending fontelloIcon icon-gplus" href="https://plus.google.com/+RottenTomatoes" aria-label="googleplus link"></a> 
+        <a class="about-social-icons trendingLink about-trending fontelloIcon icon-youtube-play" href="https://www.youtube.com/user/rottentomatoes" aria-label="youtube link"></a> 
+        <a class="about-social-icons trendingLink about-trending fontelloIcon icon-tumblr" href="https://rottentomatoes.tumblr.com/" aria-label="tumblr link"></a> 
        </div> 
       </div> 
      </section> 
-    </section> 
-   </div> 
-   <div class="sleaderboard_wrapper hidden-xs"> 
-    <div id="leaderboard_bottom_ad" style="margin-left:auto;margin-right:auto;display:inline-block"> 
+     <section class="is-pizza-pie-baked" style="display: none">
+       US 
+     </section> 
     </div> 
-    <script>
-        var mps = mps||{}; mps._queue = mps._queue||{}; mps._queue.gptloaded = mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function () {
-            if (mps.getResponsiveSet() != '0') { //DESKTOP or TABLET
-                mps.insertAd('#leaderboard_bottom_ad','bottombanner');
-            }
-        });
-    </script> 
    </div> 
-   <!--
-    <c:set var="onloadJs">
-    if(!$("#[skin]_ad").is(":visible")){$("body").removeAttr("style");}
-    </c:set>
-     --> 
-   <style>#[skin]_ad { height:0px !important; }</style> 
-   <div id="[skin]_ad"></div> 
    <footer id="foot" class="footer hidden-xs"> 
     <div class="row"> 
      <div class="col-xs-5 subnav"> 
@@ -4891,14 +3583,11 @@ h2.title {
 root.RottenTomatoes || (root.RottenTomatoes = {});
 root.RottenTomatoes.context = {"_routes":{"apiDiscoveryTheaters":{"path":"http:\u002F\u002Forigin-discovery-api-2103972120.us-east-1.elb.amazonaws.com\u002Ftheaters\u002Fv2","keys":[],"regexp":/^http:\/\/origin-discovery-api-2103972120\.us-east-1\.elb\.amazonaws\.com\/theaters\/v2\/?$/i,"pathTokens":[{"literal":"http:\u002F\u002Forigin-discovery-api-2103972120.us-east-1.elb.amazonaws.com\u002Ftheaters\u002Fv2"}]},"apiTvSeasonEpisodes":{"path":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fapi\u002Fprivate\u002Fv2.0\u002FtvSeason\u002F:id\u002Fepisodes","keys":[{"name":"id","optional":false,"offset":66}],"regexp":/^https:\/\/www\.rottentomatoes\.com\/api\/private\/v2\.0\/tvSeason\/(?:([^\/]+?))\/episodes\/?$/i,"pathTokens":[{"literal":"https:\u002F\u002Fwww.rottentomatoes.com\u002Fapi\u002Fprivate\u002Fv2.0\u002FtvSeason\u002F"},{"key":"id"},{"literal":"\u002Fepisodes"}]},"baseCanonicalUrl":{"path":"https:\u002F\u002Fwww.rottentomatoes.com","keys":[],"regexp":/^https:\/\/www\.rottentomatoes\.com\/?$/i,"pathTokens":[{"literal":"https:\u002F\u002Fwww.rottentomatoes.com"}]},"flixsterGeoLocationApi":{"path":"https:\u002F\u002Fapi.flixster.com\u002Fticketing\u002Fapi\u002Fv1\u002Fgeoip","keys":[],"regexp":/^https:\/\/api\.flixster\.com\/ticketing\/api\/v1\/geoip\/?$/i,"pathTokens":[{"literal":"https:\u002F\u002Fapi.flixster.com\u002Fticketing\u002Fapi\u002Fv1\u002Fgeoip"}]},"napiAccountForgotPassword":{"path":"\u002Fnapi\u002Faccount\u002FforgotPassword\u002F","keys":[],"regexp":/^\/napi\/account\/forgotPassword\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Faccount\u002FforgotPassword\u002F"}]},"napiAccountLogin":{"path":"\u002Fnapi\u002Faccount\u002Flogin\u002F","keys":[],"regexp":/^\/napi\/account\/login\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Faccount\u002Flogin\u002F"}]},"napiAccountLoginFacebookOauth":{"path":"\u002Fnapi\u002Faccount\u002FloginFacebookOauth\u002F","keys":[],"regexp":/^\/napi\/account\/loginFacebookOauth\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Faccount\u002FloginFacebookOauth\u002F"}]},"napiAccountLogout":{"path":"\u002Fnapi\u002Faccount\u002Flogout\u002F","keys":[],"regexp":/^\/napi\/account\/logout\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Faccount\u002Flogout\u002F"}]},"napiAccountRegister":{"path":"\u002Fnapi\u002Faccount\u002Fregister\u002F","keys":[],"regexp":/^\/napi\/account\/register\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Faccount\u002Fregister\u002F"}]},"napiAccountVerifyToken":{"path":"\u002Fnapi\u002Faccount\u002FverifyToken\u002F","keys":[],"regexp":/^\/napi\/account\/verifyToken\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Faccount\u002FverifyToken\u002F"}]},"napiMovieCalendar":{"path":"\u002Fnapi\u002FmovieCalendar\u002F:title-:id(\\d+)","keys":[{"name":"title","optional":false,"offset":22},{"name":"id","optional":false,"offset":38}],"regexp":/^\/napi\/movieCalendar\/(?:([^\/]+?))-(?:(\d+))\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002FmovieCalendar\u002F"},{"key":"title"},{"literal":"-"},{"key":"id"}]},"napiMovieListDvdAll":{"path":"\u002Fnapi\u002FmovieList\u002FdvdAll","keys":[],"regexp":/^\/napi\/movieList\/dvdAll\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FdvdAll"}]},"napiMovieListDvdUpcoming":{"path":"\u002Fnapi\u002FmovieList\u002FdvdUpcoming","keys":[],"regexp":/^\/napi\/movieList\/dvdUpcoming\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FdvdUpcoming"}]},"napiMovieListDvdCertified":{"path":"\u002Fnapi\u002FmovieList\u002FdvdCertified","keys":[],"regexp":/^\/napi\/movieList\/dvdCertified\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002FmovieList\u002FdvdCertified"}]},"napiMovieShowtimeGroupings":{"path":"\u002Fnapi\u002FtheaterShowtimeGroupings\u002F:id(\\d+)\u002F:startDate","keys":[{"name":"id","optional":false,"offset":33},{"name":"startDate","optional":false,"offset":44}],"regexp":/^\/napi\/theaterShowtimeGroupings\/(?:(\d+))\/(?:([^\/]+?))\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002FtheaterShowtimeGroupings\u002F"},{"key":"id"},{"literal":"\u002F"},{"key":"startDate"}]},"napiSearchAllCategories":{"path":"\u002Fnapi\u002Fsearch\u002F","keys":[],"regexp":/^\/napi\/search\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Fsearch\u002F"}]},"napiSearchTopMoviesDefaultList":{"path":"\u002Fnapi\u002Fsearch\u002Fdefault-list","keys":[],"regexp":/^\/napi\/search\/default-list\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Fsearch\u002Fdefault-list"}]},"napiUserMovieRating":{"path":"\u002Fnapi\u002Fuser\u002Frating\u002Fmovie\u002F:movieId(\\d+)\u002F","keys":[{"name":"movieId","optional":false,"offset":28}],"regexp":/^\/napi\/user\/rating\/movie\/(?:(\d+))\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Fuser\u002Frating\u002Fmovie\u002F"},{"key":"movieId"},{"literal":"\u002F"}]},"napiUserUpdateMovieRating":{"path":"\u002Fnapi\u002Fuser\u002Frating\u002Fmovie\u002FupdateRating\u002F:movieId(\\d+)\u002F","keys":[{"name":"movieId","optional":false,"offset":42}],"regexp":/^\/napi\/user\/rating\/movie\/updateRating\/(?:(\d+))\/?$/i,"pathTokens":[{"literal":"\u002Fnapi\u002Fuser\u002Frating\u002Fmovie\u002FupdateRating\u002F"},{"key":"movieId"},{"literal":"\u002F"}]},"webSearchResults":{"path":"\u002Fsearch\u002F","keys":[],"regexp":/^\/search\/?$/i,"pathTokens":[{"literal":"\u002Fsearch\u002F"}]}}};
 root.RottenTomatoes.context || (root.RottenTomatoes.context = {});
-root.RottenTomatoes.context.req = {"params":{},"queries":{},"route":{},"url":"\u002F","secure":false,"buildVersion":"1.0.1"};
+root.RottenTomatoes.context.req = {"params":{},"queries":{},"route":{},"url":"\u002Fabout","secure":false,"buildVersion":"1.0.1"};
 root.RottenTomatoes.thirdParty = {"chartBeat":{"auth":"64558","domain":"rottentomatoes.com"},"facebook":{"appId":"326803741017","version":"v2.9","appName":"flixstertomatoes"},"googleReCaptcha":"6Lcobh0TAAAAAN1K9rWeJ8xgl8uYkASWSDLBuKU1","mpx":{"accountPid":"dCK2IC","playerPid":"X36SYnM49ldh","accountId":"2474312077"}};
 root.RottenTomatoes.serviceWorker = {"isServiceWokerOn":true};
-root.RottenTomatoes.dtmData = {"webVersion":"node","pageName":"rt | homepage"};
-root.RottenTomatoes.context.akamaiEdgescape = {"zip":"","zipFallback":"","city":"SAOPAULO","state":"SP","county":"","areacode":"","lat":"-23.53","long":"-46.62","countryCode":"BR"};
-root.RottenTomatoes.context.gptSite = "home";
-root.RottenTomatoes.serviceWorker || (root.RottenTomatoes.serviceWorker = {});
-root.RottenTomatoes.serviceWorker.preCachingPageUrls = ["\u002Fm\u002Fvenom_2018","\u002Fm\u002Fa_star_is_born_2018","\u002Fm\u002Fshine_2018","\u002Fm\u002Fthe_hate_u_give","\u002Fm\u002Floving_pablo"];
+root.RottenTomatoes.dtmData = {"webVersion":"node","pageName":"rt | about"};
+root.RottenTomatoes.context.akamaiEdgescape = {"zip":"","zipFallback":"","city":"FORTALEZA","state":"CE","county":"","areacode":"","lat":"-3.72","long":"-38.50","countryCode":"BR"};
 }(this));
 </script> 
   <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDPjsVhzeFsT0QhCw_gwy2PyXyfLo-ejds&amp;libraries=places"></script> 
@@ -4906,7 +3595,6 @@ root.RottenTomatoes.serviceWorker.preCachingPageUrls = ["\u002Fm\u002Fvenom_2018
   <script src="/assets/pizza-pie/javascripts/bundles/vendor.41e3207a5bb.js"></script> 
   <script src="/assets/pizza-pie/javascripts/bundles/client-side-templates.215cf1a8cfb.js"></script> 
   <script src="/assets/pizza-pie/javascripts/bundles/global.32450d9af31.js"></script> 
-  <script src="/assets/pizza-pie/javascripts/bundles/home.3b059ae6272.js"></script> 
   <script>
             if ('function' === typeof window.mps.writeFooter) window.mps.writeFooter()
             </script> 

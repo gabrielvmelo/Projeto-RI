@@ -46,10 +46,10 @@ class Main {
                     print("URL:$url\n")
 
                     //Analisar se link esta no dominio
-//
-//                    if(domain != getDomainName(url)){
-//                        continue
-//                    }
+
+                    if(domain != getDomainName(url)){
+                        continue
+                    }
 
                     //Analisar robots.txt
                     if(checkRules(mapRobots[item]!!, url)){

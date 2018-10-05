@@ -219,13 +219,13 @@ define("globals", ["jquery", "underscore"], function($, _) {
 
         mpscall = {
             "site":"rottentomatoes-web",
-            "type":"movie_page", // page or content type
-            "cat":"movie|movie_page", // section hierarchy (pipe separated)
+            "type":"index", // page or content type
+            "cat":"critics|index", // section hierarchy (pipe separated)
             "field[env]":"prod" // execution environment
         };
 
         BK.PageName = "";
-        BK.SiteSection = "movie";
+        BK.SiteSection = "critics";
 
         require(["js-cookie"], function(Cookies){
             var user_id_key = "auth_user";
@@ -359,11 +359,10 @@ define("globals", ["jquery", "underscore"], function($, _) {
     });
     </script> 
   <script>console.info("gtm:" + window.performance.now());</script> 
-  <meta NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"> 
-  <title>Movie Showtimes - Rotten Tomatoes</title> 
-  <link rel="stylesheet" href="https://staticv2-4.rottentomatoes.com/static/styles/css/movie.css"> 
-  <link rel="stylesheet" href="https://staticv2-4.rottentomatoes.com/static/styles/css/showtimes.css"> 
-  <link href="https://www.rottentomatoes.com/theaters/" rel="canonical"> 
+  <title>Movie &amp; TV Critics - Rotten Tomatoes</title> 
+  <meta name="description" content="Meet the critics whose reviews contribute to the Rotten Tomatoes Tomatometer, the most trusted measurement of quality for Movies &amp; TV."> 
+  <link href="https://www.rottentomatoes.com/critics/" rel="canonical"> 
+  <link rel="stylesheet" href="https://staticv2-4.rottentomatoes.com/static/styles/css/critic.css"> 
   <script>console.info("after page specific head tag content:" + window.performance.now());</script> 
   <script>console.info("bottom of head tag: " + window.performance.now());</script> 
   <script type="text/javascript">
@@ -949,308 +948,87 @@ require(['jquery', 'facebook', 'globals'], function($, FB, RT) {
     </div> 
    </nav> 
    <div id="main_container" class="container "> 
-    <div class="col-full-xs col-left-center"> 
-     <div id="location-picker"> 
-      <div id="page-title"> 
-       <span class="text"> Theaters near <span class="zipcode"></span> </span> 
-       <input class="typeahead form-control" type="text" value="" placeholder="city &amp; state or zip" autocomplete="off"> 
-       <span><a id="location-change-link">Change location</a><button id="location-button" type="button" class="btn-showtimes" style="display:none">Submit</button></span> 
-       <div class="results"></div> 
+    <div class="col-left-center critic-container col-full-xs"> 
+     <div class="btn-group critic-mobile-nav btn-primary-border-dropdown btn-container-full-width"> 
+      <button class="dropdown-toggle btn btn-primary-border" data-toggle="dropdown" aria-expanded="false" type="button"> Critics Home<span class="fontelloIcon icon-down-dir"></span> </button> 
+      <ul class="dropdown-menu" role="menu"> 
+       <li class="active disable"> <a href="/critics/">Tomatometer-Approved Critics</a> </li> 
+       <li> <a href="/critics/authors">Critics List</a> </li> 
+       <li> <a href="/critics/sources">Publications List</a> </li> 
+       <li> <a href="/critics/latest_reviews">Latest Film Reviews</a> </li> 
+       <li> <a href="/help_desk/critics">Critic Application &amp; Criteria</a> </li> 
+       <li> <a href="/critics/critics_groups"> Resources</a> </li>
+      </ul> 
+     </div>
+     <section class="panel panel-rt panel-box "> 
+      <h1 class="panel-heading">WHO ARE THE TOMATOMETER-APPROVED CRITICS?</h1> 
+      <div class="panel-body content_body"> 
+       <p> Tomatometer-approved critics come from all across the U.S., and the world. They publish on a variety of platforms – among them you’ll find podcasters, newspaper and magazine writers, bloggers, and YouTubers. Reviews from Tomatometer-approved critics form the trusted Tomatometer score for movies and TV shows. Their reviews embody several key values – insight and dedication among them – and meet a set of <a href="/help_desk/critics">Eligibility&nbsp;Guidelines</a>. To see our full list of Tomatometer-approved critics, click <a href="/critics/authors">here</a>. </p> 
+       <p>If you’d like to find out how to join their ranks, you can apply to be a Tomatometer-approved critic <a target="_blank" href="https://fandango.az1.qualtrics.com/jfe/form/SV_9TYsI7mipNbGCYl">here</a>.</p> 
       </div> 
-      <div id="spinner"> 
-       <br>
-       <br>
-       <br>
-       <br>
-       <img src="https://staticv2-4.rottentomatoes.com/static/images/chrome/loading.gif" style="display: block;margin: auto;"> 
+     </section> 
+     <section id="" class="panel panel-rt panel-box "> 
+      <h2 class="panel-heading">Critic Spotlight</h2> 
+      <div class="panel-body content_body"> 
       </div> 
-     </div> 
-     <div id="google-attributions"></div> 
-     <div id="sharethrough_top_ad"></div> 
-     <script>
-        var mps=mps||{}; mps._queue=mps._queue||{}; mps._queue.gptloaded=mps._queue.gptloaded||[];
-        mps._queue.gptloaded.push(function() {
-            if (mps.getResponsiveSet() =='0') { //MOBILE
-                mps.insertAd('#sharethrough_top_ad','sharethrough','strnativekey=dfAs8TUYJTwJtibWtm9Go8Lb;pos=top;');
-            }
-        });
-    </script> 
-     <div id="theaters"></div> 
+     </section> 
+     <section id="" class="panel panel-rt panel-box "> 
+      <h2 class="panel-heading">Latest Reviews</h2> 
+      <div class="panel-body content_body"> 
+       <div class="col col-sm-12 col-xs-24"> 
+        <p class="subtle bold">MOVIES</p> 
+        <a class="bold articleLink" href="/m/harmony_2018">Harmony</a> 
+        <p><span class="icon tiny rotten"></span> ...one of those irritating local films in which all the Australian actors adopt American accents.</p> 
+        <p> ‐ <a href="/critic/david-stratton" class="articleLink">David Stratton</a>, The Australian</p> 
+        <a class="bold articleLink" href="/m/the_seagull_2018">The Seagull</a> 
+        <p><span class="icon tiny fresh"></span> The new version, by director Michael Meyer, is far more successful in catching the elusive atmosphere of the Russian master's work. </p> 
+        <p> ‐ <a href="/critic/david-stratton" class="articleLink">David Stratton</a>, The Australian</p> 
+        <a class="bold articleLink" href="/m/first_man">First Man</a> 
+        <p><span class="icon tiny fresh"></span> The performances by Gosling - in a difficult, interior role - and Foy are exemplary.</p> 
+        <p> ‐ <a href="/critic/david-stratton" class="articleLink">David Stratton</a>, The Australian</p> 
+       </div> 
+       <div class="col col-sm-12 col-xs-24"> 
+        <p class="subtle bold">AT HOME</p> 
+        <a class="bold articleLink" href="/m/1009113-halloween">Halloween</a> 
+        <p><span class="icon tiny fresh"></span> John Carpenter's horror institution has never looked or sounded better than in this specially crafted 4K UHD release. With the release of the new Halloween imminent, now is the perfect time to reacquaint yourself with the ultimate slasher.</p> 
+        <p> ‐ <a href="/critic/kat-hughes" class="articleLink">Kat Hughes</a>, <a href="http://www.thehollywoodnews.com/2018/10/05/home-entertainment-halloween-4k-uhd-blu-ray-review/" target="_blank" class="articleLink">The Hollywood News</a> </p> 
+        <a class="bold articleLink" href="/m/stairway_to_heaven_1947">Stairway to Heaven (A Matter of Life and Death)</a> 
+        <p><span class="icon tiny fresh"></span> Honestly, it's nearly a matter of life or death whether true cinephiles add this disc to their home libraries.</p> 
+        <p> ‐ <a href="/critic/eric-henderson" class="articleLink">Eric Henderson</a>, <a href="https://www.slantmagazine.com/dvd/review/a-matter-of-life-and-death" target="_blank" class="articleLink">Slant Magazine</a> </p> 
+        <a class="bold articleLink" href="/m/exorcist_ii_the_heretic">Exorcist II: The Heretic</a> 
+        <p><span class="icon tiny fresh"></span> The film may not be a neglected masterpiece, but this Blu-ray package certainly makes a case for it as a fascinating work by a visionary filmmaker.</p> 
+        <p> ‐ <a href="/critic/niles-schwartz" class="articleLink">Niles Schwartz</a>, <a href="https://www.slantmagazine.com/dvd/review/exorcist-ii-the-heretic" target="_blank" class="articleLink">Slant Magazine</a> </p> 
+       </div> 
+      </div> 
+     </section> 
     </div> 
-    <div class="hidden-xs col-right"> 
-     <aside id="medrec_top_ad" class="medrec_ad " style="width:300px"></aside> 
+    <div class="col-right col-full-xs critic-buzz"> 
+     <div class="hidden-xs"> 
+      <section id="" class="panel panel-rt panel-box "> 
+       <div class="panel-body content_body"> 
+        <ul class="nav nav-pills nav-stacked critic-nav"> 
+         <li class="active disable"> <a href="/critics/">Tomatometer-Approved Critics</a> </li> 
+         <li> <a href="/critics/authors">Critics List</a> </li> 
+         <li> <a href="/critics/sources">Publications List</a> </li> 
+         <li> <a href="/critics/latest_reviews">Latest Film Reviews</a> </li> 
+         <li> <a href="/help_desk/critics">Critic Application &amp; Criteria</a> </li> 
+         <li> <a href="/critics/critics_groups"> Resources</a> </li>
+        </ul> 
+       </div> 
+      </section> 
+     </div> 
+     <aside id="medrec_bottom_ad" class="medrec_ad " style="width:300px"></aside> 
      <script>
                 var mps=mps||{}; mps._queue=mps._queue||{}; mps._queue.gptloaded=mps._queue.gptloaded||[];
                 mps._queue.gptloaded.push(function() {
                     if (mps.getResponsiveSet() !='0') { //DESKTOP or TABLET
-                        mps.insertAd('#medrec_top_ad','topmulti');
+                        mps.insertAd('#medrec_bottom_ad','boxadone');
+                    } else if (mps.getResponsiveSet() == '0' && 'critics' == 'home') {
+                        mps.insertAd('#medrec_bottom_ad','mboxadtwo');
                     }
                 });
             </script> 
     </div> 
-    <script type="text/template" class="TheaterGroupsCompositeTemplate">
-    <div class="panel-rt">
-        <div class="panel-body theater-group-items"></div>
-    </div>
-</script> 
-    <script type="text/template" class="TheaterListItemTemplate">
-    <label>
-        <div class="theater-list-checkbox" value="<@= id @>"></div>
-        <@= name @>
-    </label>
-</script> 
-    <script type="text/template" class="MovieListItemTemplate">
-    <label>
-        <div class="movie-list-checkbox" value="<@= id @>"></div>
-        <@= title @>
-    </label>
-</script> 
-    <script type="text/template" class="ShowtimesCompositeViewTemplate">
-    <div class="col-xs-24">
-        <div class="panel panel-rt panel-box showtimes-box">
-            <@ if (!hideTheaterInfo) { @>
-                <div class="theater-heading clearfix">
-                    <div class="heading-top-row clearfix">
-                        <h2 class="panel-heading"><@= name @></h2>
-                    </div>
-                    <div class="sub-info">
-                        <p><@= address.street @>, <@= address.city @></p>
-                        <@ if( map ) { @>
-                            <p><br /><a href="http://www.google.com/maps?q=<@= name @> <@= address.street @>" target="_blank" >Map</a></p>
-                        <@ } @>
-                        <@ if( phone ) { @>
-                            <p style="white-space:pre">&#149 <a href="tel:<@= callablePhone @>"><@= phone @></a></p>
-                        <@ } @>
-                    </div>
-                    <@ if(ticketSource === 'MTK') { @>
-                        <div class="vendor-type">
-                            <p>Tickets by MovieTickets.com</p>
-                        </div>
-                    <@ } else if(ticketSource === 'FLX') { @>
-                        <@ if(hasFees) { @>
-                            <div class="vendor-type flixster-vendor-type">
-                                <p>Tickets by <img src="/static/images/trademark/flixster-logo.png"></p>
-                            </div>
-                        <@ } else { @>
-                            <div class="vendor-type flixster-vendor-type">
-                                <p>No Fees! Tickets by <img src="/static/images/trademark/flixster-logo.png"></p>
-                            </div>
-                        <@ } @>
-                    <@ } @>
-                </div>
-            <@ } @>
-            <div class="panel-body movie-showtimes-item">
-                <p>There are no showtimes for this theater</p>
-            </div>
-        </div>
-    </div>
-</script> 
-    <script type="text/template" class="MovieDetailsTemplate">
-    <div class="showtimes-body">
-        <@ if (!hideMovieInfo) { @>
-        <div class="col-xs-4 col-sm-3 showtimes-poster">
-            <a class="pull-left" href="/m/<@= movieData().vanityUrl @>">
-                <@ if(movieData().poster) { @>
-                <img class="movie-poster" src="<@= movieData().poster.detailed @>">
-                <@  } @>
-            </a>
-        </div>
-        <@ } @>
-        <div class="<@ if (hideMovieInfo) { @>col-xs-24<@ } else { @>col-xs-20 col-sm-21<@ } @>">
-            <div class="showtimes-header" >
-                <@ if (!hideMovieInfo) { @>
-                    <@ if (movieData().vanityUrl) { @>
-                        <a href="/m/<@= movieData().vanityUrl @>">
-                    <@ } @>
-                        <h3 class="movie-title"> <@= movieData().title @> </h3>
-                            <@ movieData().reviews.rottenTomatoes @>
-                        <div class="movie-scores">
-                            <@ if(movieData().reviews && movieData().reviews.rottenTomatoes && movieData().reviews.rottenTomatoes.rating >= 0 && movieData().reviews.rottenTomatoes.rating <= 100) { @>
-                                <@ if(movieData().reviews.rottenTomatoes.certifiedFresh) { @>
-                                    <span class="icon tiny certified"></span>
-                                <@ } else if(movieData().reviews.rottenTomatoes.rating > 60) { @>
-                                    <span class="icon tiny fresh"></span>
-                                <@ } else { @>
-                                    <span class="icon tiny rotten"></span>
-                                <@ } @>
-                                <span class="tMeterScore "><@= movieData().reviews.rottenTomatoes.rating @>%</span>
-                            <@ } @>
-                            <@ if (audienceData().ratingClass) { @>
-                                <span class="icon tiny <@= audienceData().ratingClass @>"></span>
-                                <span class="tMeterScore">
-                                    <span style="vertical-align:top"><@= audienceData().ratingScore @></span>%<span class="comma">,</span>
-                                </span>
-                            <@ } @>
-                        </div>
-                        <div class="movie-info">
-                            <@ if(movieData().mpaa) { @>
-                                <span>&nbsp<@= movieData().mpaa @>,</span>
-                            <@ } @>
-                            <@ if(movieData().runningTime) { @>
-                                <span>&nbsp<@= movieData().runningTime @></span>
-                            <@ } @>
-                        </div>
-                    <@ if (movieData().vanityUrl) { @>
-                        </a>
-                    <@ } @>
-                <@ } @>
-            </div>
-        </div>
-        <div class="col-full-xs col-sm-21 showtimes-presentations"></div>
-    </div>
-</script> 
-    <script type="text/template" class="MovieListSelectorTemplate">
-    <@ _.each(model, function(currentModel) { @><li value="<@= currentModel.id @>"><@= currentModel.title @></li><@ }); @>
-</script> 
-    <script type="text/template" class="NoShowtimesTemplateShowtimes">
-    <div class="media" style="padding-left: 10px;">
-        <div class="media-body">
-            <div id='no-theaters-text'>
-                <p>No showtimes available.</p>
-                <p> Try selecting other movies or theaters.</p>
-            </div>
-        </div>
-    </div>
-</script> 
-    <script type="text/template" class="PurchaseButtonTemplate">
-    <@ if(!theaterData.get("tickets") || !movieData().get("isLive")) { @>
-        <@= formatTime(isoDate) @><span class="comma">,</span>
-    <@ } else if(typeof ticketUrl === 'undefined') { @>
-        <a href="" id="<@= code @>" class="btn btn-showtimes" disabled="true" role="button"><@= formatTime(isoDate) @></a>
-    <@ } else if(theaterData.get("ticketSource") === "FLX") { @>
-        <a id="<@= code @>" href="<@= ticketUrl @>&deviceType=RTO&returnUrl=<@= encodeURIComponent(location.href) @>" class="btn btn-showtimes" role="button" onclick="trackMovieTicketsAffiliateEvent()"><@= formatTime(isoDate) @></a>
-    <@ } else { @>
-        <a id="<@= code @>" href="<@= ticketUrl @>" target="_blank" class="btn btn-showtimes" role="button"><@= formatTime(isoDate) @></a>
-    <@ } @>
-</script> 
-    <script type="text/template" class="TraitGroupTemplate">
-    <span class='presentation-name text-uppercase'><@= presentationName @> showtimes</span>
-    <@ if(typeof traits != "undefined") {@>
-        <@ _.each(traits, function(trait) { @>
-            <span class='trait'><@= traitData(trait) @></span>
-        <@ }); @>
-    <@ } @>
-    <div class='performances'></div>
-</script> 
-    <script type="text/template" class="OpeningOnTemplate">
-    <div class='opening-on-text-box'>
-        <a href="/m/<@= id @>"><@= title @></a> opens on <a href="#" class="opening-on-date"><@= formatTime() @></a>
-    </div>
-</script> 
-    <script type="text/template" class="ShowtimesMovieInfo">
-    <div id="movieInfo" class="score_panel">
-        <div class="col-sm-5 col-xs-9">
-            <div class="center">
-                <a href="/m/<@= vanityUrl @>/">
-                    <img class="posterImage" src="<@= posterImgSrc @>" />
-                </a>
-            </div>
-        </div>
-        <div class="col-sm-19 col-xs-15">
-            <h1 class="movie_title"><a class="unstyled" href="/m/<@= vanityUrl @>/"><@= title @></a></h1>
-            <div class="tmeterpanel">
-                <h3 class="scoreTitle noSpacing visible-xs">TOMATOMETER</h3>
-                <div class="meter">
-                    <@ if ('undefined' !== typeof(critic)) { @>
-                        <span class="meter-tomato icon big medium-xs <@= critic.ratingClass @> pull-left"></span>
-                        <span class="meter-value"><@= critic.ratingScore @>%</span>
-                    <@ } else { @>
-                        <span class="meter-value">N/A</span>
-                    <@ } @>
-                </div>
-            </div>
-            <div class="audiencepanel">
-                <h3 class="scoreTitle noSpacing visible-xs">
-                    <@ if (!audience && 'viewed' == audience.ratingType) { @>
-                        Audience Score
-                    <@ } else { @>
-                        Want to See
-                    <@ } @>
-                </h3>
-                <div class="audience-score meter">
-                    <div class="meter-tomato icon big medium-xs <@= audience.ratingClass @> pull-left"></div>
-                    <div class="meter-value">
-                        <span style="vertical-align:top"><@= audience.ratingScore @></span>%
-                    </div>
-                </div>
-            </div>
-            <div class="col-full-xs clearfix">
-                <p class="critic_consensus tomato-info">
-                    <span class="subtle superPageFontColor">Critic Consensus:</span>
-                    <@ if ('undefined' === typeof(consensus) || null === consensus || '' === consensus) { @>
-                        No consensus yet.
-                    <@ } else { @>
-                        <@= consensus @>
-                    <@ } @>
-                </p>
-                <@ if ('undefined' !== typeof(mpaaRating)) { @>
-                    <p class="tomato-info noSpacing hidden-xs">
-                        <span class="subtle">Rating:</span>
-                        <@= mpaaRating @> <@ if ('undefined' !== typeof(advisory)) { @>(<@= advisory @>)<@ } @>
-                    </p>
-                <@ } @>
-                <@ if ('undefined' !== typeof(theaterReleaseDate)) { @>
-                    <p class="tomato-info noSpacing hidden-xs">
-                        <span class="subtle">In Theaters:</span>
-                        <@= theaterReleaseDate @>
-                    </p>
-                <@ } @>
-                <@ if (runningTime) { @>
-                    <p class="tomato-info noSpacing hidden-xs">
-                        <span class="subtle">Runtime:</span>
-                        <@= runningTime @>
-                    </p>
-                <@ } @>
-            </div>
-        </div>
-    </div>
-</script> 
-    <script type="text/template" class="ShowtimesTheaterInfo">
-    <div id="theaterInfo">
-        <h1 class="movie_title noSpacing"><@= title @></h1>
-        <div class="col-xs-24">
-            <p><@= address.street @>, <@= address.city @>, <@= address.state @> <@= address.zip @></p>
-            <@ if (phone) { @>
-                <p><a href="tel:<@= friendlyPhone @>"><@= phone @></a></p>
-            <@ } @>
-        </div>
-    </div>
-</script> 
-    <script type="text/template" class="TheaterItemTemplate">
-            <a href="/showtimes/?theater=<@= theaterId @>"><h2 class="title"><@= title @></h2></a>
-            <a href="/showtimes/?theater=<@= theaterId @>"><address><@= address @></address></a>
-        </script> 
-    <script type="text/template" class="TheaterBoxTemplate">
-            <div class="panel panel-rt panel-box showtimes-box">
-                <h2 class="panel-heading"><@= title @></h2>
-                <div class="panel-body content_body">
-                </div>
-            </div>
-        </script> 
-    <script>
-            require([
-                "jquery",
-                "globals",
-                "js-cookie",
-                "location-utils",
-                "https://staticv2-4.rottentomatoes.com/static/dist/app/App.min.js",
-                "https://staticv2-4.rottentomatoes.com/static/dist/app/controllers/TheaterController.js"
-            ],function($, RT, Cookies, LocationUtils, Theaters, TheaterController) {
-                var apiBaseUrl = "";
-                var locationPickerId = $("#location-picker");
-                var parentEl = $("#theaters");
-                RT.showtimesApiBaseUrl = apiBaseUrl;
-                Theaters.start();
-
-                LocationUtils.getLocation().then(function(location) {
-                    new TheaterController.Controller({
-                        parentEl: parentEl,
-                        locationPickerId: locationPickerId,
-                        location: location
-                    });
-                });
-            });
-        </script> 
    </div> 
    <script>console.info("body content:" + window.performance.now());</script> 
    <div class="sleaderboard_wrapper hidden-xs"> 
@@ -1603,7 +1381,7 @@ require(["https://staticv2-4.rottentomatoes.com/static/dist/jspjs/bodyScript.tag
   <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaCallback&amp;render=explicit" async defer></script> 
   <script>
     $(".easteregg").click(function () {
-        alert(window.location.href + " \n/movies/theaters.jsp \nip-10-25-16-83 (BR) \nGA:empty");
+        alert(window.location.href + " \n/critics/critic.index.jsp \nip-10-25-23-196 (BR) \nGA:empty");
     });
 </script>
   <script>
@@ -1623,7 +1401,7 @@ require(["https://staticv2-4.rottentomatoes.com/static/dist/jspjs/bodyScript.tag
   <script type="text/javascript">
         var _sf_async_config = _sf_async_config || {};
         /** CONFIGURATION START **/
-        _sf_async_config.sections = "movie";
+        _sf_async_config.sections = "critics";
         _sf_async_config.authors = 'rt-staff'; 
 
         /** CONFIGURATION END **/
