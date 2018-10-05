@@ -4,13 +4,16 @@ import java.io.File
  * Created by lariciamota.
  */
 //Armazenar as paginas visitadas
-class PageRepository {
-    fun storePage(html: String, domain: String, position: Int){
-        val dirName = domain.substringBefore(".")
-        val fileName = "$dirName$position"
-        val path = "src/repository/$dirName/$fileName.html"
-        val myFile = File(path)
+class PageRepository(dirName: String, fileName: String) {
+    val path = "src/repository/$dirName/$fileName.html"
+    val myFile = File(path)
 
+    fun storePage(html: String){
         myFile.writeText(html)
     }
+
+    fun checkPage(): Boolean{
+        return myFile.exists()
+    }
+
 }

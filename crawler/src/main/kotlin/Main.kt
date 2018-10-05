@@ -73,9 +73,17 @@ class Main {
                         continue
                     }
 
+                    //Analisar se pagina ja foi visitada previamente
+                    val dirName = domain.substringBefore(".")
+                    val formattedURL = formatURL(url)
+                    val repo = PageRepository(dirName, formattedURL)
+
+                    if (repo.checkPage()){
+                        continue
+                    }
+
                     //Armazena pagina visitada
-                    val repo = PageRepository()
-                    repo.storePage(html, domain, contador)
+                    repo.storePage(html)
 
                     //Passar pagina pelo parser para pegar links existentes
                     val txtProcessor = TextProcessor()
@@ -108,6 +116,10 @@ class Main {
             val uri = URI(url)
             val domain = uri.host
             return if (domain.startsWith("www.")) domain.substring(4) else domain
+        }
+
+        fun formatURL(url: String): String {
+            return url.replace("/", "")
         }
 
     }
