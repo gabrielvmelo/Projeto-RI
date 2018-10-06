@@ -7,7 +7,7 @@ class Tokenizer {
         val listScores = arrayListOf<Int>()
 
         for (token in urlTokenizer(url)){
-            listScores.add(scoreToken(token))
+            listScores.add(scoreToken(token.toLowerCase()))
         }
 
         var score = 0
@@ -18,7 +18,7 @@ class Tokenizer {
         return score
     }
 
-    fun urlTokenizer(url: String): List<String>{
+    private fun urlTokenizer(url: String): List<String>{
         return url.split(":|/|.|-|_|&|=|\\?".toRegex())
     }
 
