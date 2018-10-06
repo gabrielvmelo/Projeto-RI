@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31336332-cd4d-43c6-8a3a-126669f20d51" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/PageRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PageRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/imdb/imdb0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/metacritic/metacritic0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes12.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes13.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes14.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes15.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes16.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes17.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/rottentomatoes/rottentomatoes9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/themoviedb/themoviedb0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/thetvdb/thetvdb0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/trakt/trakt0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/tv/tv0.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/repository/tvguide/tvguide0.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Tokenizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="crawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -151,7 +126,7 @@
           <entry key="gradlew" value="1" />
           <entry key="html" value="2" />
           <entry key="java" value="1" />
-          <entry key="kt" value="1" />
+          <entry key="kt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -159,20 +134,20 @@
           <entry key="Groovy" value="2" />
           <entry key="HTML" value="2" />
           <entry key="JAVA" value="1" />
-          <entry key="Kotlin" value="1" />
+          <entry key="Kotlin" value="3" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="1" />
-          <entry key="kt" value="2296" />
+          <entry key="kt" value="4490" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="Kotlin" value="2296" />
+          <entry key="Kotlin" value="4490" />
         </counts>
       </usages-collector>
     </session>
@@ -182,11 +157,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+            <state relative-caret-position="210">
+              <caret line="24" column="35" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="24" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/Tokenizer.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.1/a287944d92875a1f3c2161e5cddaede7720913d1/kotlin-stdlib-1.1.1-sources.jar!/kotlin/text/Strings.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="1181" column="31" selection-start-line="1181" selection-start-column="31" selection-end-line="1181" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -203,7 +196,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="360">
               <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
@@ -622,6 +615,7 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/Robot.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/PageRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Tokenizer.kt" />
       </list>
     </option>
   </component>
@@ -665,6 +659,13 @@
               <item name="crawler" type="b2602c69:ProjectViewProjectNode" />
               <item name="crawler" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="kotlin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crawler" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crawler" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -678,7 +679,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538700969161" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538847039030" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -991,17 +992,18 @@
       <workItem from="1538592466810" duration="1934000" />
       <workItem from="1538596026480" duration="1675000" />
       <workItem from="1538599801336" duration="10250000" />
-      <workItem from="1538701133576" duration="8025000" />
+      <workItem from="1538701133576" duration="18773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24993000" />
+    <option name="totallyTimeSpent" value="35741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28525898" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.28525898" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1010,7 +1012,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3431677" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3431677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1090,27 +1092,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/CheckRobots.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-start-column="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Robot.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,10 +1106,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/CheckRobots.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.1/a287944d92875a1f3c2161e5cddaede7720913d1/kotlin-stdlib-1.1.1-sources.jar!/kotlin/text/Strings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="1181" column="31" selection-start-line="1181" selection-start-column="31" selection-end-line="1181" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+        <state relative-caret-position="210">
+          <caret line="24" column="35" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Tokenizer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
         </state>
       </provider>
     </entry>
