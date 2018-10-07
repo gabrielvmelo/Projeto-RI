@@ -36,6 +36,7 @@ for item in dataset:
         
         arq_out.write("{}\t".format(tf))
     arq_out.write("{}\n".format(item['label']))
+    
 
 total = timer() - start
 
