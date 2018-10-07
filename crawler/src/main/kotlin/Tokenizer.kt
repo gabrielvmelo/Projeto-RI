@@ -19,7 +19,7 @@ class Tokenizer {
     }
 
     private fun urlTokenizer(url: String): List<String>{
-        return url.split(":|/|.|-|_|&|=|\\?".toRegex())
+        return url.split(":|/|\\.|-|_|&|=|\\?".toRegex())
     }
 
     private fun scoreToken(token: String): Int{
