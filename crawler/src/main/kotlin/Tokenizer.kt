@@ -1,31 +1,40 @@
-import kotlin.collections.ArrayList
+import java.net.URI
 
 //Tokenizar as URLs para adicionar pesos as palavras
 class Tokenizer {
     val hashMap = hashMapOf(
-            "s0" to 5, "s1" to 5, "s2" to 5, "s3" to 5, "s4" to 5, "s5" to 5,"s6" to 5, "s7" to 5, "s8" to 5, "s9" to 5, "s10" to 5,
-            "season" to 5, "seasons" to 5, "shows" to 5, "show" to 5, "tvshows" to 5, "series" to 5,
-            "tv" to 3, "toptv" to 3, "title" to 3, "episodes" to 3, "watch" to 3, "cast" to 3, "actors" to 3, "person" to 3, "people" to 3, "reviews" to 3,
+            "s01" to 10, "s1" to 10, "s2" to 10, "s02" to 10, "s3" to 10, "s03" to 10, "s4" to 10, "s04" to 10, "s5" to 10,"s05" to 10,
+            "s6" to 10, "s06" to 10, "s7" to 10, "s07" to 10, "s8" to 10, "s08" to 10, "s9" to 10, "s09" to 10, "s10" to 10,
+            "season" to 10, "seasons" to 3, "shows" to 10, "show" to 10, "tvshows" to 10, "tvshow" to 10, "series" to 10,
+            "tv" to 10, "toptv" to 3, "title" to 10, "episode" to 1, "episodes" to 1, "watch" to 3, "cast" to 1, "actors" to 1, "person" to 1, "people" to 1, "reviews" to 1,
             "release" to 1, "date" to 1, "photos" to 1, "galleries" to 1, "gallery" to 1, "videogallery" to 1,
             "mediaindex" to 1, "videos" to 1, "images" to 1, "awards" to 1, "top" to 1, "streaming" to 1,
-            "score" to 1, "metascore" to 1,  "critic" to 1, "watchlist" to 1, "listings" to 1,  "calendar" to 1, "special" to 1,
-            "m" to (-5), "movie" to (-5), "movies" to (-5), "moviemeter" to (-5), "oscar" to (-5), "dvd" to (-5), "theaters" to (-5),
-            "login" to (-5), "account" to (-5), "signup" to (-5), "user" to (-5), "registration" to (-5), "signin" to (-5),
-            "game" to (-5), "games" to (-5), "company" to (-5), "music" to (-5), "albums" to (-5), "donate" to (-5), "sponsors" to (-5), "contribute" to (-5),
-            "showtimes" to (-5), "apps" to (-5), "sports" to (-5), "tech" to (-5), "community" to (-5), "trivia" to (-5),
-            "news" to (-3), "publication" to (-3), "discuss" to (-3), "documentation" to (-3), "talk" to (-3),
-            "trailers" to (-1), "leaderboard" to (-1), "vip" to (-1), "browse" to (-1)
+            "score" to 1, "metascore" to 1,  "critic" to 1, "watchlist" to (-10), "listings" to (-10), "lists" to (-10), "discover" to (-10), "calendar" to (-10), "calendars" to (-10), "special" to 1,
+            "m" to (-15), "movie" to (-30), "movies" to (-30), "moviemeter" to (-30), "oscar" to (-30), "dvd" to (-30), "theater" to (-30), "theaters" to (-30),
+            "login" to (-40), "account" to (-30), "signup" to (-40), "user" to (-40), "users" to (-40), "registration" to (-40), "signin" to (-40), "trending" to (-10),
+            "game" to (-10), "games" to (-20), "company" to (-20), "music" to (-30), "albums" to (-30), "donate" to (-30), "sponsors" to (-30), "contribute" to (-30),
+            "showtimes" to (-20), "apps" to (-10), "sports" to (-30), "tech" to (-20), "community" to (-20), "trivia" to (-20),
+            "news" to (-30), "publication" to (-3), "discuss" to (-20), "documentation" to (-20), "talk" to (-20),
+            "trailers" to (-10), "leaderboard" to (-10), "vip" to (-1), "browse" to (-1), "post" to (-10), "posts" to (-10), "home" to (-3)
     )
 
-    fun scoreURL(url: String): Int{
-        val listScores = arrayListOf<Int>()
+    fun scoreURL(url: String, domain: String): Int{
+        val scoresMap = hashMapOf<String, Int>()
+        val tokens = urlTokenizer(url).map { token -> token.toLowerCase() }
 
-        for (token in urlTokenizer(url)){
-            listScores.add(scoreToken(token.toLowerCase()))
+        for (token in tokens){
+            val value = scoreToken(token)
+            if (value == 0) continue
+            if (!scoresMap.contains(token)) scoresMap[token] = value
+            else {
+                scoresMap[token] = scoresMap[token]!! + value
+            }
         }
 
+        if (domain.contains("tv")) scoresMap["tv"] = scoresMap["tv"]!! - 10
+
         var score = 0
-        for (value in listScores){
+        for (value in scoresMap.values){
             score += value
         }
 
