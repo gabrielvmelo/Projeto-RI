@@ -11,6 +11,9 @@ import java.net.URISyntaxException
  */
 class Main {
     companion object{
+        val NUMBER_ATTEMPTS = 5
+        val NUMBER_COUNT = 20
+
         @JvmStatic
         fun main(args: Array<String>){
             val heuristic = true
@@ -68,9 +71,9 @@ class Main {
                 var count = 0
                 var relevant = 0
 
-                while (!frontier.vazia() && count < 20){
+                while (!frontier.vazia() && count < NUMBER_COUNT){
                     val url = frontier.remove()
-                    print("URL:$url\n")
+//                    print("URL:$url\n")
 
                     //Analisar se link esta no dominio
 
@@ -90,7 +93,7 @@ class Main {
 
                     var success = false
                     var countFail = 0
-                    while (!success || countFail < 5){
+                    while (!success && countFail < NUMBER_ATTEMPTS){
                         try {
                             html = rbt.downloadPage(url)
                             success = true
@@ -128,8 +131,9 @@ class Main {
                     if(heuristic){
                         val tokenizer = Tokenizer()
                         for (link in links){
-                            val value = tokenizer.scoreURL(link, domain)
-                            if(value > 10){
+                            val value = tokenizer.scoreURL(link)
+                            println(value)
+                            if(value >= 10){
                                 frontier.addURL(link)
                             }
                         }

@@ -18,7 +18,7 @@ class Tokenizer {
             "trailers" to (-10), "leaderboard" to (-10), "vip" to (-1), "browse" to (-1), "post" to (-10), "posts" to (-10), "home" to (-3)
     )
 
-    fun scoreURL(url: String, domain: String): Int{
+    fun scoreURL(url: String): Int{
         val scoresMap = hashMapOf<String, Int>()
         val tokens = urlTokenizer(url).map { token -> token.toLowerCase() }
 
@@ -31,8 +31,6 @@ class Tokenizer {
             }
         }
         var score = 0
-
-        if (domain.contains("tv")) score - 10
 
         for (value in scoresMap.values){
             score += value
