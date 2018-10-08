@@ -30,10 +30,10 @@ class Tokenizer {
                 scoresMap[token] = scoresMap[token]!! + value
             }
         }
-
-        if (domain.contains("tv")) scoresMap["tv"] = scoresMap["tv"]!! - 10
-
         var score = 0
+
+        if (domain.contains("tv")) score - 10
+
         for (value in scoresMap.values){
             score += value
         }

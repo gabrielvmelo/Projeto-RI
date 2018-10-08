@@ -65,9 +65,10 @@ class Main {
                 val robots = CheckRobots()
                 if(!mapRobots.contains(item)) mapRobots[item] = robots.readTxt(item+"robots.txt")
 
-                var contador = 0
+                var count = 0
+                var relevant = 0
 
-                while (!frontier.vazia() && contador < 30){
+                while (!frontier.vazia() && count < 20){
                     val url = frontier.remove()
                     print("URL:$url\n")
 
@@ -85,19 +86,21 @@ class Main {
 
                     //Analisar se eh uma pagina html e fazer download da pagina se for
                     val rbt = Robot()
-                    var html: String
-                    try {
-                        val ishtml = rbt.downloadPage(url)
-                        if (ishtml != null){
-                            html = ishtml
-                        } else {
-                            println("Nao eh html\n")
-                            continue
+                    var html: String? = null
+
+                    var success = false
+                    var countFail = 0
+                    while (!success || countFail < 5){
+                        try {
+                            html = rbt.downloadPage(url)
+                            success = true
+                        } catch (e: Exception) {
+                            println(e.message)
+                            countFail += 1
                         }
-                    } catch (e: Exception) {
-                        println(e.message)
-                        continue
                     }
+
+                    if (!success || html == null) continue
 
                     //Analisar se pagina ja foi visitada previamente
                     val dirName = domain.substringBefore(".")
@@ -113,6 +116,9 @@ class Main {
 
                     //Calcula score da pagina
                     val pageClass = PageClassifier().scorePage(html)
+                    if (pageClass > 250){ //pagina considerada relevante
+                        relevant += 1
+                    }
 
                     //Passar pagina pelo parser para pegar links existentes
                     val txtProcessor = TextProcessor()
@@ -133,10 +139,10 @@ class Main {
                         }
                     }
 
-                    contador += 1
-                    println("\n" + contador + "\n")
+                    count += 1
+//                    println("\n" + count + "\n")
                 }
-
+                println("Dominio: $item. Quantidade de links visitados: $count. Quantidade de links relevantes: $relevant")
             }
 
         }
