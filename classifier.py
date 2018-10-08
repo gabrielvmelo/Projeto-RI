@@ -19,7 +19,9 @@ print(len(idf_zero))
 dataset = dataset.drop(columns = idf_zero)
 dataset.to_csv("dataset/datset_drop_TF", sep='\t', index=False)
 
-l = len(dataset)
+idf_dataset = pd.DataFrame.from_dict(idf)
+
+'''l = len(dataset)
 
 for i in range(l):
     print(i)
@@ -29,4 +31,4 @@ for i in range(l):
         print(aux)
         dataset.at[i, word] = dataset.iloc[i][word] * idf[word]
 
-dataset.to_csv("dataset/dataset_TFxIDF", sep='\t')
+dataset.to_csv("dataset/dataset_TFxIDF", sep='\t')'''
