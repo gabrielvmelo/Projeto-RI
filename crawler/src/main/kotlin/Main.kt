@@ -1,4 +1,5 @@
 import java.lang.Exception
+import java.lang.IllegalArgumentException
 import java.net.URI
 import java.util.*
 import kotlin.collections.HashMap
@@ -10,12 +11,12 @@ import java.net.URISyntaxException
  */
 class Main {
     companion object{
-        val NUMBER_ATTEMPTS = 5
-        val NUMBER_COUNT = 1000
+        val NUMBER_ATTEMPTS = 3
+        val NUMBER_COUNT = 100
+        val STRATEGY_CODE = 1 // 1 eh baseline, 2 eh heuristica com palavras positivas e 3 eh heuristica com palavras positivas e negativas
 
         @JvmStatic
         fun main(args: Array<String>){
-            val heuristic = true
             //URLs
             val URLs = arrayOf (
                 "https://www.rottentomatoes.com",
@@ -97,7 +98,7 @@ class Main {
                             html = rbt.downloadPage(url)
                             success = true
                         } catch (e: Exception) {
-                            println(e.message)
+                            println(e.message + " $url")
                             countFail += 1
                         }
                     }
@@ -106,7 +107,10 @@ class Main {
 
                     //Analisar se pagina ja foi visitada previamente
                     val dirName = domain.substringBefore(".")
-                    val formattedURL = formatURL(url)
+                    var formattedURL =  formatURL(url)
+                    if(formattedURL.length >= 255){
+                        formattedURL =  formatURL(url).substring(0, 255)
+                    }
                     val repo = PageRepository(dirName, formattedURL)
 
                     if (repo.checkPage()){
@@ -127,18 +131,30 @@ class Main {
                     val txtProcessor = TextProcessor()
                     val links = txtProcessor.getLinks(html, item)
 
-                    //Atualiza fronteira
-                    if(heuristic){
-                        val tokenizer = Tokenizer()
-                        for (link in links){
-                            val value = tokenizer.scoreURL(link)
-                            if(value >= 10){
+                    //Atualiza fronteira de acordo com estrategia escolhida
+                    when(STRATEGY_CODE){
+                        1 -> { //baseline
+                            for (link in links){
                                 frontier.addURL(link)
                             }
                         }
-                    } else {
-                        for (link in links){
-                            frontier.addURL(link)
+                        2 -> { //heuristica com palavras positivas
+                            val tokenizerPositive = TokenizerPositive()
+                            for (link in links){
+                                val value = tokenizerPositive.scoreURL(link)
+                                if(value >= 10){
+                                    frontier.addURL(link)
+                                }
+                            }
+                        }
+                        3 -> { //heuristica com palavras positivas e negativas
+                            val tokenizer = Tokenizer()
+                            for (link in links){
+                                val value = tokenizer.scoreURL(link)
+                                if(value >= 10){
+                                    frontier.addURL(link)
+                                }
+                            }
                         }
                     }
 
@@ -162,14 +178,28 @@ class Main {
         @Throws(URISyntaxException::class)
         fun getDomainName(url: String): String? {
             var uri: URI? = null
+            var domain: String? = null
             try{
+//                println("URL: $url")
                 uri = URI(url)
+//                println("uri: $uri")
+                domain = uri.host
             } catch (e: URISyntaxException){
-                print(e.message)
+                println(e.message)
                 return null
             }
-            val domain = uri.host
-            return if (domain.startsWith("www.")) domain.substring(4) else domain
+//            println("Domain fora: $domain")
+            if(domain == null){
+                println("WARN - invalid url detected: $url")
+                return null
+            }
+            if (domain.startsWith("www.")) {
+//                println("Domain startswith: ${domain.substring(4)}\n")
+                return domain.substring(4)
+            } else {
+//                println("Domain sem: $domain\n")
+               return domain
+            }
         }
 
         private fun formatURL(url: String): String {
