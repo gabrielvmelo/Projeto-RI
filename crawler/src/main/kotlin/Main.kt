@@ -5,14 +5,13 @@ import kotlin.collections.HashMap
 import java.net.URISyntaxException
 
 
-
 /**
  * Created by lariciamota.
  */
 class Main {
     companion object{
         val NUMBER_ATTEMPTS = 5
-        val NUMBER_COUNT = 20
+        val NUMBER_COUNT = 1000
 
         @JvmStatic
         fun main(args: Array<String>){
@@ -77,7 +76,7 @@ class Main {
 
                     //Analisar se link esta no dominio
 
-                    if(domain != getDomainName(url)){
+                    if(domain == null || domain != getDomainName(url)){
                         continue
                     }
 
@@ -121,6 +120,7 @@ class Main {
                     val pageClass = PageClassifier().scorePage(html)
                     if (pageClass > 250){ //pagina considerada relevante
                         relevant += 1
+                        print("$relevant de $count|")
                     }
 
                     //Passar pagina pelo parser para pegar links existentes
@@ -132,7 +132,6 @@ class Main {
                         val tokenizer = Tokenizer()
                         for (link in links){
                             val value = tokenizer.scoreURL(link)
-                            println(value)
                             if(value >= 10){
                                 frontier.addURL(link)
                             }
@@ -161,8 +160,14 @@ class Main {
         }
 
         @Throws(URISyntaxException::class)
-        fun getDomainName(url: String): String {
-            val uri = URI(url)
+        fun getDomainName(url: String): String? {
+            var uri: URI? = null
+            try{
+                uri = URI(url)
+            } catch (e: URISyntaxException){
+                print(e.message)
+                return null
+            }
             val domain = uri.host
             return if (domain.startsWith("www.")) domain.substring(4) else domain
         }
