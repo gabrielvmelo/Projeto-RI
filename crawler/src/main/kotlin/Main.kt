@@ -1,5 +1,4 @@
 import java.lang.Exception
-import java.lang.IllegalArgumentException
 import java.net.URI
 import java.util.*
 import kotlin.collections.HashMap
@@ -14,7 +13,7 @@ class Main {
     companion object{
         val NUMBER_ATTEMPTS = 3
         val NUMBER_COUNT = 1000
-        val STRATEGY_CODE = 1 // 1 eh baseline, 2 eh heuristica com palavras positivas e 3 eh heuristica com palavras positivas e negativas
+        val STRATEGY_CODE = 2 // 1 eh baseline, 2 eh heuristica com palavras positivas e 3 eh heuristica com palavras positivas e negativas
 
         fun crawler(URL: String){
 
