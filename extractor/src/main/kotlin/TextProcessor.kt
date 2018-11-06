@@ -20,11 +20,12 @@ class TextProcessor {
     }
 
     fun getMetadata(html: String, domain: String){ //attributes
+        val parsedHTML = parse(html)
         //um wrapper para cada site
         when(domain) {
-            "rottentomatoes" -> getMetadataRotten(html)
-            "imdb" -> getMetadataIMDB(html, domain)
-            "themoviedb" -> getMetadataMovieDB(html, domain)
+            "rottentomatoes" -> getMetadataRotten(parsedHTML)
+            "imdb" -> getMetadataIMDB(parsedHTML)
+            "themoviedb" -> getMetadataMovieDB(parsedHTML)
             "trakt" -> getMetadataTrakt(html, domain)
             "tvguide" -> getMetadataTVGuide(html, domain)
             "metacritic" -> getMetadataMetacritic(html, domain)
@@ -34,9 +35,7 @@ class TextProcessor {
         }
     }
 
-    private fun getMetadataRotten(html: String){
-        val parsedHTML = parse(html)
-
+    private fun getMetadataRotten(parsedHTML: Document){
         //title
         var title = parsedHTML.getElementsByClass("movie_title")
         attributeValueMap["title"] = title.text().substringBeforeLast(":")
@@ -80,11 +79,27 @@ class TextProcessor {
 
     }
 
-    fun getMetadataIMDB(html: String, domain: String){
+    fun getMetadataIMDB(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select(".title_wrapper h1")
+        attributeValueMap["title"] = title.text()
 
+        //storyline
+        val storyline = parsedHTML.select(".inline.canwrap p span")
+        attributeValueMap["storyline"] = storyline.text()
+
+        //premiere date
+        val premiereDate = parsedHTML.select("div.txt-block")
+        for (i in premiereDate.indices){
+            if (premiereDate[i].getElementsByClass("inline").text().contains("Release Date")){
+                attributeValueMap["premiere_date"] = premiereDate[i].text().substringAfter("Release Date: ").substringBefore(" (")
+            }
+        }
+
+        println(attributeValueMap)
     }
 
-    fun getMetadataMovieDB(html: String, domain: String){
+    fun getMetadataMovieDB(parsedHTML: Document){
 
     }
 

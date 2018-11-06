@@ -20,7 +20,9 @@ class Main {
             //lista de URLs rotuladas positivamente
             val URLs = arrayOf (
                 "https://www.rottentomatoes.com/tv/maniac/s01",
-                "https://www.rottentomatoes.com/tv/maniac"
+                "https://www.rottentomatoes.com/tv/maniac",
+                "https://www.imdb.com/title/tt0903747/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=12230b0e-0e00-43ed-9e59-8d5353703cce&pf_rd_r=HX0Z12EBE1TM84TC778W&pf_rd_s=center-1&pf_rd_t=15506&pf_rd_i=toptv&ref_=chttvtp_tt_5",
+                "https://www.imdb.com/title/tt1475582/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=12230b0e-0e00-43ed-9e59-8d5353703cce&pf_rd_r=SAG9557X6GS13548BB2R&pf_rd_s=center-1&pf_rd_t=15506&pf_rd_i=toptv&ref_=chttvtp_tt_15"
             )
             val executor = Executors.newFixedThreadPool(URLs.size)
             for (i in 0 until URLs.size) {

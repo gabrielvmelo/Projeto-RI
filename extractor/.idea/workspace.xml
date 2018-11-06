@@ -2,32 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/.idea/modules/crawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/modules/crawler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/.idea/modules/crawler_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/modules/crawler_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/.idea/modules/crawler_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/modules/crawler_test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/CheckRobots.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/CheckRobots.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/Frontier.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/Frontier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/META-INF/crawler_main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/META-INF/crawler_main.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/Main$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/PageClassifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/PageClassifier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/PageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/PageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/TextProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/TextProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/out/production/classes/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/out/production/classes/Tokenizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/src/main/kotlin/PageRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/src/main/kotlin/PageRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../crawler/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/src/main/kotlin/TextProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -65,13 +41,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="290" />
+          <entry key="kt" value="558" />
           <entry key="regexp" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="290" />
+          <entry key="Kotlin" value="558" />
           <entry key="RegExp" value="3" />
         </counts>
       </usages-collector>
@@ -82,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+            <state relative-caret-position="236">
+              <caret line="24" column="215" selection-start-line="24" selection-start-column="215" selection-end-line="24" selection-end-column="215" />
               <folding>
                 <element signature="e#0#115#0" expanded="true" />
               </folding>
@@ -94,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+            <state relative-caret-position="155">
+              <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -580,7 +556,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541541106366" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541547996620" />
     <property name="last.edited.regexp" value="" />
   </component>
   <component name="RunDashboard">
@@ -675,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        <state relative-caret-position="236">
+          <caret line="24" column="215" selection-start-line="24" selection-start-column="215" selection-end-line="24" selection-end-column="215" />
           <folding>
             <element signature="e#0#115#0" expanded="true" />
           </folding>
@@ -685,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+        <state relative-caret-position="155">
+          <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
