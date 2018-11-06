@@ -6,8 +6,9 @@ import java.util.*
  * Created by lariciamota.
  */
 //Processar o texto: rodar o parser HTML para encontrar os links presentes na pagina
+
 class TextProcessor {
-    var listaLinks: LinkedList<String> = LinkedList()
+    private var listLinks: LinkedList<String> = LinkedList()
 
     private fun parse(html: String): Document {
         return Jsoup.parse(html)
@@ -24,8 +25,9 @@ class TextProcessor {
                 link = "http:$link"
             }
 
-            listaLinks.add(link)
+            listLinks.add(link)
         }
-        return listaLinks
+        return listLinks
     }
+
 }

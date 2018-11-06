@@ -13,9 +13,9 @@ class Main {
     companion object{
         val NUMBER_ATTEMPTS = 3
         val NUMBER_COUNT = 1000
-        val STRATEGY_CODE = 2 // 1 eh baseline, 2 eh heuristica com palavras positivas e 3 eh heuristica com palavras positivas e negativas
+        val STRATEGY_CODE = 3 // 1 eh baseline, 2 eh heuristica com palavras positivas e 3 eh heuristica com palavras positivas e negativas
 
-        fun crawler(URL: String){
+        private fun crawler(URL: String){
 
             //Salvar robots.txt
             val mapRobots = HashMap<String, LinkedList<String>>()
@@ -87,11 +87,7 @@ class Main {
                     val pageClass = PageClassifier().scorePage(html)
                     if (pageClass > 250){ //pagina considerada relevante
                         relevant += 1
-//                        println("$relevant $url $pageClass")
                     }
-//                    else {
-//                        println("NAO RELEVANTE $url $pageClass")
-//                    }
 
                     //Passar pagina pelo parser para pegar links existentes
                     val txtProcessor = TextProcessor()
@@ -128,7 +124,6 @@ class Main {
 //                    println("\n" + count + "\n")
                 }
                 println("Dominio: $URL. Quantidade de links visitados: $count. Quantidade de links relevantes: $relevant")
-            //}
 
         }
 
@@ -169,24 +164,19 @@ class Main {
             var uri: URI? = null
             var domain: String? = null
             try{
-//                println("URL: $url")
                 uri = URI(url)
-//                println("uri: $uri")
                 domain = uri.host
             } catch (e: URISyntaxException){
                 println(e.message)
                 return null
             }
-//            println("Domain fora: $domain")
             if(domain == null){
                 println("WARN - invalid url detected: $url")
                 return null
             }
             if (domain.startsWith("www.")) {
-//                println("Domain startswith: ${domain.substring(4)}\n")
                 return domain.substring(4)
             } else {
-//                println("Domain sem: $domain\n")
                return domain
             }
         }

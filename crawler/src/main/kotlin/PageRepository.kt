@@ -5,7 +5,7 @@ import java.io.File
  */
 //Armazenar as paginas visitadas
 class PageRepository(dirName: String, fileName: String) {
-    val path = "src/repository/$dirName/$fileName"
+    val path = "repository/$dirName/$fileName"
     val myFile = File(path)
 
     fun storePage(html: String){
