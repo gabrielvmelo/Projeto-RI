@@ -2,32 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31336332-cd4d-43c6-8a3a-126669f20d51" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../extractor/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/TextProcessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/crawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/crawler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/crawler_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/crawler_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/crawler_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/crawler_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/MetadataRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckRobots.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/CheckRobots.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Frontier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Frontier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/crawler_main.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/META-INF/crawler_main.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/PageClassifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PageClassifier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/PageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/PageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Robot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Robot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/TextProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/TextProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Tokenizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/PageRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/PageRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/Main$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/TextProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/TextProcessor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/TextProcessor.kt" afterDir="false" />
     </list>
     <ignored path="crawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -184,9 +165,10 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.56" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -223,13 +205,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
+            <state relative-caret-position="1320">
               <caret line="93" column="57" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -245,16 +227,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Robot.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/PageRepository.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+              <caret line="7" column="16" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -1097,7 +1079,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14054927" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14216478" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1245,13 +1227,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/repository/rottentomatoes/http:www.rottentomatoes.comtop-tv" />
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Frontier.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1259,24 +1234,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/PageRepository.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="1320">
+          <caret line="93" column="57" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Robot.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Frontier.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="93" column="57" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
+        <state relative-caret-position="90">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1287,6 +1262,13 @@
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/PageRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>

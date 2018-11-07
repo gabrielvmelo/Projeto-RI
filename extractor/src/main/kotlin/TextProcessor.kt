@@ -14,6 +14,7 @@ class TextProcessor {
         "premiere_date" to "",
         "network" to ""
     )
+    private var domain: String? = null
 
     private fun parse(html: String): Document {
         return Jsoup.parse(html)
@@ -21,6 +22,8 @@ class TextProcessor {
 
     fun getMetadata(html: String, domain: String){ //attributes
         val parsedHTML = parse(html)
+        this.domain = domain
+
         //um wrapper para cada site
         when(domain) {
             "rottentomatoes" -> getMetadataRotten(parsedHTML)
@@ -33,6 +36,13 @@ class TextProcessor {
             "tvguide" -> getMetadataTVGuide(parsedHTML)
             else -> println("Dominio nao encontrado, nao eh possivel pegar metadata")
         }
+    }
+
+    private fun store(){
+        val repo = MetadataRepository(domain!!)
+        var row = "${attributeValueMap["title"]} ## ${attributeValueMap["storyline"]} ## ${attributeValueMap["premiere_date"]} ## ${attributeValueMap["network"]}\n"
+
+        repo.storeData(row)
     }
 
     private fun getMetadataRotten(parsedHTML: Document){
@@ -79,12 +89,8 @@ class TextProcessor {
                 }
             }
         }
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
 
+        store()
     }
 
     private fun getMetadataIMDB(parsedHTML: Document){
@@ -104,11 +110,7 @@ class TextProcessor {
             }
         }
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 
     private fun getMetadataMovieDB(parsedHTML: Document){
@@ -128,11 +130,7 @@ class TextProcessor {
         val network = parsedHTML.select("ul.networks li a img")
         attributeValueMap["network"] = network.attr("alt").substringAfter("from ").substringBefore("...")
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 
     private fun getMetadataTrakt(parsedHTML: Document){
@@ -162,11 +160,7 @@ class TextProcessor {
             }
         }
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 
     private fun getMetadataTVGuide(parsedHTML: Document){
@@ -187,11 +181,7 @@ class TextProcessor {
             }
         }
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 
     private fun getMetadataMetacritic(parsedHTML: Document){
@@ -211,11 +201,7 @@ class TextProcessor {
         val network = parsedHTML.select("li.summary_detail.network.publisher span.data a span")
         attributeValueMap["network"] = network.text()
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 
     private fun getMetadataTVDB(parsedHTML: Document){
@@ -238,11 +224,7 @@ class TextProcessor {
             }
         }
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 
     private fun getMetadataTV(parsedHTML: Document){
@@ -267,10 +249,6 @@ class TextProcessor {
         }
         attributeValueMap["network"] = network
 
-        println(attributeValueMap["title"])
-        println(attributeValueMap["storyline"])
-        println(attributeValueMap["premiere_date"])
-        println(attributeValueMap["network"])
-        println()
+        store()
     }
 }
