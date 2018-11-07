@@ -26,7 +26,7 @@ class TextProcessor {
             "rottentomatoes" -> getMetadataRotten(parsedHTML)
             "imdb" -> getMetadataIMDB(parsedHTML)
             "themoviedb" -> getMetadataMovieDB(parsedHTML)
-            "trakt" -> getMetadataTrakt(html, domain)
+            "trakt" -> getMetadataTrakt(parsedHTML)
             "tvguide" -> getMetadataTVGuide(html, domain)
             "metacritic" -> getMetadataMetacritic(html, domain)
             "thetvdb" -> getMetadataTVDB(html, domain)
@@ -87,7 +87,7 @@ class TextProcessor {
 
     }
 
-    fun getMetadataIMDB(parsedHTML: Document){
+    private fun getMetadataIMDB(parsedHTML: Document){
         //title
         val title = parsedHTML.select(".title_wrapper h1")
         attributeValueMap["title"] = title.text()
@@ -111,7 +111,7 @@ class TextProcessor {
         println()
     }
 
-    fun getMetadataMovieDB(parsedHTML: Document){
+    private fun getMetadataMovieDB(parsedHTML: Document){
         //title
         val title = parsedHTML.select("div.title span a h2")
         attributeValueMap["title"] = title.text()
@@ -135,8 +135,38 @@ class TextProcessor {
         println()
     }
 
-    fun getMetadataTrakt(html: String, domain: String){
+    private fun getMetadataTrakt(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select("h2.section strong")
+        attributeValueMap["title"] = title.text()
 
+        //storyline
+        val storyline = parsedHTML.select("div#overview p")
+        attributeValueMap["storyline"] = storyline.text()
+
+        //premiere date and network
+        val label = parsedHTML.select("ul.additional-stats li")
+
+        for (i in label.indices){
+            val labelName = label[i].select("label").first().text()
+            if (labelName.contains("Premiered")){
+                attributeValueMap["premiere_date"] = label[i].select("span").text().substringBefore("T")
+            }
+            if (labelName.contains("Network")){
+                attributeValueMap["network"] = label[i].text().substringAfter("Network").substringBefore(" (")
+            }
+            if (attributeValueMap["network"] == ""){
+                if (labelName.contains("Airs")){
+                    attributeValueMap["network"] = label[i].text().substringAfter("on ").substringBefore(" (")
+                }
+            }
+        }
+
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
     }
 
     fun getMetadataTVGuide(html: String, domain: String){
