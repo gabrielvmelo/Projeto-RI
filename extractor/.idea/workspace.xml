@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$Companion$main$worker$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/TextProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/TextProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" afterDir="false" />
     </list>
@@ -41,13 +45,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="558" />
+          <entry key="kt" value="1169" />
           <entry key="regexp" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="558" />
+          <entry key="Kotlin" value="1169" />
           <entry key="RegExp" value="3" />
         </counts>
       </usages-collector>
@@ -55,11 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="24" column="215" selection-start-line="24" selection-start-column="215" selection-end-line="24" selection-end-column="215" />
+            <state relative-caret-position="14">
+              <caret line="173" column="40" lean-forward="true" selection-start-line="173" selection-start-column="40" selection-end-line="173" selection-end-column="40" />
               <folding>
                 <element signature="e#0#115#0" expanded="true" />
               </folding>
@@ -67,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
+            <state relative-caret-position="173">
+              <caret line="46" column="66" lean-forward="true" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -507,8 +511,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
       </list>
     </option>
   </component>
@@ -556,7 +560,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541547996620" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541550414125" />
     <property name="last.edited.regexp" value="" />
   </component>
   <component name="RunDashboard">
@@ -606,14 +610,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" />
@@ -622,7 +625,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.9808219" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -649,22 +652,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="24" column="215" selection-start-line="24" selection-start-column="215" selection-end-line="24" selection-end-column="215" />
+        <state relative-caret-position="173">
+          <caret line="46" column="66" lean-forward="true" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="66" />
           <folding>
-            <element signature="e#0#115#0" expanded="true" />
+            <element signature="e#0#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="94" column="75" selection-start-line="94" selection-start-column="75" selection-end-line="94" selection-end-column="75" />
+        <state relative-caret-position="14">
+          <caret line="173" column="40" lean-forward="true" selection-start-line="173" selection-start-column="40" selection-end-line="173" selection-end-column="40" />
           <folding>
-            <element signature="e#0#73#0" expanded="true" />
+            <element signature="e#0#115#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -43,6 +43,10 @@ class TextProcessor {
             title = parsedHTML.getElementsByClass("title no-trailer-title")
             attributeValueMap["title"] = title.text().substringBeforeLast(" (")
         }
+        if (attributeValueMap["title"] == "") {
+            title = parsedHTML.select("div.seriesHeader h1.title")
+            attributeValueMap["title"] = title.text().substringBeforeLast(" (")
+        }
 
         //storyline
         val storyline = parsedHTML.getElementById("movieSynopsis")
@@ -75,7 +79,11 @@ class TextProcessor {
                 }
             }
         }
-        println(attributeValueMap)
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
 
     }
 
@@ -96,7 +104,11 @@ class TextProcessor {
             }
         }
 
-        println(attributeValueMap)
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
     }
 
     fun getMetadataMovieDB(parsedHTML: Document){
