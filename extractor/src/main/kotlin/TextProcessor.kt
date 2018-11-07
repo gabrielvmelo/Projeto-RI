@@ -27,8 +27,7 @@ class TextProcessor {
             "imdb" -> getMetadataIMDB(parsedHTML)
             "themoviedb" -> getMetadataMovieDB(parsedHTML)
             "trakt" -> getMetadataTrakt(parsedHTML)
-            "tvguide" -> getMetadataTVGuide(html, domain)
-            "metacritic" -> getMetadataMetacritic(html, domain)
+            "metacritic" -> getMetadataMetacritic(parsedHTML)
             "thetvdb" -> getMetadataTVDB(html, domain)
             "tv" -> getMetadataTV(html, domain)
             else -> println("Dominio nao encontrado, nao eh possivel pegar metadata")
@@ -169,12 +168,32 @@ class TextProcessor {
         println()
     }
 
-    fun getMetadataTVGuide(html: String, domain: String){
+//    fun getMetadataTVGuide(html: String, domain: String){
+//
+//    }
 
-    }
+    fun getMetadataMetacritic(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select("div.product_title a.hover_none span span h1")
+        attributeValueMap["title"] = title.text()
 
-    fun getMetadataMetacritic(html: String, domain: String){
+        //storyline
+        val storyline = parsedHTML.select("li.summary_detail.product_summary span.data span")
+        attributeValueMap["storyline"] = storyline.text()
 
+        //premiere date
+        val premiereDate = parsedHTML.select("li.summary_detail.release_data span.data")
+        attributeValueMap["premiere_date"] = premiereDate.first().text()
+
+        //network
+        val network = parsedHTML.select("li.summary_detail.network.publisher span.data a span")
+        attributeValueMap["network"] = network.text()
+
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
     }
 
     fun getMetadataTVDB(html: String, domain: String){
