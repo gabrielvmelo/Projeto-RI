@@ -28,8 +28,9 @@ class TextProcessor {
             "themoviedb" -> getMetadataMovieDB(parsedHTML)
             "trakt" -> getMetadataTrakt(parsedHTML)
             "metacritic" -> getMetadataMetacritic(parsedHTML)
-            "thetvdb" -> getMetadataTVDB(html, domain)
-            "tv" -> getMetadataTV(html, domain)
+            "thetvdb" -> getMetadataTVDB(parsedHTML)
+            "tv" -> getMetadataTV(parsedHTML)
+            "tvguide" -> getMetadataTVGuide(parsedHTML)
             else -> println("Dominio nao encontrado, nao eh possivel pegar metadata")
         }
     }
@@ -168,11 +169,32 @@ class TextProcessor {
         println()
     }
 
-//    fun getMetadataTVGuide(html: String, domain: String){
-//
-//    }
+    private fun getMetadataTVGuide(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select("a.tvobject-masthead-head-link")
+        attributeValueMap["title"] = title.text()
 
-    fun getMetadataMetacritic(parsedHTML: Document){
+        //storyline
+        val storyline = parsedHTML.select("p.tvobject-masthead-description-text span span.notruncation")
+        attributeValueMap["storyline"] = storyline.text()
+        if (attributeValueMap["storyline"] == "") attributeValueMap["storyline"] = parsedHTML.select("p.tvobject-masthead-description-text").text()
+
+        //premiere date
+        val label = parsedHTML.select("li.tvobject-overview-about-line")
+        for (i in label.indices){
+            if(label[i].select("strong").text().contains("Premiered")){
+                attributeValueMap["premiere_date"] = label[i].text().removePrefix("Premiered: ")
+            }
+        }
+
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
+    }
+
+    private fun getMetadataMetacritic(parsedHTML: Document){
         //title
         val title = parsedHTML.select("div.product_title a.hover_none span span h1")
         attributeValueMap["title"] = title.text()
@@ -196,11 +218,59 @@ class TextProcessor {
         println()
     }
 
-    fun getMetadataTVDB(html: String, domain: String){
+    private fun getMetadataTVDB(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select("h1#series_title")
+        attributeValueMap["title"] = title.text()
 
+        //storyline
+        val storyline = parsedHTML.select("div.change_translation_text p")
+        attributeValueMap["storyline"] = storyline.first().text()
+
+        //premiere date and network
+        val label = parsedHTML.select("li.list-group-item.clearfix")
+        for (i in label.indices){
+            if(label[i].select("strong").text().contains("First Aired")){
+                attributeValueMap["premiere_date"] = label[i].select("span").text()
+            }
+            if(label[i].select("strong").text().contains("Network")){
+                attributeValueMap["network"] = label[i].select("span").text().substringBefore(" (")
+            }
+        }
+
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
     }
 
-    fun getMetadataTV(html: String, domain: String){
+    private fun getMetadataTV(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select("div.m.show_head h1")
+        attributeValueMap["title"] = title.text()
 
+        //storyline
+        val storyline = parsedHTML.select("div.description")
+        attributeValueMap["storyline"] = storyline.text()
+
+        //network
+        var network = parsedHTML.select("div.tagline").text()
+        if (network.contains("on")){
+            network = network.substringAfter("on ").substringBefore(" (")
+            if(network.contains("Premiered")){
+                network = network.substringBefore(" Premiered").substringBefore(" (")
+            }
+        }
+        if(network.contains("Premiered")){
+            network = network.substringBefore(" Premiered").substringBefore(" (")
+        }
+        attributeValueMap["network"] = network
+
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
     }
 }

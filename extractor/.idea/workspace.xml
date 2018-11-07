@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" afterDir="false" />
     </list>
@@ -41,13 +42,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="2248" />
+          <entry key="kt" value="2920" />
           <entry key="regexp" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="2248" />
+          <entry key="Kotlin" value="2920" />
           <entry key="RegExp" value="3" />
         </counts>
       </usages-collector>
@@ -58,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+            <state relative-caret-position="255">
+              <caret line="149" column="61" lean-forward="true" selection-start-line="149" selection-start-column="61" selection-end-line="149" selection-end-column="61" />
               <folding>
                 <element signature="e#0#115#0" expanded="true" />
               </folding>
@@ -70,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="188" column="67" selection-start-line="188" selection-start-column="67" selection-end-line="188" selection-end-column="67" />
+            <state relative-caret-position="155">
+              <caret line="252" column="19" lean-forward="true" selection-start-line="252" selection-start-column="19" selection-end-line="252" selection-end-column="19" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -556,7 +557,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541598314637" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541617943818" />
     <property name="last.edited.regexp" value="" />
   </component>
   <component name="RunDashboard">
@@ -651,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="25" column="60" selection-start-line="25" selection-start-column="60" selection-end-line="25" selection-end-column="60" />
+        <state relative-caret-position="255">
+          <caret line="149" column="61" lean-forward="true" selection-start-line="149" selection-start-column="61" selection-end-line="149" selection-end-column="61" />
           <folding>
             <element signature="e#0#115#0" expanded="true" />
           </folding>
@@ -661,8 +662,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="188" column="67" selection-start-line="188" selection-start-column="67" selection-end-line="188" selection-end-column="67" />
+        <state relative-caret-position="155">
+          <caret line="252" column="19" lean-forward="true" selection-start-line="252" selection-start-column="19" selection-end-line="252" selection-end-column="19" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
