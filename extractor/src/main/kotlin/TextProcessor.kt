@@ -112,7 +112,27 @@ class TextProcessor {
     }
 
     fun getMetadataMovieDB(parsedHTML: Document){
+        //title
+        val title = parsedHTML.select("div.title span a h2")
+        attributeValueMap["title"] = title.text()
 
+        //storyline
+        val storyline = parsedHTML.select("div.overview p")
+        attributeValueMap["storyline"] = storyline.text()
+
+        //premiere date
+        val premiereDate = parsedHTML.select("div.title span span.release_date")
+        attributeValueMap["premiere_date"] = premiereDate.text().substringAfter("(").substringBefore(")")
+
+        //network
+        val network = parsedHTML.select("ul.networks li a img")
+        attributeValueMap["network"] = network.attr("alt").substringAfter("from ").substringBefore("...")
+
+        println(attributeValueMap["title"])
+        println(attributeValueMap["storyline"])
+        println(attributeValueMap["premiere_date"])
+        println(attributeValueMap["network"])
+        println()
     }
 
     fun getMetadataTrakt(html: String, domain: String){
