@@ -1,3 +1,4 @@
+import extractor.TextProcessor
 import org.jsoup.Jsoup
 import java.net.URI
 import java.net.URISyntaxException
