@@ -12,7 +12,7 @@ class MetadataRepository(fileName: String) {
     val path = "repository/$fileName"
     val myFile = File(path)
 
-    fun storeData(data: String){
+    fun storeDataInFile(data: String){
         val fileWriter = FileWriter(myFile, true)
 
         val bufferedWriter = BufferedWriter(fileWriter)

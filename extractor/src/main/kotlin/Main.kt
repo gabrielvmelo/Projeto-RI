@@ -1,17 +1,23 @@
 import org.jsoup.Jsoup
 import java.net.URI
 import java.net.URISyntaxException
-import java.util.concurrent.Executors
 
 class Main {
     companion object {
 
-        private fun extractor(URL: String){
+        private fun extractor(URL: String, extractorData: HashMap<String, HashMap<String, String>>): HashMap<String, HashMap<String, String>>{
             val domain = getDomainName(URL)?.substringBefore(".")
             val txtProcessor = TextProcessor()
             val html = downloadPage(URL)
-            if (domain != null && html != null) txtProcessor.getMetadata(html, domain)
 
+            var data: HashMap<String, String>? = null
+
+            if (domain != null && html != null) data = txtProcessor.getMetadata(html, domain)
+
+            if (data != null) {
+                if(!extractorData.contains(URL)) extractorData[URL] = data
+            }
+            return extractorData
         }
 
         @JvmStatic
@@ -150,8 +156,9 @@ class Main {
                 "http://www.tv.com/shows/days-of-our-lives/",
                 "http://www.tv.com/shows/will-and-grace/"
             )
+            var extractorData = hashMapOf<String, HashMap<String, String>>()
             for (i in 0 until URLs.size) {
-                extractor(URLs[i])
+                extractorData = extractor(URLs[i], extractorData)
             }
         }
 

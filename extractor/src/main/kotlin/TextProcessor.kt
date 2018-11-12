@@ -1,6 +1,5 @@
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
-import java.util.*
 
 /**
  * Created by lariciamota.
@@ -20,7 +19,7 @@ class TextProcessor {
         return Jsoup.parse(html)
     }
 
-    fun getMetadata(html: String, domain: String){ //attributes
+    fun getMetadata(html: String, domain: String): HashMap<String, String>?{ //attributes
         val parsedHTML = parse(html)
         this.domain = domain
 
@@ -34,15 +33,21 @@ class TextProcessor {
             "thetvdb" -> getMetadataTVDB(parsedHTML)
             "tv" -> getMetadataTV(parsedHTML)
             "tvguide" -> getMetadataTVGuide(parsedHTML)
-            else -> println("Dominio nao encontrado, nao eh possivel pegar metadata")
+            else -> {
+                println("Dominio nao encontrado, nao eh possivel pegar metadata")
+                return null
+            }
         }
+
+        return attributeValueMap
     }
 
     private fun store(){
+        //salvando em arquivo
         val repo = MetadataRepository(domain!!)
-        var row = "${attributeValueMap["title"]} ## ${attributeValueMap["storyline"]} ## ${attributeValueMap["premiere_date"]} ## ${attributeValueMap["network"]}\n"
+        val row = "${attributeValueMap["title"]} ## ${attributeValueMap["storyline"]} ## ${attributeValueMap["premiere_date"]} ## ${attributeValueMap["network"]}\n"
 
-        repo.storeData(row)
+        repo.storeDataInFile(row)
     }
 
     private fun getMetadataRotten(parsedHTML: Document){
