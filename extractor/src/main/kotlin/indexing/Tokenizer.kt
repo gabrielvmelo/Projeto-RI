@@ -1,16 +1,18 @@
 package indexing
 
 import Main.Companion.downloadPage
+import RepositoryManager
 import org.jsoup.Jsoup
 import java.lang.Exception
 
 //criacao de map com tokens e lista de documentos em que estao presentes
 class Tokenizer {
-    private val NUMBER_ATTEMPTS = 3
+    private val NUMBER_ATTEMPTS = 5
     fun termTokens(documentsID: HashMap<String, Int>): HashMap<String, ArrayList<Int>>{
         val tokensMap = hashMapOf<String, ArrayList<Int>>()
         var html: String? = null
-        var tokens: List<String>? = null
+        var tokens: List<String>?
+        val repo = RepositoryManager()
 
         for (url in documentsID.keys){
             var success = false
@@ -37,7 +39,7 @@ class Tokenizer {
         for (docIDs in tokensMap.values){
             docIDs.sort()
         }
-
+        repo.storeDataInFile(tokensMap.toString(), "tokenizer")
         return tokensMap
     }
 
@@ -46,4 +48,5 @@ class Tokenizer {
         val regex = "[^A-Za-z0-9]+".toRegex()
         return textHTML.split(regex)
     }
+
 }

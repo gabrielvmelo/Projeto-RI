@@ -1,5 +1,3 @@
-package extractor
-
 import Main.Companion.ATTR1
 import Main.Companion.ATTR2
 import Main.Companion.ATTR3
@@ -10,11 +8,11 @@ import java.io.*
  * Created by lariciamota.
  */
 //Armazenar as paginas visitadas
-class MetadataRepository(fileName: String) {
-    val path = "repository/$fileName"
-    val myFile = File(path)
+class RepositoryManager {
 
-    fun storeDataInFile(data: String){
+    fun storeDataInFile(data: String, fileName: String){
+        val path = "repository/$fileName"
+        val myFile = File(path)
         val fileWriter = FileWriter(myFile, true)
 
         val bufferedWriter = BufferedWriter(fileWriter)
@@ -22,7 +20,9 @@ class MetadataRepository(fileName: String) {
         bufferedWriter.close()
     }
 
-    fun retrieveDataFromFile(): HashMap<String, HashMap<String, String>>{
+    fun retrieveDataFromFile(fileName: String): HashMap<String, HashMap<String, String>>{
+        val path = "repository/$fileName"
+        val myFile = File(path)
         val fileReader = FileReader(myFile)
         val bufferedReader = BufferedReader(fileReader)
 

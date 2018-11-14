@@ -12,6 +12,7 @@ import Main.Companion.DOM5
 import Main.Companion.DOM6
 import Main.Companion.DOM7
 import Main.Companion.DOM8
+import RepositoryManager
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 
@@ -60,11 +61,11 @@ class TextProcessor {
 
     private fun store(){
         //salvando em arquivo
-        val repo = MetadataRepository(domain!!)
+        val repo = RepositoryManager()
         val row = "$url ## ${attributeValueMap[ATTR1]} ## ${attributeValueMap[ATTR2]} ## ${attributeValueMap[ATTR3]} ## ${attributeValueMap[ATTR4]}\n"
 
         println(url)
-        repo.storeDataInFile(row)
+        repo.storeDataInFile(row, "attribute-value/${domain!!}")
     }
 
     private fun getMetadataRotten(parsedHTML: Document){

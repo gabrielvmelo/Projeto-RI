@@ -1,4 +1,3 @@
-import extractor.MetadataRepository
 import extractor.TextProcessor
 import indexing.DocumentsID
 import indexing.Tokenizer
@@ -186,6 +185,7 @@ class Main {
         @JvmStatic
         fun main(args: Array<String>){
             var extractorData = hashMapOf<String, HashMap<String, String>>()
+            val repo = RepositoryManager()
 
             when(CHOOSER){
                 1 -> {
@@ -196,7 +196,7 @@ class Main {
                 2 -> {
                     //transforma arquivo em hashmap
                     for(i in 0 until domains.size){
-                       extractorData = MetadataRepository(domains[i]).retrieveDataFromFile()
+                       extractorData = repo.retrieveDataFromFile("attribute-value/${domains[i]}")
                     }
                     indexer(URLs, extractorData)
                 }

@@ -6,8 +6,20 @@
       <change beforePath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/Main$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/extractor/MetadataRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/extractor/TextProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/extractor/TextProcessor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/indexing/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/indexing/Tokenizer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/imdb" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/imdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/metacritic" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/metacritic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/rottentomatoes" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/rottentomatoes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/themoviedb" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/themoviedb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/thetvdb" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/thetvdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/trakt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/trakt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/tv" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/tv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/repository/tvguide" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/tvguide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/MetadataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/RepositoryManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/TextProcessor.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/Tokenizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/Tokenizer.kt" afterDir="false" />
     </list>
     <ignored path="crawler.iws" />
