@@ -2,18 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/BuildFieldIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/FieldIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/TermFrequency.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/TermIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/MetadataRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/TextProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/imdb" beforeDir="false" afterPath="$PROJECT_DIR$/repository/imdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/metacritic" beforeDir="false" afterPath="$PROJECT_DIR$/repository/metacritic" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/rottentomatoes" beforeDir="false" afterPath="$PROJECT_DIR$/repository/rottentomatoes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/themoviedb" beforeDir="false" afterPath="$PROJECT_DIR$/repository/themoviedb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/thetvdb" beforeDir="false" afterPath="$PROJECT_DIR$/repository/thetvdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/trakt" beforeDir="false" afterPath="$PROJECT_DIR$/repository/trakt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/tv" beforeDir="false" afterPath="$PROJECT_DIR$/repository/tv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/tvguide" beforeDir="false" afterPath="$PROJECT_DIR$/repository/tvguide" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MetadataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -33,42 +39,46 @@
     <session id="1019180378">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.53" value="1" />
           <entry key="project.open.time.54" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.71" value="1" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="1" />
-          <entry key="imdb" value="1" />
-          <entry key="kt" value="10" />
-          <entry key="metacritic" value="4" />
-          <entry key="rottentomatoes" value="1" />
-          <entry key="themoviedb" value="1" />
-          <entry key="thetvdb" value="1" />
-          <entry key="trakt" value="1" />
-          <entry key="tvguide" value="1" />
+          <entry key="imdb" value="5" />
+          <entry key="kt" value="14" />
+          <entry key="metacritic" value="9" />
+          <entry key="rottentomatoes" value="5" />
+          <entry key="themoviedb" value="5" />
+          <entry key="thetvdb" value="5" />
+          <entry key="trakt" value="4" />
+          <entry key="tv" value="6" />
+          <entry key="tvguide" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="1" />
-          <entry key="Kotlin" value="10" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="Kotlin" value="14" />
+          <entry key="PLAIN_TEXT" value="44" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="4282" />
+          <entry key="kt" value="5895" />
           <entry key="regexp" value="3" />
           <entry key="rottentomatoes" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="4282" />
+          <entry key="Kotlin" value="5895" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RegExp" value="3" />
         </counts>
@@ -77,32 +87,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="398">
+              <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
               <folding>
-                <element signature="e#0#108#0" expanded="true" />
+                <element signature="e#0#172#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+            <state relative-caret-position="426">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+              <folding>
+                <element signature="e#19#147#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+            <state relative-caret-position="176">
+              <caret line="66" column="33" lean-forward="true" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -120,7 +133,20 @@
     <findStrings>
       <find>title</find>
       <find>Map</find>
+      <find>&quot;premiere_date&quot;</find>
+      <find>&quot;title&quot;</find>
+      <find>ATTR1</find>
+      <find>ATTR2</find>
+      <find>ATTR3</find>
+      <find>&quot;network&quot;</find>
+      <find>ATTR4</find>
+      <find>network</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>ATTR3</replace>
+      <replace>ATTR4</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -536,20 +562,26 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/repository/metacritic" />
-        <option value="$PROJECT_DIR$/repository/rottentomatoes" />
-        <option value="$PROJECT_DIR$/repository/tvguide" />
-        <option value="$PROJECT_DIR$/repository/trakt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/MetadataRepository.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/TermIndex.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/TermFrequency.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/FieldIndex.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/BuildFieldIndex.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt" />
+        <option value="$PROJECT_DIR$/repository/imdb" />
+        <option value="$PROJECT_DIR$/repository/metacritic" />
+        <option value="$PROJECT_DIR$/repository/themoviedb" />
+        <option value="$PROJECT_DIR$/repository/thetvdb" />
+        <option value="$PROJECT_DIR$/repository/trakt" />
+        <option value="$PROJECT_DIR$/repository/tv" />
+        <option value="$PROJECT_DIR$/repository/tvguide" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" />
+        <option value="$PROJECT_DIR$/repository/rottentomatoes" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
       </list>
     </option>
   </component>
@@ -563,7 +595,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -614,11 +645,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542047257807" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542212041618" />
     <property name="last.edited.regexp" value="" />
   </component>
   <component name="RecentsManager">
@@ -673,8 +705,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536349" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -682,8 +715,8 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.52465755" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40273973" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -715,48 +748,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/rottentomatoes">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/tvguide">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/trakt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/thetvdb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/themoviedb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/metacritic">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="297" selection-start-line="16" selection-start-column="297" selection-end-line="16" selection-end-column="297" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/imdb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#108#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/BuildFieldIndex.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -768,26 +759,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#75#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -812,10 +783,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/DocumentsID.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="66" column="33" lean-forward="true" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/trakt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/imdb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/rottentomatoes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/thetvdb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/themoviedb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/metacritic">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/tvguide">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/tv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1038" lean-forward="true" selection-start-line="7" selection-start-column="1038" selection-end-line="7" selection-end-column="1038" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/MetadataRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="e#19#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="195" column="21" lean-forward="true" selection-start-line="195" selection-start-column="21" selection-end-line="195" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#172#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

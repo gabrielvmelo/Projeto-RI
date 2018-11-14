@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31336332-cd4d-43c6-8a3a-126669f20d51" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/BuildFieldIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/BuildTermIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/DocumentsID.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/FieldIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/TermFrequency.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/TermIndex.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/Tokenizer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/MetadataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/MetadataRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/TextProcessor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/DocumentsID.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/DocumentsID.kt" afterDir="false" />
     </list>
     <ignored path="crawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -169,11 +160,12 @@
     <session id="161575212">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.56" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -706,6 +698,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="crawler" type="58d84e3e:PackageViewProjectNode" />
+              <item name="crawler" type="eaaa3913:PackageViewModuleGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -735,17 +738,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="kotlin" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="crawler" type="58d84e3e:PackageViewProjectNode" />
-              <item name="crawler" type="eaaa3913:PackageViewModuleGroupNode" />
             </path>
           </expand>
           <select />
@@ -1092,7 +1084,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14378029" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14620355" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -1240,6 +1232,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/CheckRobots.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/TextProcessor.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1257,13 +1263,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Frontier.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/PageRepository.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1271,17 +1270,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/CheckRobots.kt">
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Frontier.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="60" selection-start-line="31" selection-start-column="60" selection-end-line="31" selection-end-column="60" />
+        <state relative-caret-position="90">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="58" />
         </state>
       </provider>
     </entry>

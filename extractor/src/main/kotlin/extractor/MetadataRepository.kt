@@ -1,10 +1,10 @@
 package extractor
 
-import java.io.File
-import java.io.BufferedWriter
-import java.io.FileWriter
-
-
+import Main.Companion.ATTR1
+import Main.Companion.ATTR2
+import Main.Companion.ATTR3
+import Main.Companion.ATTR4
+import java.io.*
 
 /**
  * Created by lariciamota.
@@ -20,6 +20,34 @@ class MetadataRepository(fileName: String) {
         val bufferedWriter = BufferedWriter(fileWriter)
         bufferedWriter.write(data)
         bufferedWriter.close()
+    }
+
+    fun retrieveDataFromFile(): HashMap<String, HashMap<String, String>>{
+        val fileReader = FileReader(myFile)
+        val bufferedReader = BufferedReader(fileReader)
+
+        val data = hashMapOf<String, HashMap<String, String>>()
+        var url: String? = null
+
+        for (i in bufferedReader.lines()){
+            val line = bufferedReader.readLine()
+            if (line != null){
+                val values: List<String> = line.split(" ## ")
+                for (j in values.indices){
+                    when(j){
+                        0 -> {
+                            url = values[j]
+                            if(!data.contains(url)) data[url] = hashMapOf()
+                        }
+                        1 -> data[url]!![ATTR1] = values[j]
+                        2 -> data[url]!![ATTR2] = values[j]
+                        3 -> data[url]!![ATTR3] = values[j]
+                        4 -> data[url]!![ATTR4] = values[j]
+                    }
+                }
+            }
+        }
+        return data
     }
 
 }
