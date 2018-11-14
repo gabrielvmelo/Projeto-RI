@@ -192,9 +192,8 @@ class Main {
                     //transforma arquivo em hashmap
                     for(i in 0 until domains.size){
                        extractorData = MetadataRepository(domains[i]).retrieveDataFromFile()
-                        println(extractorData)
                     }
-                   // indexer(URLs, extractorData)
+                    indexer(URLs, extractorData)
                 }
             }
 
