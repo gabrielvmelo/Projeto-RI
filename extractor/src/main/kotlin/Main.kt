@@ -1,6 +1,7 @@
 import extractor.MetadataRepository
 import extractor.TextProcessor
 import indexing.DocumentsID
+import indexing.Tokenizer
 import org.jsoup.Jsoup
 import java.net.URI
 import java.net.URISyntaxException
@@ -176,6 +177,10 @@ class Main {
             //criando os IDs dos documentos
             val documentsID = DocumentsID().createIDs(URLs)
             println(documentsID)
+
+            //tokenizando o html das paginas
+            val tokenizer = Tokenizer().termTokens(documentsID)
+            println(tokenizer)
         }
 
         @JvmStatic
@@ -222,7 +227,7 @@ class Main {
             }
         }
 
-        private fun downloadPage(url: String): String? {
+        fun downloadPage(url: String): String? {
             val resp = Jsoup.connect(url).header("Accept-Language", "en").timeout(10 * 1000).execute()
             val contentType = resp.contentType()
 
