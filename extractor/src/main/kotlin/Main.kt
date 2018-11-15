@@ -1,4 +1,5 @@
 import extractor.TextProcessor
+import indexing.BuildTermIndex
 import indexing.DocumentsID
 import indexing.Tokenizer
 import org.jsoup.Jsoup
@@ -173,13 +174,16 @@ class Main {
         }
 
         private fun indexer(URLs: Array<String>, extractorData: HashMap<String, HashMap<String, String>>){
-            //criando os IDs dos documentos
-            val documentsID = DocumentsID().createIDs(URLs)
-            println(documentsID)
+//            //criando os IDs dos documentos
+//            val documentsID = DocumentsID().createIDs(URLs)
+//            println(documentsID)
+//
+//            //tokenizando o html das paginas
+//            val tokenizer = Tokenizer().termTokens(documentsID)
+//            println(tokenizer)
 
-            //tokenizando o html das paginas
-            val tokenizer = Tokenizer().termTokens(documentsID)
-            println(tokenizer)
+            //construindo indice termo documento
+
         }
 
         @JvmStatic
@@ -195,9 +199,9 @@ class Main {
                 }
                 2 -> {
                     //transforma arquivo em hashmap
-                    for(i in 0 until domains.size){
-                       extractorData = repo.retrieveDataFromFile("attribute-value/${domains[i]}")
-                    }
+//                    for(i in 0 until domains.size){
+//                       extractorData = repo.retrieveDataFromFile("attribute-value/${domains[i]}")
+//                    }
                     indexer(URLs, extractorData)
                 }
             }

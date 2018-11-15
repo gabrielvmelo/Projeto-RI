@@ -1,5 +1,6 @@
 package indexing
 
 //objeto que representa o indice termo documento
-class TermIndex {
-}
+class TermIndex(
+    val index: Map<String, TermFrequency>
+)

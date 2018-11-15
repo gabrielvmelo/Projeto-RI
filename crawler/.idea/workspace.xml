@@ -4,23 +4,12 @@
     <list default="true" id="31336332-cd4d-43c6-8a3a-126669f20d51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/Main$Companion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/extractor/MetadataRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/extractor/TextProcessor.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/extractor/TextProcessor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/indexing/Tokenizer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/indexing/Tokenizer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/imdb" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/imdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/metacritic" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/metacritic" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/rottentomatoes" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/rottentomatoes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/themoviedb" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/themoviedb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/thetvdb" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/thetvdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/trakt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/trakt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/tv" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/tv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/repository/tvguide" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/repository/attribute-value/tvguide" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/out/production/classes/RepositoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/out/production/classes/RepositoryManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/MetadataRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/RepositoryManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/extractor/TextProcessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/Tokenizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/Tokenizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/BuildTermIndex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/BuildTermIndex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/TermFrequency.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/TermFrequency.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/TermIndex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../extractor/src/main/kotlin/indexing/TermIndex.kt" afterDir="false" />
     </list>
     <ignored path="crawler.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -176,7 +165,7 @@
     <session id="161575212">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -1117,7 +1106,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14862682" />
       <window_info id="Structure" order="1" weight="0.25" />
