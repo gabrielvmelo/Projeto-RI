@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../crawler/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/RepositoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/RepositoryManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/indexing/TermFrequency.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/TermFrequency.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/indexing/TermIndex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/TermIndex.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -68,14 +59,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="kt" value="8378" />
+          <entry key="kt" value="8543" />
           <entry key="regexp" value="37" />
           <entry key="rottentomatoes" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Kotlin" value="8378" />
+          <entry key="Kotlin" value="8543" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RegExp" value="37" />
         </counts>
@@ -87,8 +78,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="185" column="12" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="12" />
+            <state relative-caret-position="222">
+              <caret line="186" column="26" lean-forward="true" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
               <folding>
                 <element signature="e#0#162#0" expanded="true" />
               </folding>
@@ -99,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="22" column="33" selection-start-line="22" selection-end-line="23" />
+            <state relative-caret-position="332">
+              <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -699,12 +690,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541534052643</updated>
       <workItem from="1542280996724" duration="699000" />
-      <workItem from="1542282851226" duration="3756000" />
+      <workItem from="1542282851226" duration="5539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4455000" />
+    <option name="totallyTimeSpent" value="6238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -861,15 +852,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="22" column="33" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="332">
+          <caret line="51" column="31" lean-forward="true" selection-start-line="51" selection-start-column="31" selection-end-line="51" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="185" column="12" selection-start-line="185" selection-start-column="12" selection-end-line="185" selection-end-column="12" />
+        <state relative-caret-position="222">
+          <caret line="186" column="26" lean-forward="true" selection-start-line="186" selection-start-column="26" selection-end-line="186" selection-end-column="26" />
           <folding>
             <element signature="e#0#162#0" expanded="true" />
           </folding>

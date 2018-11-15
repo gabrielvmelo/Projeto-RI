@@ -5,8 +5,8 @@ class BuildTermIndex {
     private var tokensMap: HashMap<String, ArrayList<Int>>? = null
 
     //conta a frequencia do token em relacao aos documentos
-    private fun countFrequency(){
-
+    private fun countFrequency(documentsList: ArrayList<HashMap<Int, Int>>): Int{
+        return documentsList.size
     }
 
     //povoa list de acordo com o map do tokenizer
@@ -36,22 +36,19 @@ class BuildTermIndex {
         return documentsList
     }
 
-    //conta a frequencia do token no documento especifico
-    private fun countFrequencyInDoc(){
-
-    }
-
     fun build(tokensMap: HashMap<String, ArrayList<Int>>): TermIndex{
         this.tokensMap = tokensMap //saida do tokenizer: String=token List=ids
-        val documentsFrequency: Int? = null
-        val documentsList: ArrayList<HashMap<Int, Int>>? = null
-        for (token in tokensMap){
-            createList(token.value)
-        }
-        val index: HashMap<String, TermFrequency>? = null //String=token TermFrequency= F (docs) e lista com [id, f]
+        var documentsList: ArrayList<HashMap<Int, Int>>
+        var termFrequency: TermFrequency
+        val index = hashMapOf<String, TermFrequency>() //String=token TermFrequency= F (docs) e lista com [id, f]
 
-        //criando objetos
-        val termFrequency = TermFrequency(documentsFrequency!!, documentsList!!)
-        return TermIndex(index!!)
+
+        for (token in tokensMap){
+            documentsList = createList(token.value)
+            termFrequency = TermFrequency(countFrequency(documentsList), documentsList)
+            index[token.key] = termFrequency
+        }
+
+        return TermIndex(index)
     }
 }

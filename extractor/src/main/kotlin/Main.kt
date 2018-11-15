@@ -174,15 +174,17 @@ class Main {
         }
 
         private fun indexer(URLs: Array<String>, extractorData: HashMap<String, HashMap<String, String>>){
-//            //criando os IDs dos documentos
-//            val documentsID = DocumentsID().createIDs(URLs)
-//            println(documentsID)
-//
-//            //tokenizando o html das paginas
-//            val tokenizer = Tokenizer().termTokens(documentsID)
-//            println(tokenizer)
+            //criando os IDs dos documentos
+            val documentsID = DocumentsID().createIDs(URLs)
+            println(documentsID)
+
+            //tokenizando o html das paginas
+            val tokenizer = Tokenizer().termTokens(documentsID)
+            println(tokenizer)
 
             //construindo indice termo documento
+            val index = BuildTermIndex().build(tokenizer)
+            println(index)
 
         }
 
