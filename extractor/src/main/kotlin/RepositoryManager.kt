@@ -3,6 +3,9 @@ import Main.Companion.ATTR2
 import Main.Companion.ATTR3
 import Main.Companion.ATTR4
 import java.io.*
+import com.fasterxml.jackson.module.kotlin.*
+import indexing.TermFrequency
+import indexing.TermIndex
 
 /**
  * Created by lariciamota.
@@ -18,6 +21,14 @@ class RepositoryManager {
         val bufferedWriter = BufferedWriter(fileWriter)
         bufferedWriter.write(data)
         bufferedWriter.close()
+    }
+
+    fun storeDataInJSON(data: Any, fileName: String){
+        val path = "repository/$fileName.json"
+        val myFile = File(path)
+        val mapper = jacksonObjectMapper()
+
+        mapper.writerWithDefaultPrettyPrinter().writeValue(myFile, data)
     }
 
     fun retrieveDataFromFile(fileName: String): HashMap<String, HashMap<String, String>>{

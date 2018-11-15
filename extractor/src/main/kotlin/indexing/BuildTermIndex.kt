@@ -1,5 +1,7 @@
 package indexing
 
+import RepositoryManager
+
 //construcao do indice termo documento
 class BuildTermIndex {
     private var tokensMap: HashMap<String, ArrayList<Int>>? = null
@@ -47,6 +49,9 @@ class BuildTermIndex {
             termFrequency = TermFrequency(countFrequency(documentsList), documentsList)
             index[token.key] = termFrequency
         }
+//        val repo = RepositoryManager()
+//
+//        repo.storeDataInJSON(index, "TermIndexJSON")
 
         return TermIndex(index)
     }

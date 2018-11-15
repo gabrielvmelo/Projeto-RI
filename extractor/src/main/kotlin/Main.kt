@@ -13,21 +13,6 @@ class Main {
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
             "https://www.metacritic.com/tv/westworld",
-            "https://www.metacritic.com/tv/gossip-girl",
-            "https://www.metacritic.com/tv/gilmore-girls",
-            "https://www.metacritic.com/tv/narcos-mexico",
-            "https://www.metacritic.com/tv/breaking-bad",
-            "https://www.metacritic.com/tv/house-of-cards-2013",
-            "https://www.metacritic.com/tv/bojack-horseman",
-            "https://www.metacritic.com/tv/freaks-and-geeks",
-            "https://www.metacritic.com/tv/suits",
-            "https://www.metacritic.com/tv/the-simpsons",
-            "https://www.metacritic.com/tv/weeds",
-            "https://www.metacritic.com/tv/the-following",
-            "https://www.metacritic.com/tv/altered-carbon",
-            "https://www.metacritic.com/tv/orphan-black",
-            "https://www.metacritic.com/tv/the-good-wife",
-            "https://www.metacritic.com/tv/stranger-things",
             "https://www.rottentomatoes.com/tv/better_call_saul/",
             "https://www.rottentomatoes.com/tv/the_voice/",
             "https://www.rottentomatoes.com/tv/the_big_bang_theory/",
@@ -127,7 +112,6 @@ class Main {
             "https://www.thetvdb.com/series/supergirl",
             "https://www.thetvdb.com/series/game-of-thrones",
             "https://www.thetvdb.com/series/stranger-things",
-            "https://www.thetvdb.com/series/gravity-falls",
             "https://www.thetvdb.com/series/izombie",
             "https://www.thetvdb.com/series/general-hospital",
             "https://www.thetvdb.com/series/modern-family",
@@ -178,15 +162,15 @@ class Main {
         private fun indexer(URLs: Array<String>, extractorData: HashMap<String, HashMap<String, String>>){
             //criando os IDs dos documentos
             val documentsID = DocumentsID().createIDs(URLs)
-            repo.storeDataInFile(documentsID.toString(), "DocumentsID")
+            repo.storeDataInJSON(documentsID, "DocumentsID")
 
             //tokenizando o html das paginas
             val tokenizer = Tokenizer().termTokens(documentsID)
-            repo.storeDataInFile(tokenizer.toString(), "Tokenizer")
+            repo.storeDataInJSON(tokenizer, "Tokenizer")
 
             //construindo indice termo documento
             val index = BuildTermIndex().build(tokenizer)
-            repo.storeDataInFile(index.toString(), "TermIndex")
+            repo.storeDataInJSON(index, "TermIndexJSON")
         }
 
         @JvmStatic
