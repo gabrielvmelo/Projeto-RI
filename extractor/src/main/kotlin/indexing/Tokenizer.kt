@@ -1,7 +1,6 @@
 package indexing
 
 import Main.Companion.downloadPage
-import RepositoryManager
 import org.jsoup.Jsoup
 import java.lang.Exception
 
@@ -12,7 +11,6 @@ class Tokenizer {
         val tokensMap = hashMapOf<String, ArrayList<Int>>()
         var html: String? = null
         var tokens: List<String>?
-        val repo = RepositoryManager()
 
         for (url in documentsID.keys){
             var success = false
@@ -39,7 +37,6 @@ class Tokenizer {
         for (docIDs in tokensMap.values){
             docIDs.sort()
         }
-        repo.storeDataInFile(tokensMap.toString(), "tokenizer")
         return tokensMap
     }
 

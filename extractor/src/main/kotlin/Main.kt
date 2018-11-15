@@ -158,6 +158,8 @@ class Main {
 
         val domains = arrayOf(DOM1, DOM2, DOM3, DOM4, DOM5, DOM6, DOM7, DOM8)
 
+        val repo = RepositoryManager()
+
         private fun extractor(URL: String, extractorData: HashMap<String, HashMap<String, String>>): HashMap<String, HashMap<String, String>>{
             val domain = getDomainName(URL)?.substringBefore(".")
             val txtProcessor = TextProcessor()
@@ -176,22 +178,20 @@ class Main {
         private fun indexer(URLs: Array<String>, extractorData: HashMap<String, HashMap<String, String>>){
             //criando os IDs dos documentos
             val documentsID = DocumentsID().createIDs(URLs)
-            println(documentsID)
+            repo.storeDataInFile(documentsID.toString(), "DocumentsID")
 
             //tokenizando o html das paginas
             val tokenizer = Tokenizer().termTokens(documentsID)
-            println(tokenizer)
+            repo.storeDataInFile(tokenizer.toString(), "Tokenizer")
 
             //construindo indice termo documento
             val index = BuildTermIndex().build(tokenizer)
-            println(index)
-
+            repo.storeDataInFile(index.toString(), "TermIndex")
         }
 
         @JvmStatic
         fun main(args: Array<String>){
             var extractorData = hashMapOf<String, HashMap<String, String>>()
-            val repo = RepositoryManager()
 
             when(CHOOSER){
                 1 -> {

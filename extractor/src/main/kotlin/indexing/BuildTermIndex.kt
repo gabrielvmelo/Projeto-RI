@@ -42,7 +42,6 @@ class BuildTermIndex {
         var termFrequency: TermFrequency
         val index = hashMapOf<String, TermFrequency>() //String=token TermFrequency= F (docs) e lista com [id, f]
 
-
         for (token in tokensMap){
             documentsList = createList(token.value)
             termFrequency = TermFrequency(countFrequency(documentsList), documentsList)
