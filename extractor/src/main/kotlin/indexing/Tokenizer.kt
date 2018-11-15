@@ -42,8 +42,26 @@ class Tokenizer {
 
     private fun pageTokenizer(html: String): List<String>{
         val textHTML = Jsoup.parse(html).text()
+        return stringTokenizer(textHTML)
+    }
+
+    private fun stringTokenizer(text: String): List<String>{
         val regex = "[^A-Za-z0-9]+".toRegex()
-        return textHTML.split(regex)
+        return text.split(regex)
+    }
+
+    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>): HashMap<Int, HashMap<String, ArrayList<String>>>{
+        val tokensMap = hashMapOf<Int, HashMap<String, ArrayList<String>>>() //int=numero doc, string=attr, array=values
+        var tokensList: List<String>
+
+        for (url in extractorData.keys){
+            for (attr in extractorData[url]!!.keys){
+                tokensList = stringTokenizer(extractorData[url]!![attr]!!)
+                
+            }
+        }
+
+        return tokensMap
     }
 
 }

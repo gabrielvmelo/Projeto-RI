@@ -170,7 +170,7 @@ class Main {
 
             //construindo indice termo documento
             val index = BuildTermIndex().build(tokenizer)
-            repo.storeDataInJSON(index, "TermIndexJSON")
+            repo.storeDataInJSON(index, "TermIndex")
         }
 
         @JvmStatic
