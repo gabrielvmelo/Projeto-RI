@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/imdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/metacritic" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/rottentomatoes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/themoviedb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/thetvdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/trakt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/tv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/attribute-value/tvguide" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -71,7 +78,7 @@
         <counts>
           <entry key="gradle" value="47" />
           <entry key="json" value="2" />
-          <entry key="kt" value="9970" />
+          <entry key="kt" value="10354" />
           <entry key="regexp" value="37" />
           <entry key="rottentomatoes" value="2" />
         </counts>
@@ -80,7 +87,7 @@
         <counts>
           <entry key="Groovy" value="47" />
           <entry key="JSON" value="2" />
-          <entry key="Kotlin" value="9970" />
+          <entry key="Kotlin" value="10354" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RegExp" value="37" />
         </counts>
@@ -89,11 +96,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1919">
-              <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
+            <state relative-caret-position="290">
+              <caret line="222" column="46" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
               <folding>
                 <element signature="e#0#197#0" expanded="true" />
               </folding>
@@ -110,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/ExtractorData.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -136,8 +143,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="332">
+              <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -611,7 +618,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/TermFrequency.kt" />
         <option value="$PROJECT_DIR$/repository/Tokenizer.json" />
         <option value="$PROJECT_DIR$/repository/TermIndexJSON.json" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" />
         <option value="$PROJECT_DIR$/repository/DocumentsID.json" />
         <option value="$PROJECT_DIR$/repository/attribute-value/thetvdb" />
         <option value="$PROJECT_DIR$/settings.gradle" />
@@ -622,6 +628,7 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" />
         <option value="$PROJECT_DIR$/repository/ExtractorData.json" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
       </list>
     </option>
@@ -669,12 +676,6 @@
             <path>
               <item name="extractor" type="b2602c69:ProjectViewProjectNode" />
               <item name="extractor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-              <item name="attribute-value" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="extractor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="extractor" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -715,7 +716,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542368600426" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542370630983" />
     <property name="last.edited.regexp" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -771,12 +772,12 @@
       <option name="presentableId" value="Default" />
       <updated>1541534052643</updated>
       <workItem from="1542280996724" duration="699000" />
-      <workItem from="1542282851226" duration="20075000" />
+      <workItem from="1542282851226" duration="21242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20774000" />
+    <option name="totallyTimeSpent" value="21941000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -970,13 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
@@ -984,18 +978,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/repository/ExtractorData.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1919">
-          <caret line="128" column="42" selection-start-line="128" selection-start-column="42" selection-end-line="128" selection-end-column="42" />
+        <state relative-caret-position="290">
+          <caret line="222" column="46" selection-start-line="222" selection-start-column="46" selection-end-line="222" selection-end-column="46" />
           <folding>
             <element signature="e#0#197#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/ExtractorData.json">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

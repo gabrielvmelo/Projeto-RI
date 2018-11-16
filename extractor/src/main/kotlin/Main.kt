@@ -10,7 +10,7 @@ import java.net.URISyntaxException
 class Main {
 
     companion object {
-        private val CHOOSER = 1 // 1 eh extrator e 2 eh indexador
+        private val CHOOSER = 2 // 1 eh extrator e 2 eh indexador
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
             "https://www.metacritic.com/tv/westworld",
@@ -157,10 +157,14 @@ class Main {
         val ATTR3 = "premiere_date"
         val ATTR4 = "network"
 
-        val domains = arrayOf(DOM1, DOM2, DOM3, DOM4, DOM5, DOM6, DOM7, DOM8)
+        val DOCID = "DocumentsID"
+        val EXTRACTORDATA = "ExtractorData"
+        val TERMINDEX = "TermIndex"
+        val TERMTOKEN = "TermTokenizer"
+        val FIELDINDEX = "FieldIndex"
 
         val repo = RepositoryManager()
-        private val NUMBER_ATTEMPTS = 10
+        private val NUMBER_ATTEMPTS = 5
 
         private fun extractor(URL: String, extractorData: HashMap<String, HashMap<String, String>>): HashMap<String, HashMap<String, String>>{
             val domain = getDomainName(URL)?.substringBefore(".")
@@ -192,15 +196,15 @@ class Main {
         private fun indexer(URLs: Array<String>, extractorData: HashMap<String, HashMap<String, String>>){
             //criando os IDs dos documentos
             val documentsID = DocumentsID().createIDs(URLs)
-            repo.storeDataInJSON(documentsID, "DocumentsID")
+            repo.storeDataInJSON(documentsID, DOCID)
 
             //tokenizando o html das paginas
             val tokenizer = Tokenizer().termTokens(documentsID)
-            repo.storeDataInJSON(tokenizer, "Tokenizer")
+            repo.storeDataInJSON(tokenizer, TERMTOKEN)
 
             //construindo indice termo documento
             val index = BuildTermIndex().build(tokenizer)
-            repo.storeDataInJSON(index, "TermIndex")
+            repo.storeDataInJSON(index, TERMINDEX)
         }
 
         @JvmStatic
@@ -212,13 +216,10 @@ class Main {
                     for (i in 0 until URLs.size) {
                         extractorData = extractor(URLs[i], extractorData)
                     }
-                    repo.storeDataInJSON(extractorData, "ExtractorData")
+                    repo.storeDataInJSON(extractorData, EXTRACTORDATA)
                 }
                 2 -> {
-                    //transforma arquivo em hashmap
-//                    for(i in 0 until domains.size){
-//                       extractorData = repo.retrieveDataFromFile("attribute-value/${domains[i]}")
-//                    }
+                    extractorData = repo.retrieveDataFromJSON(EXTRACTORDATA) as HashMap<String, HashMap<String, String>>
                     indexer(URLs, extractorData)
                 }
             }
