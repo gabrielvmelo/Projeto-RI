@@ -58,7 +58,7 @@ class Tokenizer {
             val id = documentsID[url]
             tokensMap[id!!] = hashMapOf()
             for (attr in extractorData[url]!!.keys){
-                tokensList = stringTokenizer(extractorData[url]!![attr]!!).toTypedArray()
+                tokensList = stringTokenizer(extractorData[url]!![attr]!!).map { token -> token.toLowerCase() }.toTypedArray()
                 tokensMap[id]!![attr] = tokensList
             }
         }

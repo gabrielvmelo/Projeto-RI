@@ -206,8 +206,7 @@ class Main {
             repo.storeDataInJSON(termTokenizer, TERMTOKEN)
 
             //construindo indice termo documento
-            val tokenizer = repo.retrieveDataFromJSON(TERMTOKEN) as HashMap<String, ArrayList<Int>>
-            val index = BuildTermIndex().build(tokenizer)
+            val index = BuildTermIndex().build(termTokenizer)
             repo.storeDataInJSON(index, TERMINDEX)
         }
 
@@ -217,7 +216,8 @@ class Main {
             repo.storeDataInJSON(fieldTokenizer, FIELDTOKEN)
 
             //construindo indice de campos
-
+            val index = BuildFieldIndex().build(fieldTokenizer)
+            repo.storeDataInJSON(index, FIELDINDEX)
         }
 
         @JvmStatic
