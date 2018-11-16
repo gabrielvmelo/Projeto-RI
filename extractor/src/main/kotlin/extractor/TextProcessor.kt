@@ -65,7 +65,7 @@ class TextProcessor {
         val row = "$url ## ${attributeValueMap[ATTR1]} ## ${attributeValueMap[ATTR2]} ## ${attributeValueMap[ATTR3]} ## ${attributeValueMap[ATTR4]}\n"
 
         println(url)
-        repo.storeDataInFile(row, "attribute-value/${domain!!}")
+//        repo.storeDataInFile(row, "attribute-value/${domain!!}")
     }
 
     private fun getMetadataRotten(parsedHTML: Document){

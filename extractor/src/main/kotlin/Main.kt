@@ -3,16 +3,32 @@ import indexing.BuildTermIndex
 import indexing.DocumentsID
 import indexing.Tokenizer
 import org.jsoup.Jsoup
+import java.lang.Exception
 import java.net.URI
 import java.net.URISyntaxException
 
 class Main {
 
     companion object {
-        private val CHOOSER = 2 // 1 eh extrator e 2 eh indexador
+        private val CHOOSER = 1 // 1 eh extrator e 2 eh indexador
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
             "https://www.metacritic.com/tv/westworld",
+            "https://www.metacritic.com/tv/gossip-girl",
+            "https://www.metacritic.com/tv/gilmore-girls",
+            "https://www.metacritic.com/tv/narcos-mexico",
+            "https://www.metacritic.com/tv/breaking-bad",
+            "https://www.metacritic.com/tv/house-of-cards-2013",
+            "https://www.metacritic.com/tv/bojack-horseman",
+            "https://www.metacritic.com/tv/freaks-and-geeks",
+            "https://www.metacritic.com/tv/suits",
+            "https://www.metacritic.com/tv/the-simpsons",
+            "https://www.metacritic.com/tv/weeds",
+            "https://www.metacritic.com/tv/the-following",
+            "https://www.metacritic.com/tv/altered-carbon",
+            "https://www.metacritic.com/tv/orphan-black",
+            "https://www.metacritic.com/tv/the-good-wife",
+            "https://www.metacritic.com/tv/stranger-things",
             "https://www.rottentomatoes.com/tv/better_call_saul/",
             "https://www.rottentomatoes.com/tv/the_voice/",
             "https://www.rottentomatoes.com/tv/the_big_bang_theory/",
@@ -112,6 +128,7 @@ class Main {
             "https://www.thetvdb.com/series/supergirl",
             "https://www.thetvdb.com/series/game-of-thrones",
             "https://www.thetvdb.com/series/stranger-things",
+            "https://www.thetvdb.com/series/gravity-falls",
             "https://www.thetvdb.com/series/izombie",
             "https://www.thetvdb.com/series/general-hospital",
             "https://www.thetvdb.com/series/modern-family",
@@ -143,11 +160,24 @@ class Main {
         val domains = arrayOf(DOM1, DOM2, DOM3, DOM4, DOM5, DOM6, DOM7, DOM8)
 
         val repo = RepositoryManager()
+        private val NUMBER_ATTEMPTS = 10
 
         private fun extractor(URL: String, extractorData: HashMap<String, HashMap<String, String>>): HashMap<String, HashMap<String, String>>{
             val domain = getDomainName(URL)?.substringBefore(".")
             val txtProcessor = TextProcessor()
-            val html = downloadPage(URL)
+
+            var html: String? = null
+            var success = false
+            var countFail = 0
+            while (!success && countFail < NUMBER_ATTEMPTS){
+                try {
+                    html = downloadPage(URL)
+                    success = true
+                } catch (e: Exception) {
+                    println(e.message + " $URL")
+                    countFail += 1
+                }
+            }
 
             var data: HashMap<String, String>? = null
 
@@ -182,6 +212,7 @@ class Main {
                     for (i in 0 until URLs.size) {
                         extractorData = extractor(URLs[i], extractorData)
                     }
+                    repo.storeDataInJSON(extractorData, "ExtractorData")
                 }
                 2 -> {
                     //transforma arquivo em hashmap

@@ -57,7 +57,7 @@ class Tokenizer {
         for (url in extractorData.keys){
             for (attr in extractorData[url]!!.keys){
                 tokensList = stringTokenizer(extractorData[url]!![attr]!!)
-                
+
             }
         }
 
