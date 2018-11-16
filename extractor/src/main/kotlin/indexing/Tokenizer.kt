@@ -50,14 +50,16 @@ class Tokenizer {
         return text.split(regex)
     }
 
-    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>): HashMap<Int, HashMap<String, ArrayList<String>>>{
-        val tokensMap = hashMapOf<Int, HashMap<String, ArrayList<String>>>() //int=numero doc, string=attr, array=values
-        var tokensList: List<String>
+    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>): HashMap<Int, HashMap<String, Array<String>>>{
+        val tokensMap = hashMapOf<Int, HashMap<String, Array<String>>>() //int=numero doc, string=attr, array=values
+        var tokensList: Array<String>
 
         for (url in extractorData.keys){
+            val id = documentsID[url]
+            tokensMap[id!!] = hashMapOf()
             for (attr in extractorData[url]!!.keys){
-                tokensList = stringTokenizer(extractorData[url]!![attr]!!)
-
+                tokensList = stringTokenizer(extractorData[url]!![attr]!!).toTypedArray()
+                tokensMap[id]!![attr] = tokensList
             }
         }
 

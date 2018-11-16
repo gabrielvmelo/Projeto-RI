@@ -1,11 +1,5 @@
-import Main.Companion.ATTR1
-import Main.Companion.ATTR2
-import Main.Companion.ATTR3
-import Main.Companion.ATTR4
-import com.fasterxml.jackson.core.type.TypeReference
 import java.io.*
 import com.fasterxml.jackson.module.kotlin.*
-import indexing.TermFrequency
 import indexing.TermIndex
 
 /**
@@ -28,4 +22,9 @@ class RepositoryManager {
         return mapper.readValue(myFile)
     }
 
+    fun retrieveTermIndex(fileName: String): TermIndex{
+        val path = "repository/$fileName.json"
+        val myFile = File(path)
+        return mapper.readValue(myFile)
+    }
 }

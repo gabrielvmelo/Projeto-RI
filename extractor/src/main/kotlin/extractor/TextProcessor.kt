@@ -29,16 +29,14 @@ class TextProcessor {
         ATTR4 to ""
     )
     private var domain: String? = null
-    private var url: String? = null
 
     private fun parse(html: String): Document {
         return Jsoup.parse(html)
     }
 
-    fun getMetadata(url: String, html: String, domain: String): HashMap<String, String>?{ //attributes
+    fun getMetadata(html: String, domain: String): HashMap<String, String>?{ //attributes
         val parsedHTML = parse(html)
         this.domain = domain
-        this.url = url
 
         //um wrapper para cada site
         when(domain) {
@@ -57,15 +55,6 @@ class TextProcessor {
         }
 
         return attributeValueMap
-    }
-
-    private fun store(){
-        //salvando em arquivo
-        val repo = RepositoryManager()
-        val row = "$url ## ${attributeValueMap[ATTR1]} ## ${attributeValueMap[ATTR2]} ## ${attributeValueMap[ATTR3]} ## ${attributeValueMap[ATTR4]}\n"
-
-        println(url)
-//        repo.storeDataInFile(row, "attribute-value/${domain!!}")
     }
 
     private fun getMetadataRotten(parsedHTML: Document){
@@ -113,7 +102,6 @@ class TextProcessor {
             }
         }
 
-        store()
     }
 
     private fun getMetadataIMDB(parsedHTML: Document){
@@ -132,8 +120,6 @@ class TextProcessor {
                 attributeValueMap[ATTR3] = premiereDate[i].text().substringAfter("Release Date: ").substringBefore(" (")
             }
         }
-
-        store()
     }
 
     private fun getMetadataMovieDB(parsedHTML: Document){
@@ -152,8 +138,6 @@ class TextProcessor {
         //network
         val network = parsedHTML.select("ul.networks li a img")
         attributeValueMap[ATTR4] = network.attr("alt").substringAfter("from ").substringBefore("...")
-
-        store()
     }
 
     private fun getMetadataTrakt(parsedHTML: Document){
@@ -182,8 +166,6 @@ class TextProcessor {
                 }
             }
         }
-
-        store()
     }
 
     private fun getMetadataTVGuide(parsedHTML: Document){
@@ -203,8 +185,6 @@ class TextProcessor {
                 attributeValueMap[ATTR3] = label[i].text().removePrefix("Premiered: ")
             }
         }
-
-        store()
     }
 
     private fun getMetadataMetacritic(parsedHTML: Document){
@@ -223,8 +203,6 @@ class TextProcessor {
         //network
         val network = parsedHTML.select("li.summary_detail.network.publisher span.data a span")
         attributeValueMap[ATTR4] = network.text()
-
-        store()
     }
 
     private fun getMetadataTVDB(parsedHTML: Document){
@@ -246,8 +224,6 @@ class TextProcessor {
                 attributeValueMap[ATTR4] = label[i].select("span").text().substringBefore(" (")
             }
         }
-
-        store()
     }
 
     private fun getMetadataTV(parsedHTML: Document){
@@ -271,7 +247,5 @@ class TextProcessor {
             network = network.substringBefore(" Premiered").substringBefore(" (")
         }
         attributeValueMap[ATTR4] = network
-
-        store()
     }
 }

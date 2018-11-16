@@ -1,7 +1,6 @@
+import com.sun.xml.internal.xsom.impl.Ref
 import extractor.TextProcessor
-import indexing.BuildTermIndex
-import indexing.DocumentsID
-import indexing.Tokenizer
+import indexing.*
 import org.jsoup.Jsoup
 import java.lang.Exception
 import java.net.URI
@@ -10,7 +9,7 @@ import java.net.URISyntaxException
 class Main {
 
     companion object {
-        private val CHOOSER = 2 // 1 eh extrator e 2 eh indexador
+        private val CHOOSER = 4 // 1: extrator, 2: pre processamento indexador, 3: indexador termo doc, 4: indexador de campos
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
             "https://www.metacritic.com/tv/westworld",
@@ -162,6 +161,7 @@ class Main {
         val TERMINDEX = "TermIndex"
         val TERMTOKEN = "TermTokenizer"
         val FIELDINDEX = "FieldIndex"
+        val FIELDTOKEN = "FieldTokenizer"
 
         val repo = RepositoryManager()
         private val NUMBER_ATTEMPTS = 5
@@ -185,7 +185,7 @@ class Main {
 
             var data: HashMap<String, String>? = null
 
-            if (domain != null && html != null) data = txtProcessor.getMetadata(URL, html, domain)
+            if (domain != null && html != null) data = txtProcessor.getMetadata(html, domain)
 
             if (data != null) {
                 if(!extractorData.contains(URL)) extractorData[URL] = data
@@ -193,34 +193,58 @@ class Main {
             return extractorData
         }
 
-        private fun indexer(URLs: Array<String>, extractorData: HashMap<String, HashMap<String, String>>){
+        private fun indexer(URLs: Array<String>){
             //criando os IDs dos documentos
             val documentsID = DocumentsID().createIDs(URLs)
             repo.storeDataInJSON(documentsID, DOCID)
 
+        }
+
+        private fun termIndexer(documentsID: HashMap<String, Int>){
             //tokenizando o html das paginas
-            val tokenizer = Tokenizer().termTokens(documentsID)
-            repo.storeDataInJSON(tokenizer, TERMTOKEN)
+            val termTokenizer = Tokenizer().termTokens(documentsID)
+            repo.storeDataInJSON(termTokenizer, TERMTOKEN)
 
             //construindo indice termo documento
+            val tokenizer = repo.retrieveDataFromJSON(TERMTOKEN) as HashMap<String, ArrayList<Int>>
             val index = BuildTermIndex().build(tokenizer)
             repo.storeDataInJSON(index, TERMINDEX)
+        }
+
+        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>){
+            //tokenizando os dados do extrator
+            val fieldTokenizer = Tokenizer().fieldTokens(extractorData, documentsID)
+            repo.storeDataInJSON(fieldTokenizer, FIELDTOKEN)
+
+            //construindo indice de campos
+
         }
 
         @JvmStatic
         fun main(args: Array<String>){
             var extractorData = hashMapOf<String, HashMap<String, String>>()
+            val documentsID: HashMap<String, Int>
+            val termIndex: TermIndex
 
             when(CHOOSER){
-                1 -> {
+                1 -> { //extrator
                     for (i in 0 until URLs.size) {
                         extractorData = extractor(URLs[i], extractorData)
                     }
                     repo.storeDataInJSON(extractorData, EXTRACTORDATA)
                 }
-                2 -> {
+                2 -> { //pre processamento do indexador
+                    indexer(URLs)
+                }
+                3-> { //indice termo documento
+                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
+                    termIndexer(documentsID)
+                    termIndex = repo.retrieveTermIndex(TERMINDEX)
+                }
+                4 -> { //indice de campos
                     extractorData = repo.retrieveDataFromJSON(EXTRACTORDATA) as HashMap<String, HashMap<String, String>>
-                    indexer(URLs, extractorData)
+                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
+                    fieldIndexer(extractorData, documentsID)
                 }
             }
 
