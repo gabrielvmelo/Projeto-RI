@@ -7,8 +7,8 @@ import java.lang.Exception
 //criacao de map com tokens e lista de documentos em que estao presentes
 class Tokenizer {
     private val NUMBER_ATTEMPTS = 5
-    fun termTokens(documentsID: HashMap<String, Int>): HashMap<String, ArrayList<Int>>{
-        val tokensMap = hashMapOf<String, ArrayList<Int>>()
+    fun termTokens(documentsID: HashMap<String, String>): HashMap<String, ArrayList<String>>{
+        val tokensMap = hashMapOf<String, ArrayList<String>>()
         var html: String? = null
         var tokens: List<String>?
 
@@ -32,6 +32,7 @@ class Tokenizer {
                     tokensMap[token]!!.add(documentsID[url]!!)
                 }
             }
+            println(url)
         }
 
         for (docIDs in tokensMap.values){
@@ -50,8 +51,8 @@ class Tokenizer {
         return text.split(regex)
     }
 
-    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>): HashMap<Int, HashMap<String, Array<String>>>{
-        val tokensMap = hashMapOf<Int, HashMap<String, Array<String>>>() //int=numero doc, string=attr, array=values
+    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, String>): HashMap<String, HashMap<String, Array<String>>>{
+        val tokensMap = hashMapOf<String, HashMap<String, Array<String>>>() //int=numero doc, string=attr, array=values
         var tokensList: Array<String>
 
         for (url in extractorData.keys){

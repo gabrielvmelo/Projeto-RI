@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty
 // lista de: doc e frequencia no doc
 class TermFrequency (
     val documentsFrequency: Int,
-    val documentsList: ArrayList<HashMap<Int, Int>>){
+    val documentsList: ArrayList<HashMap<String, Int>>){
 
     override fun toString(): String {
         return "($documentsFrequency, $documentsList)"

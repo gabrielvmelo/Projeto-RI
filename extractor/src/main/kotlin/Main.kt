@@ -127,7 +127,6 @@ class Main {
             "https://www.thetvdb.com/series/supergirl",
             "https://www.thetvdb.com/series/game-of-thrones",
             "https://www.thetvdb.com/series/stranger-things",
-            "https://www.thetvdb.com/series/gravity-falls",
             "https://www.thetvdb.com/series/izombie",
             "https://www.thetvdb.com/series/general-hospital",
             "https://www.thetvdb.com/series/modern-family",
@@ -197,10 +196,9 @@ class Main {
             //criando os IDs dos documentos
             val documentsID = DocumentsID().createIDs(URLs)
             repo.storeDataInJSON(documentsID, DOCID)
-
         }
 
-        private fun termIndexer(documentsID: HashMap<String, Int>){
+        private fun termIndexer(documentsID: HashMap<String, String>){
             //tokenizando o html das paginas
             val termTokenizer = Tokenizer().termTokens(documentsID)
             repo.storeDataInJSON(termTokenizer, TERMTOKEN)
@@ -210,7 +208,7 @@ class Main {
             repo.storeDataInJSON(index, TERMINDEX)
         }
 
-        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>){
+        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, String>){
             //tokenizando os dados do extrator
             val fieldTokenizer = Tokenizer().fieldTokens(extractorData, documentsID)
             repo.storeDataInJSON(fieldTokenizer, FIELDTOKEN)
@@ -223,7 +221,7 @@ class Main {
         @JvmStatic
         fun main(args: Array<String>){
             var extractorData = hashMapOf<String, HashMap<String, String>>()
-            val documentsID: HashMap<String, Int>
+            val documentsID: HashMap<String, String>
             val termIndex: TermIndex
 
             when(CHOOSER){
@@ -237,13 +235,13 @@ class Main {
                     indexer(URLs)
                 }
                 3-> { //indice termo documento
-                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
+                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, String>
                     termIndexer(documentsID)
                     termIndex = repo.retrieveTermIndex(TERMINDEX)
                 }
                 4 -> { //indice de campos
                     extractorData = repo.retrieveDataFromJSON(EXTRACTORDATA) as HashMap<String, HashMap<String, String>>
-                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
+                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, String>
                     fieldIndexer(extractorData, documentsID)
                 }
             }
@@ -274,7 +272,7 @@ class Main {
         }
 
         fun downloadPage(url: String): String? {
-            val resp = Jsoup.connect(url).header("Accept-Language", "en").timeout(10 * 1000).execute()
+            val resp = Jsoup.connect(url).header("Accept-Language", "en").timeout(100 * 1000).execute()
             val contentType = resp.contentType()
 
             if (contentType.contains("application/xhtml+xml") || contentType.contains("text/html")){
