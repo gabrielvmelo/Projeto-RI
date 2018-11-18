@@ -1,5 +1,6 @@
 import java.io.*
 import com.fasterxml.jackson.module.kotlin.*
+import indexing.FieldIndex
 import indexing.TermIndex
 
 /**
@@ -23,6 +24,12 @@ class RepositoryManager {
     }
 
     fun retrieveTermIndex(fileName: String): TermIndex{
+        val path = "repository/$fileName.json"
+        val myFile = File(path)
+        return mapper.readValue(myFile)
+    }
+
+    fun retrieveFieldIndex(fileName: String): FieldIndex {
         val path = "repository/$fileName.json"
         val myFile = File(path)
         return mapper.readValue(myFile)

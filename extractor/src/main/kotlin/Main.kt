@@ -8,7 +8,10 @@ import java.net.URISyntaxException
 class Main {
 
     companion object {
-        private val CHOOSER = 4 // 1: extrator, 2: pre processamento indexador, 3: indexador termo doc, 4: indexador de campos
+        // 1: extrator, 2: pre processamento indexador, 3: indexador termo doc, 4: indexador de campos
+        // 5: compressor do indice termo doc, 6: compressor do indice de campos
+        private val CHOOSER = 5
+
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
             "https://www.metacritic.com/tv/westworld",
@@ -161,6 +164,8 @@ class Main {
         val TERMTOKEN = "TermTokenizer"
         val FIELDINDEX = "FieldIndex"
         val FIELDTOKEN = "FieldTokenizer"
+        val TERMINDEXCOMPRESSED = "TermIndexCompressed"
+        val FIELDINDEXCOMPRESSED = "FieldIndexCompressed"
 
         val repo = RepositoryManager()
         private val NUMBER_ATTEMPTS = 5
@@ -223,6 +228,8 @@ class Main {
             var extractorData = hashMapOf<String, HashMap<String, String>>()
             val documentsID: HashMap<String, Int>
             val termIndex: TermIndex
+            val fieldIndex: FieldIndex
+            val compressor = Compressor()
 
             when(CHOOSER){
                 1 -> { //extrator
@@ -243,6 +250,14 @@ class Main {
                     extractorData = repo.retrieveDataFromJSON(EXTRACTORDATA) as HashMap<String, HashMap<String, String>>
                     documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
                     fieldIndexer(extractorData, documentsID)
+                }
+                5 -> { //compressor do termo documento
+                    termIndex = compressor.compressTermIndex(repo.retrieveTermIndex(TERMINDEX))
+                    repo.storeDataInJSON(termIndex, TERMINDEXCOMPRESSED)
+                }
+                6 -> { //compressor do campos
+                    fieldIndex = compressor.compressFieldIndex(repo.retrieveFieldIndex(FIELDINDEX))
+                    repo.storeDataInJSON(fieldIndex, FIELDINDEXCOMPRESSED)
                 }
             }
 
