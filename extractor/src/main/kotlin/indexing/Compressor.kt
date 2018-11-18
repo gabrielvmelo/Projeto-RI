@@ -7,7 +7,6 @@ class Compressor {
 
     private fun compress(list: ArrayList<Int>): ArrayList<Int>{
         val compressedList = arrayListOf(list[0])
-//        var sum = 0
 
         for (i in 1..list.lastIndex){
             compressedList.add(list[i]-list[i-1])
@@ -18,21 +17,37 @@ class Compressor {
 
     fun compressTermIndex(termIndex: TermIndex): TermIndex{
         val index = termIndex.index
-        val termFrequency = index.values
-        val list = arrayListOf<Int>()
-        for (row in termFrequency){
-            for (element in row.documentsList){
-                list.add(element.keys.first())
-            }
-        }
+        val oldIDs = arrayListOf<Int>()
+        val oldFrequencies = arrayListOf<Int>()
+        var id: Int
 
-        val compressedList = compress(list)
-        var counter = 0
-        for (row in termFrequency){
-            for (element in row.documentsList){
-                element[element.keys.first()] = compressedList[counter]
+        for (termFrequencies in index.values){
+            //limpar lista antigas
+            oldIDs.clear()
+            oldFrequencies.clear()
+
+            //construir listas com dados antigos
+            val list = termFrequencies.documentsList
+            for (element in list){
+                id = element.keys.first()
+                oldIDs.add(id)
+                oldFrequencies.add(element[id]!!)
             }
-            counter += 1
+
+            //comprimir lista antiga de ids
+            val compressedList = compress(oldIDs)
+            val newArray = arrayListOf<HashMap<Int, Int>>()
+
+            //atualizar documentsList
+            for (i in list.indices){
+                val newID = compressedList[i]
+                val frequency = oldFrequencies[i]
+                newArray.add(hashMapOf(newID to frequency))
+            }
+
+            //limpar array e colocar o novo
+            termFrequencies.documentsList.clear()
+            termFrequencies.documentsList.addAll(newArray)
         }
 
         return TermIndex(index)
