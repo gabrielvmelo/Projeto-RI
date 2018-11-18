@@ -1,4 +1,3 @@
-import com.sun.xml.internal.xsom.impl.Ref
 import extractor.TextProcessor
 import indexing.*
 import org.jsoup.Jsoup
@@ -131,6 +130,7 @@ class Main {
             "https://www.thetvdb.com/series/general-hospital",
             "https://www.thetvdb.com/series/modern-family",
             "http://www.tv.com/shows/the-big-bang-theory/",
+            "https://www.thetvdb.com/series/gravity-falls",
             "http://www.tv.com/shows/law-order/",
             "http://www.tv.com/shows/blackish/",
             "http://www.tv.com/shows/greys-anatomy/",
@@ -198,7 +198,7 @@ class Main {
             repo.storeDataInJSON(documentsID, DOCID)
         }
 
-        private fun termIndexer(documentsID: HashMap<String, String>){
+        private fun termIndexer(documentsID: HashMap<String, Int>){
             //tokenizando o html das paginas
             val termTokenizer = Tokenizer().termTokens(documentsID)
             repo.storeDataInJSON(termTokenizer, TERMTOKEN)
@@ -208,7 +208,7 @@ class Main {
             repo.storeDataInJSON(index, TERMINDEX)
         }
 
-        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, String>){
+        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>){
             //tokenizando os dados do extrator
             val fieldTokenizer = Tokenizer().fieldTokens(extractorData, documentsID)
             repo.storeDataInJSON(fieldTokenizer, FIELDTOKEN)
@@ -221,7 +221,7 @@ class Main {
         @JvmStatic
         fun main(args: Array<String>){
             var extractorData = hashMapOf<String, HashMap<String, String>>()
-            val documentsID: HashMap<String, String>
+            val documentsID: HashMap<String, Int>
             val termIndex: TermIndex
 
             when(CHOOSER){
@@ -235,13 +235,13 @@ class Main {
                     indexer(URLs)
                 }
                 3-> { //indice termo documento
-                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, String>
+                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
                     termIndexer(documentsID)
                     termIndex = repo.retrieveTermIndex(TERMINDEX)
                 }
                 4 -> { //indice de campos
                     extractorData = repo.retrieveDataFromJSON(EXTRACTORDATA) as HashMap<String, HashMap<String, String>>
-                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, String>
+                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
                     fieldIndexer(extractorData, documentsID)
                 }
             }

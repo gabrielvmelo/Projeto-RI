@@ -8,8 +8,8 @@ class BuildFieldIndex {
         return "$value.$attr"
     }
 
-    fun build(tokensMap: HashMap<String, HashMap<String, Array<String>>>): FieldIndex{
-        val index = hashMapOf<String, ArrayList<String>>() //string=campo array=ids doc
+    fun build(tokensMap: HashMap<Int, HashMap<String, Array<String>>>): FieldIndex{
+        val index = hashMapOf<String, ArrayList<Int>>() //string=campo array=ids doc
         var field: String
 
         for (id in tokensMap.keys){
