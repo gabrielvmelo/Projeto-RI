@@ -10,7 +10,7 @@ class Main {
     companion object {
         // 1: extrator, 2: pre processamento indexador, 3: indexador termo doc, 4: indexador de campos
         // 5: compressor do indice termo doc, 6: compressor do indice de campos
-        private val CHOOSER = 5
+        private val CHOOSER = 6
 
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
@@ -159,13 +159,17 @@ class Main {
         val ATTR4 = "network"
 
         val DOCID = "DocumentsID"
-        val EXTRACTORDATA = "ExtractorData"
+        val EXTRACTOR_DATA = "ExtractorData"
         val TERMINDEX = "TermIndex"
         val TERMTOKEN = "TermTokenizer"
         val FIELDINDEX = "FieldIndex"
         val FIELDTOKEN = "FieldTokenizer"
-        val TERMINDEXCOMPRESSED = "TermIndexCompressed"
-        val FIELDINDEXCOMPRESSED = "FieldIndexCompressed"
+        val TERMINDEX_COMPRESSED = "TermIndexCompressed"
+        val FIELDINDEX_COMPRESSED = "FieldIndexCompressed"
+        val TERMINDEX_BINARY = "TermIndexBinary"
+        val FIELDINDEX_BINARY = "FieldIndexBinary"
+        val TERMINDEX_COMPRESSED_BINARY = "TermIndexCompressedBinary"
+        val FIELDINDEX_COMPRESSED_BINARY = "FieldIndexCompressedBinary"
 
         val repo = RepositoryManager()
         private val NUMBER_ATTEMPTS = 5
@@ -211,6 +215,7 @@ class Main {
             //construindo indice termo documento
             val index = BuildTermIndex().build(termTokenizer)
             repo.storeDataInJSON(index, TERMINDEX)
+            repo.storeDataInBSON(index, TERMINDEX_BINARY)
         }
 
         private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>){
@@ -221,6 +226,7 @@ class Main {
             //construindo indice de campos
             val index = BuildFieldIndex().build(fieldTokenizer)
             repo.storeDataInJSON(index, FIELDINDEX)
+            repo.storeDataInBSON(index, FIELDINDEX_BINARY)
         }
 
         @JvmStatic
@@ -236,7 +242,7 @@ class Main {
                     for (i in 0 until URLs.size) {
                         extractorData = extractor(URLs[i], extractorData)
                     }
-                    repo.storeDataInJSON(extractorData, EXTRACTORDATA)
+                    repo.storeDataInJSON(extractorData, EXTRACTOR_DATA)
                 }
                 2 -> { //pre processamento do indexador
                     indexer(URLs)
@@ -247,17 +253,19 @@ class Main {
                     termIndex = repo.retrieveTermIndex(TERMINDEX)
                 }
                 4 -> { //indice de campos
-                    extractorData = repo.retrieveDataFromJSON(EXTRACTORDATA) as HashMap<String, HashMap<String, String>>
+                    extractorData = repo.retrieveDataFromJSON(EXTRACTOR_DATA) as HashMap<String, HashMap<String, String>>
                     documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
                     fieldIndexer(extractorData, documentsID)
                 }
                 5 -> { //compressor do termo documento
                     termIndex = compressor.compressTermIndex(repo.retrieveTermIndex(TERMINDEX))
-                    repo.storeDataInJSON(termIndex, TERMINDEXCOMPRESSED)
+                    repo.storeDataInJSON(termIndex, TERMINDEX_COMPRESSED)
+                    repo.storeDataInBSON(termIndex, TERMINDEX_COMPRESSED_BINARY)
                 }
                 6 -> { //compressor do campos
                     fieldIndex = compressor.compressFieldIndex(repo.retrieveFieldIndex(FIELDINDEX))
-                    repo.storeDataInJSON(fieldIndex, FIELDINDEXCOMPRESSED)
+                    repo.storeDataInJSON(fieldIndex, FIELDINDEX_COMPRESSED)
+                    repo.storeDataInBSON(fieldIndex, FIELDINDEX_COMPRESSED_BINARY)
                 }
             }
 

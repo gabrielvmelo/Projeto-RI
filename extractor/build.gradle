@@ -22,4 +22,5 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile 'org.jsoup:jsoup:1.11.3'
     compile 'com.fasterxml.jackson.module:jackson-module-kotlin:2.8.8'
+    compile 'de.undercouch:bson4jackson:2.9.2'
 }

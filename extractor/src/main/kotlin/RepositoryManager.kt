@@ -1,7 +1,14 @@
 import java.io.*
 import com.fasterxml.jackson.module.kotlin.*
+import de.undercouch.bson4jackson.BsonFactory
 import indexing.FieldIndex
 import indexing.TermIndex
+import java.io.ByteArrayOutputStream
+import com.fasterxml.jackson.databind.ObjectMapper
+
+
+
+
 
 /**
  * Created by lariciamota.
@@ -15,6 +22,15 @@ class RepositoryManager {
         val myFile = File(path)
 
         mapper.writerWithDefaultPrettyPrinter().writeValue(myFile, data)
+    }
+
+    fun storeDataInBSON(data: Any, fileName: String){
+        val path = "repository/$fileName.bson"
+        val myFile = File(path)
+        val baos = ByteArrayOutputStream()
+        val mapperBSON = ObjectMapper(BsonFactory())
+
+        mapperBSON.writeValue(myFile, data)
     }
 
     fun retrieveDataFromJSON(fileName: String): Any{

@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e20e361-0a98-43d0-8ad2-ec7d6de98685" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/indexing/Compressor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/indexing/Compressor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/TermIndexCompressed.json" beforeDir="false" afterPath="$PROJECT_DIR$/repository/TermIndexCompressed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/RepositoryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/RepositoryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/FieldIndex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/FieldIndexCompressed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/FieldTokenizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/TermIndex.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/TermIndexCompressed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/TermTokenizer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/indexing/Compressor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/indexing/Compressor.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,12 +57,12 @@
           <entry key="TermIndex" value="4" />
           <entry key="Tokenizer" value="2" />
           <entry key="bat" value="1" />
-          <entry key="gradle" value="6" />
+          <entry key="gradle" value="7" />
           <entry key="gradlew" value="1" />
           <entry key="imdb" value="8" />
           <entry key="java" value="2" />
-          <entry key="json" value="100" />
-          <entry key="kt" value="75" />
+          <entry key="json" value="115" />
+          <entry key="kt" value="76" />
           <entry key="metacritic" value="11" />
           <entry key="properties" value="1" />
           <entry key="rottentomatoes" value="5" />
@@ -64,28 +76,28 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Groovy" value="6" />
+          <entry key="Groovy" value="7" />
           <entry key="JAVA" value="2" />
-          <entry key="JSON" value="100" />
-          <entry key="Kotlin" value="75" />
+          <entry key="JSON" value="115" />
+          <entry key="Kotlin" value="76" />
           <entry key="PLAIN_TEXT" value="67" />
           <entry key="Properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="gradle" value="47" />
+          <entry key="gradle" value="48" />
           <entry key="json" value="3" />
-          <entry key="kt" value="14242" />
+          <entry key="kt" value="14630" />
           <entry key="regexp" value="37" />
           <entry key="rottentomatoes" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Groovy" value="47" />
+          <entry key="Groovy" value="48" />
           <entry key="JSON" value="3" />
-          <entry key="Kotlin" value="14242" />
+          <entry key="Kotlin" value="14630" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="RegExp" value="37" />
         </counts>
@@ -94,7 +106,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -103,30 +115,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/Compressor.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+            <state relative-caret-position="165">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repository/TermIndexCompressed.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/repository/TermIndex.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/FieldIndex.kt">
+        <entry file="file://$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            <state relative-caret-position="293">
+              <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#248#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,15 +150,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/BuildTermIndex.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -187,6 +183,8 @@
       <find>gravity</find>
       <find>gr</find>
       <find>term</find>
+      <find>abc</find>
+      <find>saul</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -393,9 +391,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="7709221829000" />
+        <entry key="$PROJECT_DIR$" value="7709503552000" />
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="2975499915" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="468878311" />
         <entry key="$PROJECT_DIR$/gradle.properties" value="3650535818" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="2585518924" />
         <entry key="$PROJECT_DIR$/settings.gradle" value="2391129890" />
@@ -621,7 +619,6 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/MetadataRepository.kt" />
         <option value="$PROJECT_DIR$/repository/attribute-value/metacritic" />
         <option value="$PROJECT_DIR$/repository/tokenizer" />
-        <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/repository/TermIndex" />
         <option value="$PROJECT_DIR$/repository/Tokenizer" />
         <option value="$PROJECT_DIR$/repository/DocumentsID" />
@@ -639,15 +636,16 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/TermFrequency.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/Tokenizer.kt" />
         <option value="$PROJECT_DIR$/repository/DocumentsID.json" />
-        <option value="$PROJECT_DIR$/repository/TermIndex.json" />
         <option value="$PROJECT_DIR$/repository/TermTokenizer.json" />
         <option value="$PROJECT_DIR$/repository/FieldIndex.json" />
         <option value="$PROJECT_DIR$/repository/FieldTokenizer.json" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" />
         <option value="$PROJECT_DIR$/repository/FieldIndexCompressed.json" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
         <option value="$PROJECT_DIR$/repository/TermIndexCompressed.json" />
         <option value="$PROJECT_DIR$/src/main/kotlin/indexing/Compressor.kt" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/repository/TermIndex.json" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/Main.kt" />
       </list>
     </option>
   </component>
@@ -734,7 +732,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542580121979" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542625169373" />
     <property name="last.edited.regexp" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -794,12 +792,12 @@
       <workItem from="1542371802324" duration="6650000" />
       <workItem from="1542412725764" duration="909000" />
       <workItem from="1542415261279" duration="1382000" />
-      <workItem from="1542571622696" duration="7671000" />
+      <workItem from="1542571622696" duration="10536000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39328000" />
+    <option name="totallyTimeSpent" value="42193000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -815,7 +813,7 @@
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3328767" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3328767" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -917,13 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/repository/attribute-value/imdb" />
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/extractor/TextProcessor.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -953,12 +944,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/TermTokenizer.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/DocumentsID.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/repository/FieldTokenizer.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -983,27 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="34" column="39" lean-forward="true" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/FieldIndexCompressed.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/FieldIndex.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/TermIndex.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1018,23 +982,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/TermIndexCompressed.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/TermIndex.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+    <entry file="file://$PROJECT_DIR$/repository/TermTokenizer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="18839" column="6" selection-start-line="18839" selection-start-column="3" selection-end-line="18839" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/teste.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/RepositoryManager.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/indexing/Compressor.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
+        <state relative-caret-position="165">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/DocumentsID.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/FieldIndex.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-526">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/FieldIndexCompressed.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-850">
+          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/TermIndex.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/TermIndexCompressed.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="154" column="9" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/Main.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
         </state>
       </provider>
     </entry>

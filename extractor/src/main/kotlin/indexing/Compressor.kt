@@ -22,7 +22,7 @@ class Compressor {
         var id: Int
 
         for (termFrequencies in index.values){
-            //limpar lista antigas
+            //limpar listas antigas
             oldIDs.clear()
             oldFrequencies.clear()
 
