@@ -5,9 +5,7 @@ import indexing.FieldIndex
 import indexing.TermIndex
 import java.io.ByteArrayOutputStream
 import com.fasterxml.jackson.databind.ObjectMapper
-
-
-
+import indexing.DocumentsID
 
 
 /**
@@ -27,10 +25,16 @@ class RepositoryManager {
     fun storeDataInBSON(data: Any, fileName: String){
         val path = "repository/$fileName.bson"
         val myFile = File(path)
-        val baos = ByteArrayOutputStream()
         val mapperBSON = ObjectMapper(BsonFactory())
 
         mapperBSON.writeValue(myFile, data)
+    }
+
+    fun retrieveDOCIDFromBSON(fileName: String): DocumentsID {
+        val mapperBSON = ObjectMapper(BsonFactory())
+        val path = "repository/$fileName.bson"
+        val myFile = File(path)
+        return mapperBSON.readValue(myFile, DocumentsID::class.java)
     }
 
     fun retrieveDataFromJSON(fileName: String): Any{

@@ -3,12 +3,13 @@ package indexing
 import Main.Companion.downloadPage
 import org.jsoup.Jsoup
 import java.lang.Exception
+import java.nio.ByteBuffer
 
 //criacao de map com tokens e lista de documentos em que estao presentes
 class Tokenizer {
     private val NUMBER_ATTEMPTS = 5
-    fun termTokens(documentsID: HashMap<String, Int>): HashMap<String, ArrayList<Int>>{
-        val tokensMap = hashMapOf<String, ArrayList<Int>>()
+    fun termTokens(documentsID: HashMap<String, ByteArray>): HashMap<String, ArrayList<ByteArray>>{
+        val tokensMap = hashMapOf<String, ArrayList<ByteArray>>()
         var html: String? = null
         var tokens: List<String>?
 
@@ -36,7 +37,15 @@ class Tokenizer {
         }
 
         for (docIDs in tokensMap.values){
-            docIDs.sort()
+            val aux = arrayListOf<Int>()
+            for (id in docIDs){
+                aux.add(ByteBuffer.wrap(id).int)
+            }
+            aux.sort()
+            docIDs.clear()
+            for (id in aux){
+                docIDs.add(ByteBuffer.allocate(4).putInt(id).array())
+            }
         }
         return tokensMap
     }
@@ -51,8 +60,8 @@ class Tokenizer {
         return text.split(regex)
     }
 
-    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>): HashMap<Int, HashMap<String, Array<String>>>{
-        val tokensMap = hashMapOf<Int, HashMap<String, Array<String>>>() //int=numero doc, string=attr, array=values
+    fun fieldTokens(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, ByteArray>): HashMap<ByteArray, HashMap<String, Array<String>>>{
+        val tokensMap = hashMapOf<ByteArray, HashMap<String, Array<String>>>() //ByteArray=numero doc, string=attr, array=values
         var tokensList: Array<String>
 
         for (url in extractorData.keys){

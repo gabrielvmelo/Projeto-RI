@@ -10,7 +10,8 @@ class Main {
     companion object {
         // 1: extrator, 2: pre processamento indexador, 3: indexador termo doc, 4: indexador de campos
         // 5: compressor do indice termo doc, 6: compressor do indice de campos
-        private val CHOOSER = 6
+        // 7: compressor com cod variavel do indice termo doc, 8: compressor com cod variavel do indice de campos
+        private val CHOOSER = 8
 
         private val URLs = arrayOf (
             "https://www.metacritic.com/tv/anne-with-an-e",
@@ -159,6 +160,7 @@ class Main {
         val ATTR4 = "network"
 
         val DOCID = "DocumentsID"
+        val DOCID_BINARY = "DocumentsIDBinary"
         val EXTRACTOR_DATA = "ExtractorData"
         val TERMINDEX = "TermIndex"
         val TERMTOKEN = "TermTokenizer"
@@ -166,10 +168,14 @@ class Main {
         val FIELDTOKEN = "FieldTokenizer"
         val TERMINDEX_COMPRESSED = "TermIndexCompressed"
         val FIELDINDEX_COMPRESSED = "FieldIndexCompressed"
+        val TERMINDEX_COMPRESSED_VARIABLE = "TermIndexCompressedVariable"
+        val FIELDINDEX_COMPRESSED_VARIABLE = "FieldIndexCompressedVariable"
         val TERMINDEX_BINARY = "TermIndexBinary"
         val FIELDINDEX_BINARY = "FieldIndexBinary"
         val TERMINDEX_COMPRESSED_BINARY = "TermIndexCompressedBinary"
         val FIELDINDEX_COMPRESSED_BINARY = "FieldIndexCompressedBinary"
+        val TERMINDEX_COMPRESSED_VARIABLE_BINARY = "TermIndexCompressedVariableBinary"
+        val FIELDINDEX_COMPRESSED_VARIABLE_BINARY = "FieldIndexCompressedVariableBinary"
 
         val repo = RepositoryManager()
         private val NUMBER_ATTEMPTS = 5
@@ -203,11 +209,13 @@ class Main {
 
         private fun indexer(URLs: Array<String>){
             //criando os IDs dos documentos
-            val documentsID = DocumentsID().createIDs(URLs)
+            val documentsID = DocumentsID()
+            documentsID.createIDs(URLs)
             repo.storeDataInJSON(documentsID, DOCID)
+            repo.storeDataInBSON(documentsID, DOCID_BINARY)
         }
 
-        private fun termIndexer(documentsID: HashMap<String, Int>){
+        private fun termIndexer(documentsID: HashMap<String, ByteArray>){
             //tokenizando o html das paginas
             val termTokenizer = Tokenizer().termTokens(documentsID)
             repo.storeDataInJSON(termTokenizer, TERMTOKEN)
@@ -218,7 +226,7 @@ class Main {
             repo.storeDataInBSON(index, TERMINDEX_BINARY)
         }
 
-        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, Int>){
+        private fun fieldIndexer(extractorData: HashMap<String, HashMap<String, String>>, documentsID: HashMap<String, ByteArray>){
             //tokenizando os dados do extrator
             val fieldTokenizer = Tokenizer().fieldTokens(extractorData, documentsID)
             repo.storeDataInJSON(fieldTokenizer, FIELDTOKEN)
@@ -232,7 +240,7 @@ class Main {
         @JvmStatic
         fun main(args: Array<String>){
             var extractorData = hashMapOf<String, HashMap<String, String>>()
-            val documentsID: HashMap<String, Int>
+            val documentsID: HashMap<String, ByteArray>
             val termIndex: TermIndex
             val fieldIndex: FieldIndex
             val compressor = Compressor()
@@ -248,29 +256,40 @@ class Main {
                     indexer(URLs)
                 }
                 3-> { //indice termo documento
-                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
+                    documentsID = repo.retrieveDOCIDFromBSON(DOCID_BINARY).documentsIDs
                     termIndexer(documentsID)
                     termIndex = repo.retrieveTermIndex(TERMINDEX)
                 }
                 4 -> { //indice de campos
                     extractorData = repo.retrieveDataFromJSON(EXTRACTOR_DATA) as HashMap<String, HashMap<String, String>>
-                    documentsID = repo.retrieveDataFromJSON(DOCID) as HashMap<String, Int>
+                    documentsID = repo.retrieveDOCIDFromBSON(DOCID_BINARY).documentsIDs
                     fieldIndexer(extractorData, documentsID)
                 }
                 5 -> { //compressor do termo documento
-                    termIndex = compressor.compressTermIndex(repo.retrieveTermIndex(TERMINDEX))
+                    termIndex = compressor.compressTermIndex(1, repo.retrieveTermIndex(TERMINDEX))
                     repo.storeDataInJSON(termIndex, TERMINDEX_COMPRESSED)
                     repo.storeDataInBSON(termIndex, TERMINDEX_COMPRESSED_BINARY)
                 }
                 6 -> { //compressor do campos
-                    fieldIndex = compressor.compressFieldIndex(repo.retrieveFieldIndex(FIELDINDEX))
+                    fieldIndex = compressor.compressFieldIndex(1, repo.retrieveFieldIndex(FIELDINDEX))
                     repo.storeDataInJSON(fieldIndex, FIELDINDEX_COMPRESSED)
                     repo.storeDataInBSON(fieldIndex, FIELDINDEX_COMPRESSED_BINARY)
+                }
+                7 -> { //cod de tamanho variavel termo doc
+                    termIndex = compressor.compressTermIndex(2, repo.retrieveTermIndex(TERMINDEX))
+                    repo.storeDataInJSON(termIndex, TERMINDEX_COMPRESSED_VARIABLE)
+                    repo.storeDataInBSON(termIndex, TERMINDEX_COMPRESSED_VARIABLE_BINARY)
+                }
+                8 -> { //cod de tamanho variavel campos
+                    fieldIndex = compressor.compressFieldIndex(2, repo.retrieveFieldIndex(FIELDINDEX))
+                    repo.storeDataInJSON(fieldIndex, FIELDINDEX_COMPRESSED_VARIABLE)
+                    repo.storeDataInBSON(fieldIndex, FIELDINDEX_COMPRESSED_VARIABLE_BINARY)
                 }
             }
 
 
         }
+
 
         @Throws(URISyntaxException::class)
         fun getDomainName(url: String): String? {
