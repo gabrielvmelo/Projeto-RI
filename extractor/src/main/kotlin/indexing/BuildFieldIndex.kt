@@ -1,5 +1,7 @@
 package indexing
 
+import java.nio.ByteBuffer
+
 //construcao do indice de campos
 class BuildFieldIndex {
 
@@ -8,8 +10,8 @@ class BuildFieldIndex {
         return "$value.$attr"
     }
 
-    fun build(tokensMap: HashMap<Int, HashMap<String, Array<String>>>): FieldIndex{
-        val index = hashMapOf<String, ArrayList<Int>>() //string=campo array=ids doc
+    fun build(tokensMap: HashMap<ByteArray, HashMap<String, Array<String>>>): FieldIndex{
+        val index = hashMapOf<String, ArrayList<ByteArray>>() //string=campo array=ids doc
         var field: String
 
         for (id in tokensMap.keys){
@@ -24,6 +26,18 @@ class BuildFieldIndex {
                         } else{
                             index[field] = arrayListOf(id)
                         }
+
+                        //sort
+                        val aux = arrayListOf<Int>()
+                        for (docID in index[field]!!){
+                            aux.add(ByteBuffer.wrap(docID).int)
+                        }
+                        aux.sort()
+                        index[field]!!.clear()
+                        for (docID in aux){
+                            index[field]!!.add(ByteBuffer.allocate(4).putInt(docID).array())
+                        }
+
                     }
                 }
             }
